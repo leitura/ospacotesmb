@@ -1,0 +1,135 @@
+#!/bin/bash
+clear
+echo -e "   ⣀⣀⣤⣤⣴⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣦⣤⣤⣄⣀⡀
+ ⣴⣿⣿⡿⣿⢿⣟⣿⣻⣟⡿⣟⣿⣟⡿⣟⣿⣻⣟⣿⣻⢿⣻⡿⣿⢿⣷⣆
+⢘⣿⢯⣷⡿⡿⡿⢿⢿⣷⣯⡿⣽⣞⣷⣻⢯⣷⣻⣾⡿⡿⢿⢿⢿⢯⣟⣞⡮
+⢸⢞⠟⠃⣉⢉⠉⠉⠓⠫⢿⣿⣷⢷⣻⣞⣿⣾⡟⠽⠚⠊⠉⠉⠉⠙⠻⣞⢵
+⢜⢯⣺⢿⣻⣿⣿⣷⣔⡄⠄⠈⠛⣿⣿⡾⠋⠁⠄⠄⣄⣶⣾⣿⡿⣿⡳⡌⡗
+⢽⢱⢳⢹⡪⡞⠮⠯⢯⡻⡬⡐⢨⢿⣿⣿⢀⠐⡥⣻⡻⠯⡳⢳⢹⢜⢜⢜⢎
+⣻⢌⠘⠌⡂⠈⠁⠉⠁⠘⠑⢧⣕⣿⣿⣿⢤⡪⠚⠂⠈⠁⠁⠁⠂⡑⠡⡈⢮
+⣳⣿⣿⣽⣭⣶⣶⣶⣶⣶⣺⣟⣾⣻⣿⣯⢯⢿⣳⣶⣶⣶⣖⣶⣮⣭⣷⣽⣗
+⢻⡿⡿⣟⣿⣻⣽⣟⣿⢯⣟⣞⡷⣿⣿⣯⢿⢽⢯⣿⣻⣟⣿⣻⣟⣿⣻⢿⣿
+⡑⡏⠯⡯⡳⡯⣗⢯⢟⡽⣗⣯⣟⣿⣿⣾⣫⢿⣽⠾⡽⣺⢳⡫⡞⡗⡝⢕⠕
+⢂⡎⠅⡃⢇⠇⠇⣃⣧⡺⡻⡳⡫⣿⡿⣟⠞⠽⠯⢧⣅⣃⠣⠱⡑⡑⠨⢐⢌
+⠐⠼⣦⢀⠄⣶⣿⢿⣿⣧⣄⡌⠂⠢⠩⠂⠑⣁⣅⣾⢿⣟⣷⠦⠄⠄⡤⡇⡪
+ ⠨⢻⣧⡅⡈⠛⠿⠿⠿⠛⠁⠄⢀⡀⠄⠄⠘⠻⠿⠿⠯⠓⠁⢠⣱⡿⢑⠄
+ ⠈⢌⢿⣷⡐⠤⣀⣀⣂⣀⢀⢀⡓⠝⡂⡀⢀⢀⢀⣀⣀⠤⢊⣼⡟⡡⡁
+  ⠈⢢⠚⣿⣄⠈⠉⠛⠛⠟⠿⠿⠟⠿⠻⠻⠛⠛⠉⠄⣠⠾⢑⠰⠈
+    ⠑⢌⠿⣦⡡⣱⣸⣸⣆⠄⠄⠄⣰⣕⢔⢔⠡⣼⠞⡡⠁
+      ⠑⢝⢷⣕⡷⣿⡿⠄⠄⠠⣿⣯⣯⡳⡽⡋⠌
+        ⠙⢮⣿⣽⣯⠄⠄⢨⣿⣿⡷⡫⠃
+          ⠘⠙⠝⠂⠄⢘⠋⠃ "
+sleep 1
+echo ""
+echo -e "    \033[0m\033[01;37m• \033[01;33mTestador de Token MB Vivo \033[0m\033[01;37m•\033[0m"
+echo -e "\033[01;37mTrue = \033[01;32m Aprovado \033[01;37m| False = \033[01;31m  Agora não"
+sleep 1
+echo -e "\033[01;32m Cola seu Token\033[01;37m"
+read TOKEN
+echo -e "\033[01;32m Cola seu DDD+NÚMERO\033[01;37m"
+read NUMERO
+echo -e "\033[01;32m Repetir quantas vezes?\033[1;37m"
+read VEZES
+echo -e "\033[01;32m É hora do show\033[1;37m"
+sleep 1
+echo ""
+echo -e "\033[0m\033[01;33m vai brasiliam\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=03bc4539-13db-4045-9119-a937eb48d41d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo -e ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 2\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=6e7eb039-9816-4118-9c3b-bb906887722c&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 3\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=fba83d4b-b7ae-43cd-9738-5eb7eb8d2564&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 4\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=4919b47c-f588-4e71-87e3-639b3af92e4d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 5\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=19313963-7198-4a33-9511-1c72c7d6152a&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 6\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=000091e22bd5-7b79-4fef-8dfa-c40f1ff3736b&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 7\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=cd5f56de-4ed9-484f-9c32-c8f6eedb08e7&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 8\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=949e575a-6db8-4608-8b71-1281e6e506df&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 9\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=04e564c7-f410-49f5-8dee-b268eaef5223&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 10\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=bdb0df13-66dd-4556-ac98-a73aed5527a7&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 11\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=02f76cd1-eead-44ff-88dd-aa69538c7aef&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 12\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=23a6eb53-cf15-4354-a357-b497de3bcc1e&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 13\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=7c732700-bfac-40bf-9805-e5a3ab5d872d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "\033[0m\033[01;33mINICIANDO TOKEN 14\033[03;037m"
+for i in $(seq $VEZES);
+do
+data=$"msisdn=$NUMERO&campid=e2b803f3-6992-472d-b4d1-663f5c9c41d7&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+echo -e "\033[0m\033[01;32mCONTAGEM:\033[01;37m$i\033[03;037m"
+done
+echo ""
+echo -e "        \033[0m\033[01;37m• \033[01;32mFim de transmissão \033[01;37m•\033[0m"
+sleep 5
