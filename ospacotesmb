@@ -42,4 +42,4 @@ done
 echo ""
 echo -e "        \033[0m\033[01;37m• \033[01;32mFim de transmissão \033[01;37m•\033[0m"
 sleep 1
-./ospacotesmb.sh
+
