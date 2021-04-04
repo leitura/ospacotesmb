@@ -66,9 +66,9 @@ echo -e "\033[01;37mqual opção no momento:\033[0m"
 read OPTION
 
 case $OPTION in
-        (1) mbsfree1
+        (1) https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree1
         ;;
-        (2) mbsfree2
+        (2) https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree2
         ;;
         (3) exit
         ;;
