@@ -66,9 +66,9 @@ echo -e "\033[01;37mqual opção no momento:\033[0m"
 read OPTION
 
 case $OPTION in
-        (1) https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree1
+        (1) curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree1 && chmod 777 mbsfree1 && ./mbsfree1
         ;;
-        (2) https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree2
+        (2) curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree2 && chmod 777 mbsfree2 && ./mbsfree2
         ;;
         (3) exit
         ;;
@@ -77,4 +77,4 @@ case $OPTION in
    sleep 1
 esac
 clear
-./mbsfree.sh
+curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree && chmod 777 mbsfree && ./mbsfree
