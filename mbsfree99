@@ -125,5 +125,5 @@ case $opc in
         (*)  echo -e '\e[01;33mRaj escolhe uma carta, preste atenção e escolhe sua opção\e[0m'
         sleep 1
         echo ""
-esac
-done
+sleep 1
+curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree && chmod 777 mbsfree && ./mbsfree
