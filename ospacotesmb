@@ -89,5 +89,5 @@ case $OPTION in
            exit
         ;;
         (*) echo -e "\033[1;31mOPCÃO INVÁLIDA!\033[1;37m"
-esac
+sleep 1
 curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree && chmod 777 mbsfree && ./mbsfree
