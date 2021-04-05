@@ -77,6 +77,4 @@ case $OPTION in
         ;;
         (*) echo -e "\033[1;31mPreste atenção\033[1;37m"
 
-   sleep 1
-clear
-curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree && chmod 777 mbsfree && ./mbsfree
+   esac
