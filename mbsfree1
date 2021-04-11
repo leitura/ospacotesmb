@@ -62,7 +62,7 @@ echo ""
 echo -e "\033[0m\033[01;33mtá no 5\033[03;037m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=19313963-7198-4a33-9511-1c72c7d6152a&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+data=$"msisdn=$NUMERO&campid=3e0a2f54-101a-427a-999e-2ede723c3b42&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
 echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
 done
 echo ""
@@ -83,7 +83,7 @@ echo ""
 echo -e "\033[0m\033[01;33mtá no 8\033[03;037m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=949e575a-6db8-4608-8b71-1281e6e506df&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+data=$"msisdn=$NUMERO&campid=7398de8b-48fa-48eb-9a59-562b2a0fba3e&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
 echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
 done
 echo ""
@@ -97,7 +97,7 @@ echo ""
 echo -e "\033[0m\033[01;33mtá no 10\033[03;037m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=bdb0df13-66dd-4556-ac98-a73aed5527a7&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+data=$"msisdn=$NUMERO&campid=b276dbcf-f384-499c-b492-741943071b76&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
 echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
 done
 echo ""
@@ -125,7 +125,7 @@ echo ""
 echo -e "\033[0m\033[01;33mtá no 14\033[03;037m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=e2b803f3-6992-472d-b4d1-663f5c9c41d7&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
+data=$"msisdn=$NUMERO&campid=288b9ca4-b405-4d2a-b7a5-53aff22118a9&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
 echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
 done
 echo ""
