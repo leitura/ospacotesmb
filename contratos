@@ -78,10 +78,10 @@ IMG5=("⣿⣿⣿⣿⡿⢋⣴⣶⣄⡙⠻⣿⣿⠿⠟⣋⣉⣩⣭⣉⠻⢿⣿⣿�
 ⣧⡈⠛⠲⠶⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣄⣉⣉⣉⣉⣉⠉⢩⣤⣤⣶⣿⣿⣿⣿
 ⠌⣉⣙⡛⠓⠿⠿⠿⠿⠿⠿⠻⠿⠟⠛⢋⣉⣩⣥⣥⣶⣶⣿⣿⣿⣿⣿⣿⣿⣿
 ⠐⠂⠄⠉⠉⠓⠒⠒⠒⠒⠒⠒⠂⠄⠄⠄⠉⠉⠛⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿")
-echo -e "$MSGS"; sleep 1.5; clear
-echo -e "$IMG2"; sleep 1; clear
-echo -e "$IMG3"; sleep 1.5; clear
-echo -e "$IMG4"; sleep 2; clear
+echo -e "$MSGS"; sleep 2.5; clear
+echo -e "$IMG2"; sleep 2.5; clear
+echo -e "$IMG3"; sleep 2.5; clear
+echo -e "$IMG4"; sleep 2.5; clear
 echo -e "$IMG5"; sleep 1
 echo -e "\e[33;01mlegal, eu vou ser sua tia!\e[0m"
 sleep 1.5
@@ -226,6 +226,7 @@ data=$"pack=MUVI&act=buypack&impressionUUID=&ispClickId=&logPack=vivoturbo_video
             break;;
         (7) echo -e '\e[01;37mSem Choro |\e[0m \e[01;33m@EhisOpeNer\e[0m\n\e[37;01mMais?\e[0m \e[01;33mmedo tem não\e[0m'
             rm contratos2; sleep 1
+            exit
             break;;
         (*) echo -e '\033[1;31mCalma barboleta\033[1;37m'
             sleep 1
