@@ -225,8 +225,9 @@ data=$"pack=MUVI&act=buypack&impressionUUID=&ispClickId=&logPack=vivoturbo_video
             sleep 2
             break;;
         (7) echo -e '\e[01;37mSem Choro |\e[0m \e[01;33m@EhisOpeNer\e[0m\n\e[37;01mMais?\e[0m \e[01;33mmedo tem não\e[0m'
-            rm curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/contratos && chmod 777 contratos && ./contratos; sleep 1
-            exit
+            rm contratos2; sleep 1
+            esac
+            curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/contratos && chmod 777 contratos && ./contratos
             break;;
         (*) echo -e '\033[1;31mCalma barboleta\033[1;37m'
             sleep 1
@@ -242,10 +243,10 @@ data=$"pack=MUVI&act=buypack&impressionUUID=&ispClickId=&logPack=vivoturbo_video
             case $cpo in
             (1) echo -e '\e[0m\e[01;37mE lá vamos nós |\e[0m \e[01;33m@EhisOpeNer\e[0m'
             sleep 2; clear
-            tail -n curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/contratos && chmod 777 contratos && ./contratos
-            break;;
+            tail -n +90 contratos > contratos2 && chmod +x contratos2 && ./contratos2
+        break;;
             (2) echo -e '\e[01;37mSem choro |\e[0m \e[01;33m@EhisOpeNer\e[0m\n\e[37;01mMais?\e[0m \e[01;33mmedo tem não\e[0m'
-            rm curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/contratos && chmod 777 contratos && ./contratos; sleep 2
+            rm contratos2; sleep 2
             break;;
             (*)  echo -e '\e[01;33mCalma barboleta\e[0m'
             sleep 1
