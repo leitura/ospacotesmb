@@ -76,7 +76,7 @@ case $OPTION in
         ;;
         (4) curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ospacotesmb && chmod 777 ospacotesmb && ./ospacotesmb
         ;;
-        (5) curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/contratos && chmod 777 contratos && ./contratos
+        (5) curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/multi && chmod 777 multi && ./multi
         ;;
         (*) echo -e "\033[1;31mPreste atenção\033[1;37m"
 
