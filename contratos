@@ -227,7 +227,6 @@ data=$"pack=MUVI&act=buypack&impressionUUID=&ispClickId=&logPack=vivoturbo_video
         (7) echo -e '\e[01;37mSem Choro |\e[0m \e[01;33m@EhisOpeNer\e[0m\n\e[37;01mMais?\e[0m \e[01;33mmedo tem não\e[0m'
             rm contratos2; sleep 1
             exit
-            bash contratos
             break;;
         (*) echo -e '\033[1;31mCalma barboleta\033[1;37m'
             sleep 1
@@ -251,4 +250,5 @@ data=$"pack=MUVI&act=buypack&impressionUUID=&ispClickId=&logPack=vivoturbo_video
             (*)  echo -e '\e[01;33mCalma barboleta\e[0m'
             sleep 1
             echo ""
-            bash mbsfree
+            esac
+            done
