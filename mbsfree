@@ -59,7 +59,7 @@ echo -e "    \033[0m\033[01;37m• \033[01;33mRaj, escolhe uma carta \033[0m\033
 echo ""
 echo -e "\033[0m\033[01;37m(1) \033[01;33mTestador padrão\033[0m"
 echo -e "\033[0m\033[01;37m(2) \033[01;33mTestar Token personalizado \033[0m"
-echo -e "\033[0m\033[01;37m(3) \033[01;33mMB até o talo (sequência 1 a 99 ou mais) \033[0m"
+echo -e "\033[0m\033[01;37m(3) \033[01;33mMB até o talo (sequência 1 a 999 ou mais) \033[0m"
 echo -e "\033[0m\033[01;37m(4) \033[01;33mPertubar a paz\033[0m"
 echo -e "\033[0m\033[01;37m(5) \033[01;33mContratar MB e Promoções\033[0m"
 echo " "
