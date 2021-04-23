@@ -100,7 +100,7 @@ do
 data=$"msisdn=$cont$NUMERO&campid=$TOKEN&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
 echo -e "\033[0m\033[01;32mMais:\033[01;37m$i\033[03;037m"
 done
-echo -e "\e[0m"; ((c++)) && (($cont==999)) && cont=0 && break
+echo -e "\e[0m"; ((c++)) && (($cont==9999)) && cont=0 && break
 done
 echo -e "    \033[0m\033[01;37m• \033[01;32mFim de Transmissão \033[01;37m•\033[0m"
 echo ""
