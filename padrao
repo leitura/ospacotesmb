@@ -323,7 +323,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mFINALIZANDO...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "ALGO DEU ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo -e "\e[01;37;41m Nunca é um adeus \e[0m"|pv -qL 20
