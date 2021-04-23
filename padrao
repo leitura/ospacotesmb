@@ -128,7 +128,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -143,7 +143,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -158,7 +158,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -173,7 +173,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -188,7 +188,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -203,7 +203,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -218,7 +218,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais \e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -233,7 +233,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -248,7 +248,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -263,7 +263,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -278,7 +278,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -293,7 +293,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
@@ -308,7 +308,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo "FEZ ALGO ERRADO"
+*) echo "PF na cola, aguarde site estabilizar"
 esac
 done
 echo
