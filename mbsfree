@@ -91,20 +91,20 @@ read -n1 -p "$aa" opc
 case $opc in
         (1) echo -e "\n\e[01;33mHORA DE GANHAR UNS MBS\e[0m"|pv -qL 18
             sleep 2
-            ./padrao;;
+            ./mbsfree1;;
         (2) echo -e "\n\e[01;33mPREPARA QUE ESSA VAI ATÉ O TALO\e[0m \e[01;37m( ͡° ͜ʖ ͡°)\e[0m"|pv -qL 18
             sleep 2
-            ./9999;;
+            ./mbsfree99;;
         (3) echo -e "\n\e[01;33mTÁ COM OS TOKENS AÍ NÉ\e[0m"|pv -qL 18
             sleep 2
-            ./personalizado;;
+            ./mbsfree2;;
         (4) echo -e "\n\e[01;33mPOOH, DEIXA OS Muleque JOGAR FREE FIRE EM PAZ\e[0m"|pv -qL 18
             sleep 2.5
-            ./sms;;
+            ./ospacotesmb;;
         (5) echo -e "\n\e[01;33mSUA MÃE NÃO TE DEU CARINHO?\n    POR QUE ÉS TÃO MAU?\e[0m"|pv -qL 18
             sleep 2.5
-            ./creditos;;
-        (6) rm -rf padrao && rm -rf 9999 && rm -rf personalizado && rm -rf sms && rm -rf creditos; echo -e "\n\e[01;33mNÃO CONSEGUE NÉ\e[0m"|pv -qL 18
+            ./multi;;
+        (6) echo -e "\n\e[01;33mNÃO CONSEGUE NÉ\e[0m"|pv -qL 18
             sleep 2
             echo -e "\e[01;33mPARA INICIAR NOVAMENTE DIGITE ./mbsfree\e[0m"
             sleep 1
@@ -119,7 +119,7 @@ nohup pkg install cmatrix -y -qq --silent
 nohup pkg install jq -y -qq --silent
 nohup pkg install git -y -qq --silent
 ###################
-nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree1 > /dev/null && chmod 777 mbsfree99
+nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree1 > /dev/null && chmod 777 mbsfree1
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree2 > /dev/null && chmod 777 mbsfree2
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree99 > /dev/null && chmod 777 mbsfree99
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ospacotesmb > /dev/null && chmod 777 ospacotesmb
