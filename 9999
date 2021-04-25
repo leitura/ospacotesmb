@@ -38,7 +38,7 @@ pack=$'"packprovisionOK"'
 case $body in
 null) echo -e "\e[01;33mDEU RUIM! PROXIMO DIGITO...\e[0m"|pv -qL 20; sleep .5; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo -e "ALGO DEU ERRADO\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
 esac
 done
 echo -e "\e[0m"; ((c++)) && (($cont==9)) && cont=0 && break
