@@ -277,7 +277,7 @@ cc=$(echo -e "\e[01;37mOpção:\e[0m")
       read -n1 -p "$cc" cpo
 case $cpo in
       (1) echo; echo -e '\e[01;37;41m E lá vamos nós | @EhisOpeNer \e[0m'|pv -qL 18
-        sleep 2; ./creditos
+        sleep 2; ./multi
         break;;
       (2) echo; echo -e "\e[01;37;41m Bye Bye | @EhisOpeNer \e[0m"|pv -qL 15; echo -e "\e[01;37;41m     TUDO NUMA BOA     \e[0m"|pv -qL 18
         sleep 1
