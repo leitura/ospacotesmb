@@ -106,7 +106,7 @@ case $opc in
             ./creditos;;
         (6) rm -rf padrao && rm -rf 9999 && rm -rf personalizado && rm -rf sms && rm -rf creditos; echo -e "\n\e[01;33mNÃO CONSEGUE NÉ\e[0m"|pv -qL 18
             sleep 2
-            echo -e "\e[01;33mPARA INICIAR NOVAMENTE DIGITE ./menu\e[0m"
+            echo -e "\e[01;33mPARA INICIAR NOVAMENTE DIGITE ./mbsfree\e[0m"
             sleep 1
             exit;;
         (*) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 2
