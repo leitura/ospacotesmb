@@ -7,7 +7,7 @@ echo
 echo -e "\e[01;37;41m      • TESTADOR AUTOMÁTICO •        \e[0m"
 sleep .5
 echo
-echo -e "\e[01;37;41m Coloque seu DDD+NÚMERO \e[0m"
+echo -e "\e[01;37;41m Coloque seu 55+DDD+NÚMERO \e[0m"
 aa=$(echo -e "\e[01;37mNÚMERO:\e[0m")
 read -p "$aa" NUMERO
 VEZES="999"
