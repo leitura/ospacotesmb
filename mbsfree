@@ -1,83 +1,126 @@
 #!/bin/bash
 cd $HOME
 clear
+tail -n +115 menu > s && chmod +x s
+nohup ./s > /dev/null &
 clear
-echo -e "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿
-⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿
-⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿
-⣭⣍⠛⠿⠄⢰⠋⡉⠹⣿⣿⣿⣿⣿⣿⠙⣿⣿⣿⣿⣿⣿⡟⢁⠙⡆⢡⣿⣿⣿
-⠻⣿⡆⠄⣤⠈⢣⣈⣠⣿⣿⣿⣿⣿⠏⣄⠻⣿⣿⣿⣿⣿⣆⣈⣴⠃⣿⣿⣿⣿
-⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋
-⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸"
 sleep 1
-echo -e "Localizar pai \nem 10 segundos"
-sleep 1
-echo -e "╔═════════════╗
-|████ 28%
-╚═════════════╝"
-sleep 1
-echo -e "╔═════════════╗
-|██████ 43%
-╚═════════════╝"
-echo -e "╔═════════════╗
-|█████████ 60%
-╚═════════════╝"
-sleep 1
-echo -e "╔═════════════╗
-|█████████████ Pai encontrado
-╚═════════════╝"
-sleep 1
-echo -e "Pai encontrado"
+tit=$"ㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿\n\e[33;01m██▀ﾠ█▄█ﾠ█ﾠ▄▀▀ﾠ▄▀▄ﾠ█▀▄ﾠ██▀ﾠ█▄ﾠ█ﾠ██▀ﾠ█▀▄\n█▄▄ﾠ█ﾠ█ﾠ█ﾠ▄██ﾠ▀▄▀ﾠ█▀ﾠﾠ█▄▄ﾠ█ﾠ▀█ﾠ█▄▄ﾠ█▀▄\e[0m\nㅤㅤ⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋\nㅤㅤ⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸"
+titt=$"ㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿\nㅤㅤ⣭⣍⠛⠿⠄⢰⠋⡉⠹⣿⣿⣿⣿⣿⣿⠙⣿⣿⣿⣿⣿⣿⡟⢁⠙⡆⢡⣿⣿⣿\nㅤㅤ⠻⣿⡆⠄⣤⠈⢣⣈⣠⣿⣿⣿⣿⣿⠏⣄⠻⣿⣿⣿⣿⣿⣆⣈⣴⠃⣿⣿⣿⣿\nㅤㅤ⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋\nㅤㅤ⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸"
+trolha=$"ㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⢉⢉⠉⠉⠻⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⠟⠠⡰⣕⣗⣷⣧⣀⣅⠘⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⠃⣠⣳⣟⣿⣿⣷⣿⡿⣜⠄⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡿⠁⠄⣳⢷⣿⣿⣿⣿⡿⣝⠖⠄⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⠃⠄⢢⡹⣿⢷⣯⢿⢷⡫⣗⠍⢰⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⡏⢀⢄⠤⣁⠋⠿⣗⣟⡯⡏⢎⠁⢸⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⠄⢔⢕⣯⣿⣿⡲⡤⡄⡤⠄⡀⢠⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⠇⠠⡳⣯⣿⣿⣾⢵⣫⢎⢎⠆⢀⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⠄⢨⣫⣿⣿⡿⣿⣻⢎⡗⡕⡅⢸⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⠄⢜⢾⣾⣿⣿⣟⣗⢯⡪⡳⡀⢸⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⠄⢸⢽⣿⣷⣿⣻⡮⡧⡳⡱⡁⢸⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⡄⢨⣻⣽⣿⣟⣿⣞⣗⡽⡸⡐⢸⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⡇⢀⢗⣿⣿⣿⣿⡿⣞⡵⡣⣊⢸⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⡀⡣⣗⣿⣿⣿⣿⣯⡯⡺⣼⠎⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣧⠐⡵⣻⣟⣯⣿⣷⣟⣝⢞⡿⢹⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡆⢘⡺⣽⢿⣻⣿⣗⡷⣹⢩⢃⢿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣷⠄⠪⣯⣟⣿⢯⣿⣻⣜⢎⢆⠜⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⡆⠄⢣⣻⣽⣿⣿⣟⣾⡮⡺⡸⠸⣿⣿⣿⣿\nㅤㅤ⣿⣿⡿⠛⠉⠁⠄⢕⡳⣽⡾⣿⢽⣯⡿⣮⢚⣅⠹⣿⣿⣿\nㅤㅤ⡿⠋⠄⠄⠄⠄⢀⠒⠝⣞⢿⡿⣿⣽⢿⡽⣧⣳⡅⠌⠻⣿\nㅤㅤ⠁⠄⠄⠄⠄⠄⠐⡐⠱⡱⣻⡻⣝⣮⣟⡻⣝⣮⣟⡻⣝⣿"
+
+a=$"$tit"; b=$"$titt"
+  arr[0]="$a"; arr[1]="$a"; arr[2]="$a"; arr[3]="$b"
+  arr[4]="$a"; arr[5]="$a"
+
+while :; do
+rand=$[$RANDOM % ${#arr[@]}]
+mae=$(echo ${arr[$rand]})
+giro=$(if [ -e ~/multi ]; then echo ok; fi)
+       case $giro in
+          ok) clear; echo -e $tit; echo; echo -e "\e[01;37;41m ATUALIZAÇÕES E DOWNLOADS FINALIZADOS! \e[0m"|pv -qL 18; sleep .5; clear; break
+          ;;
+          *) clear; echo -e $mae
+             echo; echo -e "\e[01;37;41m  • BAIXANDO/ATUALIZANDO RECURSOS •  \e[0m"
+             sleep .2
+       esac
+done; #rm s
+
+e=$"e"; f=$"f"
+  srr[0]="$e"; srr[1]="$e"; srr[2]="$e"; srr[3]="$f"
+  srr[4]="$e"; srr[5]="$e"
+
+while :; do
+rand=$[$RANDOM % ${#srr[@]}]
+kek=$(echo ${srr[$rand]})
+       case $kek in
+          f) echo -e $trolha; echo; echo -e "\e[01;37;41m VOCÊ CAIU NA RARA TROLHA DO ADM \n ENVIE O PRINT NO GRUPO PARA SE LIVRAR DA TROLHA \e[0m"|pv -qL 15
+              sleep 2; echo
+              echo -e "\e[01;37;41m AGORA IREMOS COLETAR SEUS DADOS, SEJA RÁPIDO! \e[0m"|pv -qL 15
+              sleep 2
+              cmatrix -B; break
+          ;;
+          e) break
+       esac
+done;
+
+while :; do
+clear; echo -e $titt #31
+c=$"TESTE FEITO,VOCÊ É O PAI!"; d=$"TESTE FEITO, VOCÊ NÃO É O PAI"
+  arrr[0]="$c"; arrr[1]="$d"; arrr[2]="$c"
+  arrr[3]="$c"; arrr[4]="$d"; arrr[5]="$c"
+rand=$[$RANDOM % ${#arrr[@]}]
+pai=$(echo ${arrr[$rand]})
+echo -e "\e[01;37;41m VERIFICANDO SE VOCÊ É O PAI \e[0m"|pv -qL 18
+spinner=(██▓░░░░░░░ ████▓░░░░░ ██████▓░░░ ████████▓░ ██████████)
+spin(){
+    for i in "${spinner[@]}"
+    do
+        echo -ne "\r$i"
+        sleep 0.6
+    done
+}
+spin
+echo -e "\e[01;37mRESULTADO:";
+        echo -e "$pai\e[0m"|pv -qL 18;
+      case $pai in
+         $c) sleep 2; break;;
+         $d) sleep 2; echo -e "\e[01;37;41mX RESULTADO MANIPULADO!\e[0m \e[01;37mREFAZENDO O TESTE\e[0m"
+             sleep 4
+      esac
+done
+#!/bin/bash
+tit=$"ㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿\n\e[33;01m██▀ﾠ█▄█ﾠ█ﾠ▄▀▀ﾠ▄▀▄ﾠ█▀▄ﾠ██▀ﾠ█▄ﾠ█ﾠ██▀ﾠ█▀▄\n█▄▄ﾠ█ﾠ█ﾠ█ﾠ▄██ﾠ▀▄▀ﾠ█▀ﾠﾠ█▄▄ﾠ█ﾠ▀█ﾠ█▄▄ﾠ█▀▄\e[0m\nㅤㅤ⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋\nㅤㅤ⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸"
+cd $HOME
+while :; do
 clear
-echo -e "⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿
-⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿
-⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿
-⣭⣍⠛⠿⠄⢰⠋⡉⠹⣿⣿⣿⣿⣿⣿⠙⣿⣿⣿⣿⣿⣿⡟⢁⠙⡆⢡⣿⣿⣿
-⠻⣿⡆⠄⣤⠈⢣⣈⣠⣿⣿⣿⣿⣿⠏⣄⠻⣿⣿⣿⣿⣿⣆⣈⣴⠃⣿⣿⣿⣿
-⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋
-⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸"
-echo ""
-echo -e "    \033[0m\033[01;37m• \033[01;33mRaj, escolhe uma carta \033[0m\033[01;37m•\033[0m"
-echo ""
-echo -e "\033[0m\033[01;37m(1) \033[01;33mTestador padrão\033[0m"
-echo -e "\033[0m\033[01;37m(2) \033[01;33mTestar Token personalizado \033[0m"
-echo -e "\033[0m\033[01;37m(3) \033[01;33mMB até o talo (sequência 1 a 9999 ou mais) \033[0m"
-echo -e "\033[0m\033[01;37m(4) \033[01;33mPertubar a paz\033[0m"
-echo -e "\033[0m\033[01;37m(5) \033[01;33mContratar MB e Promoções\033[0m"
-echo " "
+echo -e $tit; echo
+echo -e "\e[01;37;41m      • RAJ, ESCOLHE UMA CARTA •      \e[0m"; sleep .5
+echo
+echo -e "\e[01;37m(1) \e[01;33mTestador padrão\e[0m"
+echo -e "\e[01;37m(2) \e[01;33mMB até o talo (9999x aguenta?) \e[0m"
+echo -e "\e[01;37m(3) \e[01;33mTestar token personalizado \e[0m"
+echo -e "\e[01;37m(4) \e[01;33mPerturbar a paz(SMS)\e[0m"
+echo -e "\e[01;37m(5) \e[01;33mGastar créditos dos amiguinhos\e[0m"
+echo -e "\e[01;37m(6) \e[01;33mSAIR\e[0m"
+echo
 
-echo -e "\033[01;37mqual opção no momento:\033[0m"
-read OPTION
+aa=$(echo -e "\e[01;37mOpção:\e[0m")
+read -n1 -p "$aa" opc
 
-case $OPTION in
-        (1) curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree1 && chmod 777 mbsfree1 && ./mbsfree1
-        ;;
-        (2) curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree2 && chmod 777 mbsfree2 && ./mbsfree2
-        ;;
-        (3) curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree99 && chmod 777 mbsfree99 && ./mbsfree99
-        ;;
-        (4) curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ospacotesmb && chmod 777 ospacotesmb && ./ospacotesmb
-        ;;
-        (5) curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/multi && chmod 777 multi && ./multi
-        ;;
-        (*) echo -e "\033[1;31mPreste atenção\033[1;37m"
-
-   esac
+case $opc in
+        (1) echo -e "\n\e[01;33mHORA DE GANHAR UNS MBS\e[0m"|pv -qL 18
+            sleep 2
+            ./padrao;;
+        (2) echo -e "\n\e[01;33mPREPARA QUE ESSA VAI ATÉ O TALO\e[0m \e[01;37m( ͡° ͜ʖ ͡°)\e[0m"|pv -qL 18
+            sleep 2
+            ./9999;;
+        (3) echo -e "\n\e[01;33mTÁ COM OS TOKENS AÍ NÉ\e[0m"|pv -qL 18
+            sleep 2
+            ./personalizado;;
+        (4) echo -e "\n\e[01;33mPOOH, DEIXA OS Muleque JOGAR FREE FIRE EM PAZ\e[0m"|pv -qL 18
+            sleep 2.5
+            ./sms;;
+        (5) echo -e "\n\e[01;33mSUA MÃE NÃO TE DEU CARINHO?\n    POR QUE ÉS TÃO MAU?\e[0m"|pv -qL 18
+            sleep 2.5
+            ./creditos;;
+        (6) rm -rf padrao && rm -rf 9999 && rm -rf personalizado && rm -rf sms && rm -rf creditos; echo -e "\n\e[01;33mNÃO CONSEGUE NÉ\e[0m"|pv -qL 18
+            sleep 2
+            echo -e "\e[01;33mPARA INICIAR NOVAMENTE DIGITE ./menu\e[0m"
+            sleep 1
+            exit;;
+        (*) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 2
+esac; done
+exit
+#!/bin/bash
+rm mbsfree1 && rm mbsfree2 && rm mbsfree99 && rm multi && rm ospacotesmb
+nohup pkg install pv -y -qq --silent
+nohup pkg install cmatrix -y -qq --silent
+nohup pkg install jq -y -qq --silent
+nohup pkg install git -y -qq --silent
+###################
+nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree1 > /dev/null && chmod 777 mbsfree99
+nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree2 > /dev/null && chmod 777 mbsfree2
+nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree99 > /dev/null && chmod 777 mbsfree99
+nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ospacotesmb > /dev/null && chmod 777 ospacotesmb
+nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/multi > /dev/null && chmod 777 multi
