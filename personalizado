@@ -10,7 +10,7 @@ echo
 echo -e "\e[01;37;41m COLE SEU TOKEN \e[0m"
 aa=$(echo -e "\e[01;37mTOKEN:\e[0m")
 read -p "$aa" TOKEN
-echo -e "\e[01;37;41m AGORA O DDD+NUMERO \e[0m"
+echo -e "\e[01;37;41m AGORA O 55+DDD+NUMERO \e[0m"
 aa=$(echo -e "\e[01;37mNÚMERO:\e[0m")
 read -p "$aa" NUMERO
 sleep .5
@@ -28,14 +28,14 @@ echo
 echo -e "\e[0m\e[01;37;41m TESTANDO O TOKEN \e[0m"
 for i in $(seq $VEZES);
 do
-response=$(data=$"msisdn=$NUMERO&campid=$TOKEN&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -d "${data}")
+response=$(data=$"msisdn=$NUMERO&campid=$TOKEN&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
 body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
 null) echo -e "\e[01;33mTOKEN FULEIRO, TENTE OUTRO...\e[0m"|pv -qL 20; sleep .5; break;;
 $pack) echo -e "\e[01;32mSUCESSO, SÓ ESPERAR CAIR\e[0m \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+*) echo -e "ALGO DEU ERRADO\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
 esac
 done
 echo
