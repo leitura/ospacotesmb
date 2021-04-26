@@ -53,7 +53,7 @@ body=$(echo $response | jq '.code')
 case $body in
 101) echo -e "\e[01;33mCOLOCOU O NUMERO ERRADO... \e[0m\e[01;37mINICIANDO O PRÓXIMO...\e[0m"|pv -qL 20; sleep .5; break;;
 0) echo -e "\e[01;32mAGORA SÓ ESPERAR O CHORO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-*) echo -e "ALGO DEU ERRADO... \e[0m \e[01;37mINICIANDO O PROXIMO...\e[0m"; echo $response; break
+*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 ... \e[0m \e[01;37mINICIANDO O PROXIMO...\e[0m"; echo $response; break
 esac
 done
 echo
