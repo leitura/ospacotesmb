@@ -1,3 +1,5 @@
+pkg install jq -y -qq --silent
+pkg install pv -y -qq --silent
 #!/bin/bash
 clear
 MSGS=("⣿⣿⣯⠉⠄⠄⠄⠄⠄⠄⡄⠄⠄⠄⠄⠄⠄⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
