@@ -42,8 +42,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
             body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done; echo
 
 
@@ -54,8 +54,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
              body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done; echo
 
 
@@ -66,8 +66,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
              body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done; echo
 
 
@@ -78,8 +78,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
              body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done; echo
 
 
@@ -90,8 +90,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
              body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done; echo
 
 
@@ -102,8 +102,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
              body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done;
          break;;
    
@@ -127,8 +127,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
              body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done
          break;;
 
@@ -152,8 +152,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
              body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done
          break;;
 
@@ -177,8 +177,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
              body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done
          break;;
 
@@ -202,8 +202,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
              body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done
          break;;
 
@@ -227,8 +227,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
              body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done
          break;;
 
@@ -252,8 +252,8 @@ echo -e "\e[01;37;41m NUMERO: $NUMERO | QUANTIDADE: $VEZES \e[0m";echo
              body=$(echo $response | grep -c response)
 
          case $body in
-         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-         *) echo -e "A CASA CAIU\e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+         1) echo -e "\e[01;32mMERDA FEITA, ADEUS SALDO \e[0m\e[01;37mmais: $i\e[0m"|pv -qL 18;;
+         *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
          esac; done
          break;;
 
