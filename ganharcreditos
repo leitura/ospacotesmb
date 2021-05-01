@@ -1,0 +1,104 @@
+clear
+tit=$"ㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿\n\e[33;01m██▀ﾠ█▄█ﾠ█ﾠ▄▀▀ﾠ▄▀▄ﾠ█▀▄ﾠ██▀ﾠ█▄ﾠ█ﾠ██▀ﾠ█▀▄\n█▄▄ﾠ█ﾠ█ﾠ█ﾠ▄██ﾠ▀▄▀ﾠ█▀ﾠﾠ█▄▄ﾠ█ﾠ▀█ﾠ█▄▄ﾠ█▀▄\e[0m\nㅤㅤ⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋\nㅤㅤ⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸"
+echo -e $tit
+sleep .5
+echo
+echo -e "\e[01;37;41m        • GANHAR CRÉDITOS •           \e[0m"
+sleep 1.5; echo
+echo -e "\e[01;37;41m ACERTE AS PERGUNTAS E GANHE O PRÊMIO \e[0m"; echo; sleep 1
+echo -e "\e[01;37m• SERÃO 2 PERGUNTAS FÁCEIS\e[0m"|pv -qL 18
+echo -e "\e[01;37m• SE VOCÊ ACOMPANHA O EhisOpeNer, JÁ ESTÁ NO PAPO\e[0m"|pv -qL 18
+echo -e "\e[01;37m• PARA DAR CERTO, É NECESSÁRIO USAR A REDE DO CHIP VIVO!\e[0m"|pv -qL 18
+echo -e "\e[01;37m• LEMBRANDO QUE SUA LINHA DEVE ESTAR COM TUDO CERTO PARA GANHAR\e[0m"|pv -qL 18
+echo -e "\e[01;37m• SE EU PEGAR COLANDO DO AMIGUINHO VAI SER REPROVADO!\e[0m"|pv -qL 18; sleep .5
+echo -e "\e[01;37m• BOA SORTE! \e[0m"|pv -qL 18; sleep 3
+clear
+while :; do
+       clear; echo -e $tit; echo
+       echo -e "\e[01;37;41m ACERTE AS QUESTÕES E GANHE O PRÊMIO \e[0m"; echo; sleep 1.2
+          echo -e "\e[01;37;41m 1° QUESTÃO \e[0m"; sleep .5
+          echo -e "\e[01;37m • COMPLETE A SEGUINTE FRASE: \e[0m"; sleep 1
+                echo -e '\e[01;33m "E não se esqueça da EVOZI o aplicativo da ....."\e[0m'|pv -qL 14; sleep 1; echo
+                    echo -e "\e[01;37m(a) Vivo\e[0m"; sleep 1
+                    echo -e "\e[01;37m(b) HTTP Injector\e[0m"; sleep 1
+                    echo -e "\e[01;37m(c) Agulha\e[0m"; sleep 1
+                    echo -e "\e[01;37m(d) NetFree\e[0m"; sleep 1; echo
+                echo -e "\e[01;37mQUAL A OPÇÃO CORRETA? A B C OU D ..."|pv -qL 18; sleep .5; echo
+                aa=$(echo -e "\e[01;37mRESPOSTA: \e[0m\e[01;32m")
+              read -n1 -p "$aa" opc
+          case $opc in
+              (a|A) echo; echo -e "\e[0m\e[01;37;41m RESPOSTA... E E ERRADA! \e[0m"|pv -qL 6
+                    echo -e "\e[01;33m QUE PENA, TENTE NOVAMENTE DEPOIS...\e[0m"
+                    exit;;
+              (b|B) echo; echo -e "\e[0m\e[01;37;41m RESPOSTA... E E ERRADA! \e[0m"|pv -qL 6
+                    echo -e "\e[01;33m QUE PENA, TENTE NOVAMENTE DEPOIS...\e[0m"
+                    exit;;
+              (c|C) echo; echo -e "\e[0m\e[01;37;41m RESPOSTA... E E EXATA! \e[0m"|pv -qL 6
+                    echo -e "\e[01;32m BOA JOVEM GAFANHOTO!\e[0m"|pv -qL 18; sleep 2
+                    echo -e "\e[01;37;41m PRÓXIMA QUESTÃO... \e[0m"|pv -qL 15
+                    break;;
+              (d|D) echo; echo -e "\e[0m\e[01;37;41m RESPOSTA... E E ERRADA! \e[0m"|pv -qL 6
+                    echo -e "\e[01;33m QUE PENA, TENTE NOVAMENTE DEPOIS...\e[0m"
+                    exit;;
+                *) echo; echo -e "\e[01;33m RESPONDA APENAS COM: a | b | c | ou d\e[0m"; sleep 3.5
+           esac
+done
+while :; do
+       clear; echo -e $tit; echo
+       echo -e "\e[01;37;41m ACERTE AS QUESTÕES E GANHE O PREMIO \e[0m"; echo; sleep 1.2
+          echo -e "\e[01;37;41m 2° QUESTÃO \e[0m"; sleep .5
+          echo -e "\e[01;37m • QUAL O HACKER MAIS PERIGOSO DO MUNDO? \e[0m"; sleep 1; echo
+                    echo -e "\e[01;37m(a) The Homeless Hacker \e[0m"; sleep 1
+                    echo -e "\e[01;37m(b) Lucas Hackersinho\e[0m"; sleep 1
+                    echo -e "\e[01;37m(c) Jonathan c0mrade\e[0m"; sleep 1
+                    echo -e "\e[01;37m(d) QUALQUER UM COM FOTO DO 'ANONIMUS' \e[0m"; sleep 1; echo
+                echo -e "\e[01;37mQUAL A OPÇÃO CORRETA? A B C OU D ..."|pv -qL 18; sleep .5; echo
+                aa=$(echo -e "\e[01;37mRESPOSTA: \e[0m\e[01;32m")
+               read -n1 -p "$aa" opc
+          case $opc in
+              (a|A) echo; echo -e "\e[0m\e[01;37;41m RESPOSTA... E E ERRADA! \e[0m"|pv -qL 6
+                    echo -e "\e[01;33m QUE PENA, TENTE NOVAMENTE DEPOIS...\e[0m"
+                    exit;;
+              (b|B) echo; echo -e "\e[0m\e[01;37;41m RESPOSTA... E E EXATA! \e[0m"|pv -qL 6
+                    echo -e "\e[01;32m QUE ORGULHO! VOCÊ CERTAMENTE MERECE O PRÊMIO\e[0m"|pv -qL 13; sleep 2
+                    break;;
+              (c|C) echo; echo -e "\e[0m\e[01;37;41m RESPOSTA... E E ERRADA! \e[0m"|pv -qL 6
+                    echo -e "\e[01;33m QUE PENA, TENTE NOVAMENTE DEPOIS...\e[0m"
+                    exit;;
+              (d|D) echo; echo -e "\e[0m\e[01;37;41m RESPOSTA... E E ERRADA! \e[0m"|pv -qL 6
+                    echo -e "\e[01;33m QUE PENA, TENTE NOVAMENTE DEPOIS...\e[0m"
+                    exit;;
+                *) echo; echo -e "\e[01;33m RESPONDA APENAS COM: a | b | c | ou d\e[0m"; sleep 3.5
+           esac
+done
+clear
+echo -e $tit; echo
+echo -e "\e[01;37;41m AGORA VAMOS PRO SHOW \e[0m"; sleep 1
+echo -e "\e[01;37m • VERIFICANDO SE SUA LINHA ESTÁ OK"|pv -qL 15
+response=$(site=$"http://portalrecarga.vivo.com.br/ca/page/creditoantecipado?offerID=1398&serviceID=128" && curl -s $site -x 52.1.217.204:80 -o a)
+body=$(grep -c "TW2" a)
+            case $body in
+                 0) echo -e "\e[01;33m LINHA PODRE, SEM CHIP FULEIRO PFV... \e[0m"|pv -qL 16; sleep 2; rm a
+                    exit;;
+                 *) echo -e "\e[01;32m TUDO CERTO! \e[0m"|pv -qL 15; echo; sleep 1
+            esac
+tail -n +28 a > b && head -n 1 b > e
+rm b
+a=$(grep -o "TW2................." a)
+TOKEN=$a
+b=$(grep -o "55..........." e)
+NUMERO=$b
+echo -e "\e[01;37;41m FAZENDO A MÁGICA...   \e[0m"|pv -qL 18; sleep 1.2; echo
+echo -e "\e[01;37;41m NUMERO: $NUMERO \e[0m"
+echo -e "\e[01;37;41m TOKEN: $TOKEN \e[0m"; sleep 1.5
+response2=$(site=$"http://portalrecarga.vivo.com.br/ca/activate/creditoantecipado/" && curl -s -d "msisdn=$NUMERO&channel=NCredit&tokenOffer=$TOKEN&offerID=1398&creditValue=R%24+1%2C99&rateValue=R%24+0%2C79" "$site" -x 52.1.217.204:80 -o result)
+rm a; rm e
+c=$(grep -o "sucesso" result)
+              case $c in
+             sucesso) echo; echo -e "\e[01;37;41m PARABÉNS!... VOCÊ GANHOU CRÉDITOS NO SEU CHIP VIVO \e[0m"|pv -qL 15; sleep 1.5
+                      echo -e "\e[01;33m SEM CHORO!\e[0m"; sleep 1
+                      exit;;
+                   *) echo; echo -e "\e[01;33m Roubaram os cabos\e[0m"; sleep 1
+                      cat result
+                      exit
+              esac; rm result
