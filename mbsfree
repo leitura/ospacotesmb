@@ -73,7 +73,7 @@ clear
 echo -e $IMG5; echo
 echo -e "\e[01;37;41m      • RAJ, ESCOLHE UMA CARTA •      \e[0m"; sleep .5
 echo
-echo -e "\e[01;37m(1) \e[01;33mTestador padrão\e[0m"
+echo -e "\e[01;37m(1) \e[01;33mTestador padrão MB fácil\e[0m"
 echo -e "\e[01;37m(2) \e[01;33mGanhar Créditos \e[0m"
 echo -e "\e[01;37m(3) \e[01;33mMB até o talo (9999x aguenta?) \e[0m"
 echo -e "\e[01;37m(4) \e[01;33mTestar token personalizado \e[0m"
