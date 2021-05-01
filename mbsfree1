@@ -115,7 +115,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -130,7 +130,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -145,7 +145,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -160,7 +160,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -175,7 +175,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -190,7 +190,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -205,7 +205,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase \e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase \e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -220,7 +220,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -235,7 +235,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -250,7 +250,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -265,7 +265,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -280,7 +280,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
@@ -295,7 +295,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na espectativa\e[0m"|pv -qL 20; break;;
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mToken na expectativa\e[0m"|pv -qL 20; break;;
 $pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 "; echo $response; break
 esac
