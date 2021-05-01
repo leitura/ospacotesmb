@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $HOME
 clear
-tail -n +111 mbsfree > s && chmod +x s
+tail -n +115 mbsfree > s && chmod +x s
 nohup ./s > /dev/null &
 clear
 sleep 1
