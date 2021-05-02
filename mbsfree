@@ -98,9 +98,6 @@ while :; do
                             *) echo -e "\e[01;37mhoje não é seu dia de sorte\e[0m"; break
                    esac
 done
-e=$"e"; f=$"f"
-  srr[0]="$e"; srr[1]="$e"; srr[2]="$e"; srr[3]="$f"
-  srr[4]="$e"; srr[5]="$e"
 while :; do
 clear; echo -e $IMG5 #31
 c=$"TESTE FEITO,VOCÊ É O PAI!"; d=$"TESTE FEITO, VOCÊ NÃO É O PAI"
