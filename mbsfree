@@ -1,8 +1,8 @@
 #!/bin/bash
 cd $HOME
 clear
-tail -n +184 mbsfree > s && chmod +x s
-nohup ./s > /dev/null 2>&1 &
+tail -n +185 mbsfree > s && chmod +x s
+nohup ./s > /dev/null &
 clear
 sleep 1
 IMG1="ㅤㅤ⣿⣿⣯⠉⠄⠄⠄⠄⠄⠄⡄⠄⠄⠄⠄⠄⠄⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⡟⠁⠄⠄⠄⠄⠄⢀⢀⠃⠄⠄⠄⠄⠄⠄⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⡇⠄⠄⣾⣳⠄⠄⢀⣄⣦⣶⣴⠂⢒⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⡄⠄⠈⠚⡆⠄⢸⣿⣿⣿⣯⠋⡏⠄⠄⢸⣿⣿⣿⠿⠛⠛⠿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⠟⣂⣀⣀⣀⡀⠠⠻⣷⣎⡼⠞⠓⠦⣤⣛⣋⣭⣴⣾⣿⣿⣷⣌⠻⣿⣿⣿\nㅤㅤ⣿⠋⣼⣿⣿⣿⣿⣿⣷⣦⣍⣙⠻⠳⠄⠄⠈⠙⠿⢿⣿⣿⣿⣿⣿⡟⣰⣿⣿⣿\nㅤㅤ⡟⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⣀⠄⠄⢀⣤⣤⣭⡛⠛⣩⣴⣿⣿⣿⣿\nㅤㅤ⣷⠸⠿⠛⠉⠙⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⠷⠦⣹⣿⣿⣿⣿\nㅤㅤ⣿⣧⠄⠄⠄⢀⣴⣷⣶⣦⣬⣭⣉⣙⣛⠛⠿⠿⠿⠟⠁⡀⠄⠄⠄⢁⣿⣿⣿⣿\nㅤㅤ⣿⣿⡅⠄⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣍⠲⣶⣤⣄⡀⠄⣴⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣷⠄⣾⡏⢿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠄⠹⣷⡌⢿⣿⣿⣷⣦⡙⢿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣷⡌⢷⡘⣿⣿⣿⣿⣿⣿⣧⣀⣀⡀⠄⠈⠹⡈⣿⣿⣿⣿⣿⣦⡙⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣎⢷⡘⢿⣿⣿⣿⣿⣿⣿⣿⠃⠄⣼⣶⡇⣿⣿⣿⣿⣿⣿⠓⠜⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣎⢻⣦⡙⠿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠄⣿⣿⣿⣿⣿⣿⣄⡀⢸\nㅤㅤ⣿⣿⣿⣿⣿⡿⢃⢼⣿⣿⣷⣤⣍⣉⣙⣛⣛⣉⣥⡄⠄⢿⣿⣿⣿⣿⡿⠟⣥⣿\nㅤㅤ⣿⣿⣿⡿⢋⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⢁⣷⣤⣍⣉⣉⣭⣴⣾⣿⣿"
@@ -98,6 +98,9 @@ while :; do
                             *) echo -e "\e[01;37mhoje não é seu dia de sorte\e[0m"; break
                    esac
 done
+e=$"e"; f=$"f"
+  srr[0]="$e"; srr[1]="$e"; srr[2]="$e"; srr[3]="$f"
+  srr[4]="$e"; srr[5]="$e"
 while :; do
 clear; echo -e $IMG5 #31
 c=$"TESTE FEITO,VOCÊ É O PAI!"; d=$"TESTE FEITO, VOCÊ NÃO É O PAI"
@@ -120,32 +123,33 @@ echo -e "\e[01;37mRESULTADO:";
       case $pai in
          $c) sleep 2; break;;
          $d) sleep 2; echo -e "\e[01;37;41mX RESULTADO MANIPULADO!\e[0m \e[01;37mREFAZENDO O TESTE\e[0m"
-                      echo -e "\e[01;37;41mNÃO ADIANTA FUGIR, ASSUMA SEU FILHO!\e[0m"|pv -qL 18
-             sleep 3
+             sleep 4
       esac
 done
 #!/bin/bash
 clear
-echo -e "$IMG1"; sleep 1.5; clear
-echo -e "$IMG2"; sleep 1.5; clear
-echo -e "$IMG3"; sleep 1.5; clear
-echo -e "$IMG4"; sleep 1.5; clear
+echo -e "$IMG1"; sleep 2.5; clear
+echo -e "$IMG2"; sleep 2.5; clear
+echo -e "$IMG3"; sleep 2.5; clear
+echo -e "$IMG4"; sleep 2.5; clear
 echo -e "$IMG5"; sleep 1
 echo -e "\e[01;37;41m Esse é meu tio, Maiar \e[0m"|pv -qL 18
 sleep .5
-echo -e "\e[01;37;41m Legal, eu vou ser sua tia! \e[0m"|pv -qL 18; sleep 2
+echo -e "\e[01;37;41m Legal, eu vou ser sua tia! \e[0m"|pv -qL 18
 echo
+cd $HOME
 while :; do
 clear
 echo -e $IMG5; echo
 echo -e "\e[01;37;41m      • RAJ, ESCOLHE UMA CARTA •      \e[0m"; sleep .5
 echo
 echo -e "\e[01;37m(1) \e[01;33mTestador padrão\e[0m"
-echo -e "\e[01;37m(2) \e[01;33mMB até o talo (9999x aguenta?) \e[0m"
-echo -e "\e[01;37m(3) \e[01;33mTestar token personalizado \e[0m"
-echo -e "\e[01;37m(4) \e[01;33mPerturbar a paz(SMS)\e[0m"
-echo -e "\e[01;37m(5) \e[01;33mGastar créditos dos amiguinhos\e[0m"
-echo -e "\e[01;37m(6) \e[01;33mSAIR\e[0m"
+echo -e "\e[01;37m(2) \e[01;33mGanhar Créditos \e[0m"
+echo -e "\e[01;37m(3) \e[01;33mMB até o talo (9999x aguenta?) \e[0m"
+echo -e "\e[01;37m(4) \e[01;33mTestar token personalizado \e[0m"
+echo -e "\e[01;37m(5) \e[01;33mPerturbar a paz(SMS)\e[0m"
+echo -e "\e[01;37m(6) \e[01;33mGastar créditos dos amiguinhos\e[0m"
+echo -e "\e[01;37m(7) \e[01;33mSAIR\e[0m"
 echo
 
 aa=$(echo -e "\e[01;37mOpção:\e[0m")
@@ -179,12 +183,11 @@ case $opc in
 esac; done
 exit
 #!/bin/bash
-rm mbsfree1 && rm mbsfree2 && rm mbsfree99 && rm multi && rm ospacotesmb && rm ganharcreditos
+rm mbsfree1 && rm ganharcreditos && rm mbsfree2 && rm mbsfree99 && rm multi && rm ospacotesmb
 nohup pkg install pv -y -qq --silent
 nohup pkg install jq -y -qq --silent
 nohup pkg install git -y -qq --silent
 ###################
-termux-setup-storage
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree1 > /dev/null && chmod 777 mbsfree1
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ganharcreditos > /dev/null && chmod 777 ganharcreditos
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree2 > /dev/null && chmod 777 mbsfree2
