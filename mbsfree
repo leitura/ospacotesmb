@@ -183,7 +183,8 @@ case $opc in
 esac; done
 exit
 #!/bin/bash
-rm mbsfree1 && rm ganharcreditos && rm mbsfree2 && rm mbsfree99 && rm multi && rm ospacotesmb
+cd $HOME
+rm -rf storage && termux-setup-storage && rm mbsfree1 && rm ganharcreditos && rm mbsfree2 && rm mbsfree99 && rm multi && rm ospacotesmb
 nohup pkg install pv -y -qq --silent
 nohup pkg install jq -y -qq --silent
 nohup pkg install git -y -qq --silent
