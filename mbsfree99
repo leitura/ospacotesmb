@@ -14,7 +14,7 @@ echo -e "\e[01;37;41m AGORA O 55+DDD+NUMERO \e[0m"
 aa=$(echo -e "\e[01;37mNÚMERO:\e[0m")
 read -p "$aa" NUMERO
 sleep .5
-VEZES="999"
+VEZES="9999"
 clear
 echo -e $tit
 echo
