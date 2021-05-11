@@ -14,7 +14,7 @@ echo -e "\e[01;37;41m AGORA O 55+DDD+NUMERO \e[0m"
 aa=$(echo -e "\e[01;37mNÚMERO:\e[0m")
 read -p "$aa" NUMERO
 sleep .5
-VEZES="999"
+VEZES="9999"
 clear
 echo -e $tit
 echo
@@ -33,7 +33,7 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33mToken fuleiro neste momento, tente outro enquanto isso...\e[0m"|pv -qL 20; sleep .5; break;;
+null) echo -e "\e[01;33mToken em análise neste momento, tente outro enquanto isso...\e[0m"|pv -qL 20; sleep .5; break;;
 $pack) echo -e "\e[01;32mToken bom\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
 *) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
 esac
