@@ -507,11 +507,87 @@ body=$(echo $response | jq '.packprovision')
 pack=$'"packprovisionOK"'
 
 case $body in
-null) echo -e "\e[01;33msem choro\e[0m \e[01;37mFINALIZANDO...\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mToken bom\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
-*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mFINALIZANDO...\e[0m"; echo $response; break
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
+*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
 esac
 done
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 28 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=3ce88629-bea8-496f-bae3-432c932ea778&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
+*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
+esac
+done
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 29 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=ddf114e4-c29b-44f1-b04b-1621234f2f5d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
+*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
+esac
+done
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 30 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=eeeee367-b3a7-4293-9dce-116de3b7157d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
+*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
+esac
+done
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 31 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=9cc0b507-59d5-4773-a9a0-9c3efbf6df2f&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
+*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
+esac
+done
+echo
+
+echo -e "\e[0m\e[01;37;41m TOKEN 32 \e[0m"
+for i in $(seq $VEZES);
+do
+response=$(data=$"msisdn=$NUMERO&campid=f1a6c737-5859-405f-8bb9-7805528bbdf8&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+body=$(echo $response | jq '.packprovision')
+pack=$'"packprovisionOK"'
+
+case $body in
+null) echo -e "\e[01;33mquase\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
+$pack) echo -e "\e[01;32mToken ON\e[0m \e[01;37mmais: $i\e[0m"|pv -qL 18;;
+*) echo -e "Informe Vivo: IMEI capturado, pode ser bloqueado pelo uso indevido conforme regulamento em nossa Rede, ligue no 1058 \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
+esac
+done
+
 echo -e "\e[01;37;41m          NUNCA É UM ADEUS           \e[0m"|pv -qL 20
 echo -e "\e[01;37;41m Pode testar a opção 'MB até o talo' \e[0m"|pv -qL 20; sleep 1.5
 echo -e "\e[01;37;41m      Se você achar que aguenta      \e[0m"; sleep 2
