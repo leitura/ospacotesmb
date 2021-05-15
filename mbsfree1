@@ -1,611 +1,427 @@
-#!/bin/bash
-clear
-MSGS=("⣿⣿⣯⠉⠄⠄⠄⠄⠄⠄⡄⠄⠄⠄⠄⠄⠄⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⡟⠁⠄⠄⠄⠄⠄⢀⢀⠃⠄⠄⠄⠄⠄⠄⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⡇⠄⠄⣾⣳⠄⠄⢀⣄⣦⣶⣴⠂⢒⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⡄⠄⠈⠚⡆⠄⢸⣿⣿⣿⣯⠋⡏⠄⠄⢸⣿⣿⣿⠿⠛⠛⠿⣿⣿⣿⣿⣿
-⣿⣿⠟⣂⣀⣀⣀⡀⠠⠻⣷⣎⡼⠞⠓⠦⣤⣛⣋⣭⣴⣾⣿⣿⣷⣌⠻⣿⣿⣿
-⣿⠋⣼⣿⣿⣿⣿⣿⣷⣦⣍⣙⠻⠳⠄⠄⠈⠙⠿⢿⣿⣿⣿⣿⣿⡟⣰⣿⣿⣿
-⡟⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⣀⠄⠄⢀⣤⣤⣭⡛⠛⣩⣴⣿⣿⣿⣿
-⣷⠸⠿⠛⠉⠙⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⠷⠦⣹⣿⣿⣿⣿
-⣿⣧⠄⠄⠄⢀⣴⣷⣶⣦⣬⣭⣉⣙⣛⠛⠿⠿⠿⠟⠁⡀⠄⠄⠄⢁⣿⣿⣿⣿
-⣿⣿⡅⠄⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣍⠲⣶⣤⣄⡀⠄⣴⣿⣿⣿⣿⣿
-⣿⣿⣷⠄⣾⡏⢿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠄⠹⣷⡌⢿⣿⣿⣷⣦⡙⢿⣿⣿⣿
-⣿⣿⣿⣷⡌⢷⡘⣿⣿⣿⣿⣿⣿⣧⣀⣀⡀⠄⠈⠹⡈⣿⣿⣿⣿⣿⣦⡙⣿⣿
-⣿⣿⣿⣿⣿⣎⢷⡘⢿⣿⣿⣿⣿⣿⣿⣿⠃⠄⣼⣶⡇⣿⣿⣿⣿⣿⣿⠓⠜⣿
-⣿⣿⣿⣿⣿⣿⣎⢻⣦⡙⠿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠄⣿⣿⣿⣿⣿⣿⣄⡀⢸
-⣿⣿⣿⣿⣿⡿⢃⢼⣿⣿⣷⣤⣍⣉⣙⣛⣛⣉⣥⡄⠄⢿⣿⣿⣿⣿⡿⠟⣥⣿
-⣿⣿⣿⡿⢋⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⢁⣷⣤⣍⣉⣉⣭⣴⣾⣿⣿")
-IMG2=("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿
-⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿
-⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿
-⣭⣍⠛⠿⠄⢰⠋⡉⠹⣿⣿⣿⣿⣿⣿⠙⣿⣿⣿⣿⣿⣿⡟⢁⠙⡆⢡⣿⣿⣿
-⠻⣿⡆⠄⣤⠈⢣⣈⣠⣿⣿⣿⣿⣿⠏⣄⠻⣿⣿⣿⣿⣿⣆⣈⣴⠃⣿⣿⣿⣿
-⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋
-⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸")
-IMG3=("⠄⠄⠄⣀⣞⣵⢣⣩⣚⣞⠿⢍⡧⡻⡿⠟⠗⣄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⠄⢴⢿⢸⢘⢽⢓⢺⣷⣦⣯⣽⠪⢃⡄⡞⡇⢿⣦⡀⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⠄⠸⠈⠄⠄⠈⠢⠻⣫⣯⣯⠯⠝⢈⣷⡂⣽⡆⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⢀⡀⣤⣤⣦⣶⣿⢸⣿⢋⣢⣯⣯⣓⣼⣼⣯⠞⣫⠄⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⣵⣿⣿⣿⣿⣿⠿⣣⡅⣟⢽⠟⢵⣾⣾⣶⣦⣉⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⠙⠿⠿⢟⣫⣶⣿⣿⡇⢯⠲⣁⣈⣹⣽⣿⣿⣿⣷⣦⡀⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⠄⠄⠄⠈⣿⠿⢟⣫⣽⣶⣾⣿⣿⣿⣿⣿⠿⠿⠛⠉⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⠄⠄⣠⣴⣶⣿⡿⢟⣛⣭⣭⣯⣶⣶⣦⣤⣀⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄
-⠄⠄⣠⣾⢿⡿⠿⣛⣥⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⣷⣿⣿⣾⣶⣤⣄⠄⠄⠄
-⢀⡞⠅⡜⣼⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⣵⣿⣿⣿⣿⣿⣿⣿⣷⣆⠄
-⠄⣼⣧⡑⠑⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢟⣽⠷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆
-⢸⣿⣷⣶⣷⣶⣶⣮⣭⣿⣿⣭⣯⢋⣵⡾⢃⣾⢊⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇
-⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡘⠛⣐⣭⣶⣿⣿⣾⣛⣻⣿⣿⣿⣿⣿⡟⠄
-⠐⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣲⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠄⠄
-⠄⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢃⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠄⠄⠄")
-IMG4=("⣿⣿⡻⠿⣳⠸⢿⡇⢇⣿⡧⢹⠿⣿⣿⣿⣿⣾⣿⡇⣿⣿⣿⣿⡿⡐⣯⠁ ⠄⠄
-⠟⣛⣽⡳⠼⠄⠈⣷⡾⣥⣱⠃⠣⣿⣿⣿⣯⣭⠽⡇⣿⣿⣿⣿⣟⢢⠏⠄ ⠄
-⢠⡿⠶⣮⣝⣿⠄⠄⠈⡥⢭⣥⠅⢌⣽⣿⣻⢶⣭⡿⠿⠜⢿⣿⣿⡿⠁⠄⠄
-⠄⣼⣧⠤⢌⣭⡇⠄⠄⠄⠭⠭⠭⠯⠴⣚⣉⣛⡢⠭⠵⢶⣾⣦⡍⠁⠄⠄⠄⠄
-⠄⣿⣷⣯⣭⡷⠄⠄⢀⣀⠩⠍⢉⣛⣛⠫⢏⣈⣭⣥⣶⣶⣦⣭⣛⠄⠄⠄⠄⠄
-⢀⣿⣿⣿⡿⠃⢀⣴⣿⣿⣿⣎⢩⠌⣡⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⠄⠄⠄
-⢸⡿⢟⣽⠎⣰⣿⣿⣿⣿⣿⣿⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠄⠄
-⣰⠯⣾⢅⣼⣿⣿⣿⣿⣿⣿⡇⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠄
-⢰⣄⡉⣼⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠄
-⢯⣌⢹⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄
-⢸⣇⣽⣿⣿⣿⣿⣿⣿⣿⣿⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄
-⢸⣟⣧⡻⣿⣿⣿⣿⣿⣿⣿⣧⡻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄
-⠈⢹⡧⣿⣸⠿⢿⣿⣿⣿⣿⡿⠗⣈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄
-⠄⠘⢷⡳⣾⣷⣶⣶⣶⣶⣶⣾⣿⣿⢀⣶⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠄
-⠄⠄⠈⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄
-⠄⠄⠄⠸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠄⠄")
-IMG5=("⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿
-⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿
-⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿
-⣭⣍⠛⠿⠄⢰⠋⡉⠹⣿⣿⣿⣿⣿⣿⠙⣿⣿⣿⣿⣿⣿⡟⢁⠙⡆⢡⣿⣿⣿
-⠻⣿⡆⠄⣤⠈⢣⣈⣠⣿⣿⣿⣿⣿⠏⣄⠻⣿⣿⣿⣿⣿⣆⣈⣴⠃⣿⣿⣿⣿
-⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋
-⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸")
-echo -e "$MSGS"; sleep 2.5; clear
-echo -e "$IMG2"; sleep 2.5; clear
-echo -e "$IMG3"; sleep 2.5; clear
-echo -e "$IMG4"; sleep 2.5; clear
-echo -e "$IMG5"; sleep 1
-echo -e "\e[33;01mEsse é meu tio, Maiar\e[0m"
-sleep 1.5
-echo -e "\e[33;01mLegal, eu vou ser sua tia!\e[0m"
-sleep 3
-echo
-echo -e "\e[01;37;41m      • TESTADOR AUTOMÁTICO •        \e[0m"
-sleep .5
-echo
-echo -e "\e[01;37;41m Coloque 55+DDD+NÚMERO \e[0m"
-aa=$(echo -e "\e[01;37mNÚMERO:\e[0m")
-read -p "$aa" NUMERO
-VEZES="9999"
-clear
-echo -e $tit
-echo
-echo -e "\e[01;37;41m      • TESTADOR AUTOMÁTICO •        \e[0m"
-sleep .5
-echo
-echo -e "\e[01;37;41m VAI BRASILIAM \e[0m"|pv -qL 15
-echo -e "\e[01;37;41m NUMERO: $NUMERO \e[0m"
-echo
-sleep .5
-
-echo -e "\e[0m\e[01;37;41m TOKEN 1 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=02f76cd1-eead-44ff-88dd-aa69538c7aef&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 2 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=7da57bec-2afe-42f8-9461-eede255c41ca&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 3 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=581d1c2f-3865-4bf4-861f-7f2d010e1457&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 4 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=c8489469-4880-4fcd-96f1-6c1cf82b07a6&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 5 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=6118bb07-b008-4c1a-a363-f2b8e9395638&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 6 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=e0f3c654-f953-4f25-97f6-4a0e96d6fcbf&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 7 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=4919b47c-f588-4e71-87e3-639b3af92e4d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 8 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=0a187891-6bea-46e2-a436-5898b995e514&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 9 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=949e575a-6db8-4608-8b71-1281e6e506df&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 10 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=04e564c7-f410-49f5-8dee-b268eaef5223&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 11 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=3e0a2f54-101a-427a-999e-2ede723c3b42&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 12 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=03bc4539-13db-4045-9119-a937eb48d41d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 13 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=cd5f56de-4ed9-484f-9c32-c8f6eedb08e7&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 14 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=7398de8b-48fa-48eb-9a59-562b2a0fba3e&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO \e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 15 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=b276dbcf-f384-499c-b492-741943071b76&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 16 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=23a6eb53-cf15-4354-a357-b497de3bcc1e&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 17 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=7c732700-bfac-40bf-9805-e5a3ab5d872d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 18 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=288b9ca4-b405-4d2a-b7a5-53aff22118a9&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 19 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=db715101-d88f-4d66-a68c-a13567919074&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 20 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=19313963-7198-4a33-9511-1c72c7d6152a&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 21 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=f79ae136-8dcd-40c5-8421-d1371c9e50d1&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 22 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=6d073f4b-4966-4733-a8bc-f40a91a66ab0&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 23 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=6e7eb039-9816-4118-9c3b-bb906887722c&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 24 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=d71dc28f-c3ff-41aa-a51b-feb4dcc127cc&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 25 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=6da416a5-7383-469d-95a9-199ca2e3ab10&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 26 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=1a37d38f-e596-4586-aff3-c279a40d89ee&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mtem mais\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo "queda de rede "; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 27 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=9906ca75-77de-4176-b9a9-a2f5a10f2e8c&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo -e "queda de rede \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 28 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=3ce88629-bea8-496f-bae3-432c932ea778&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo -e "queda de rede \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 29 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=ddf114e4-c29b-44f1-b04b-1621234f2f5d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo -e "queda de rede \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 30 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=eeeee367-b3a7-4293-9dce-116de3b7157d&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo -e "queda de rede \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 31 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=9cc0b507-59d5-4773-a9a0-9c3efbf6df2f&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo -e "queda de rede \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
-esac
-done
-echo
-
-echo -e "\e[0m\e[01;37;41m TOKEN 32 \e[0m"
-for i in $(seq $VEZES);
-do
-response=$(data=$"msisdn=$NUMERO&campid=f1a6c737-5859-405f-8bb9-7805528bbdf8&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
-body=$(echo $response | jq '.packprovision')
-pack=$'"packprovisionOK"'
-
-case $body in
-null) echo -e "\e[01;33mTOKEN VICIADO\e[0m \e[01;37mlogo tem mais...\e[0m"|pv -qL 20; break;;
-$pack) echo -e "\e[01;32mSUCESSO, TOKEN BOM\e[0m \e[01;37mmais $i\e[0m"|pv -qL 18;;
-*) echo -e "queda de rede \e[0m \e[01;37mlogo tem mais...\e[0m"; echo $response; break
-esac
-done
-
-echo -e "\e[01;37;41m          NUNCA É UM ADEUS           \e[0m"|pv -qL 20
-echo -e "\e[01;37;41m Pode testar a opção 'MB até o talo' \e[0m"|pv -qL 20; sleep 1.5
-echo -e "\e[01;37;41m      Se você achar que aguenta      \e[0m"; sleep 2
-echo
-echo -e "\e[01;37;41m       • Fim de transmissão •        \e[0m"
-echo -e '\e[01;37;41m    Não me viu chegando? quer mais?  \e[0m'
-sleep .5
+tit=$"ㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠃⠄⠄⠄⠄⠄⠄⠄⠄⠹⣿⣿⣶⣶⣦⣬⢹⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠄⠄⠄⣰⣧⡀⠄⠄⠄⠄⠈⢙⡋⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠰⠼⢯⣿⣿⣦⣄⠄⠄⠄⠈⢡⣿⣿⣿⢸⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠄⠄⠸⠤⠕⠛⠙⠷⣿⡆⠄⠄⠄⣸⣿⣿⡏⣼⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⣴⣿⣿⣿⢡⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⡟⠄⠄⠄⠄⠄⣄⠄⢀⠄⠄⢀⣤⣾⣿⣿⣿⢃⣾⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⠿⣛⣡⣄⣀⠄⠠⢴⣿⣿⡿⣄⣴⣿⣿⣿⣿⣿⢃⣾⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⡏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣩⡽⡁⢸⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⢃⣿⣿⢟⣿⣿⣿⣿⣿⣮⢫⣿⣿⣿⣿⣿⣟⢿⠃⠄⢻⣿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡿⣸⠟⣵⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣷⣄⢰⡄⢿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣿⡇⠏⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠹⡎⣿⣿⣿\n\e[33;01m██▀ﾠ█▄█ﾠ█ﾠ▄▀▀ﾠ▄▀▄ﾠ█▀▄ﾠ██▀ﾠ█▄ﾠ█ﾠ██▀ﾠ█▀▄\n█▄▄ﾠ█ﾠ█ﾠ█ﾠ▄██ﾠ▀▄▀ﾠ█▀ﾠﾠ█▄▄ﾠ█ﾠ▀█ﾠ█▄▄ﾠ█▀▄\e[0m\nㅤㅤ⡀⠈⢿⠄⣿⡇⠄⠙⠿⣿⡿⠿⢋⣥⣾⣿⣷⣌⠻⢿⣿⣿⡿⠟⣡⣾⣿⣿⠿⢋\nㅤㅤ⠛⠳⠄⢠⣿⠇⠄⣷⡑⢶⣶⢿⣿⣿⣿⣽⣿⣿⣿⣶⣶⡐⣶⣿⠿⠛⣩⡄⠄⢸"
+tokens=$(echo "02f76cd1-eead-44ff-88dd-aa69538c7aef
+4919b47c-f588-4e71-87e3-639b3af92e4d
+03bc4539-13db-4045-9119-a937eb48d41d
+19313963-7198-4a33-9511-1c72c7d6152a
+f79ae136-8dcd-40c5-8421-d1371c9e50d1
+6d073f4b-4966-4733-a8bc-f40a91a66ab0
+6e7eb039-9816-4118-9c3b-bb906887722c
+d71dc28f-c3ff-41aa-a51b-feb4dcc127cc
+ddf114e4-c29b-44f1-b04b-1621234f2f5d")
 while :; do
-echo -e '\e[01;37m(1)\e[0m Sim\e[0m'
-echo -e '\e[01;37m(2)\e[0m Não\e[0m'
-cc=$(echo -e "\e[01;37mOpção:\e[0m")
-read -n1 -p "$cc" cpo
-case $cpo in
-        (1) echo; echo -e '\e[01;37;41m E lá vamos nós | @EhisOpeNer \e[0m'|pv -qL 18
-        sleep 2; ./mbsfree1
-        break;;
-        (2) echo; echo -e "\e[01;37;41m Bye Bye | @EhisOpeNer \e[0m"|pv -qL 15; echo -e "\e[01;37;41m     TUDO NUMA BOA     \e[0m"|pv -qL 18
-        sleep 1
-        break;;
-        (*) echo; echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"
-        sleep 1
-esac
-done
+clear; echo -e $tit
+
+  echo -e "\e[01;37;41m           𝐓𝐄𝐒𝐓𝐀𝐃𝐎𝐑 𝐏𝐀𝐃𝐑𝐀𝐎           \e[0m"; sleep .4; echo
+  echo -e "         \e[01;37m𝙼𝙴𝙽𝚄 𝙳𝙴 𝙾𝙿𝙲𝙾𝙴𝚂\e[0m"
+  echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+  echo -e " \e[01;37m〘*1*〙\e[0m\e[01;04;33mVERIFICAR SE HÁ ADS\e[0m\c"; echo -e "\e[02;03;37m   Ver se posso ganhar MB\e[0m"
+  echo -e " \e[01;37m〘*2*〙\e[0m\e[01;04;33mVERIFICAR ADS NA MÃO\e[0m\c"; echo -e "\e[02;03;37m  cole o PASS aqui\e[0m"
+  echo -e " \e[01;37m〘*3*〙\e[0m\e[01;04;33mIR NO TESTADOR PADRÃO\e[0m\c"; echo -e "\e[02;03;37m Ir direto ao padrão\e[0m"
+  echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+  echo -e " \e[01;37m『*4*』\e[0m\e[01;04;33mSOLICITAR PASS\e[0m\c"; echo -e "\e[02;03;37m  navegue com a rede Vivo aqui\e[0m"
+  echo -e " \e[01;37m『*0*』\e[0m\e[01;04;33mCAIR FORA DO SCRIPT\e[0m\c"; echo -e "\e[02;03;37m   Noob sofre\e[0m"
+  echo -e " \e[00;31m═══════════════════════════════\e[0m"
+  
+veri=$(echo -e "\e[01;37m Opção: \e[0m")
+  read -n1 -p "$veri" verifica; echo
+    case $verifica in # case MENU
+        1)
+         while :; do
+             echo -e "\e[01;37;41m # USE DADOS MÓVEIS # \e[0m"|pv -qL 18
+             echo -e "\e[01;37;41m #   DA VIVO    # \e[0m"|pv -qL 18; sleep 2.5
+             clear; echo -e $tit; echo -e "\e[01;37;41m   VERIFICANDO SE HÁ ADS DISPONÍVEL   \e[0m"; sleep .5; echo
+                echo -e "      \e[01;37m 𝚁𝙴𝚀𝚄𝙸𝚂𝙸𝚃𝙰𝙽𝙳𝙾 𝙾 𝙿𝙰𝚂𝚂\e[0m"
+                echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m";sleep .5
+                
+                pass=$(curl -s -d "version=2" i.vivo.ddivulga.com/i/gp)
+                pass2=$(echo $pass| jq -r .sctoken)
+                pass3=$(echo $pass| grep -c sctoken)
+                    case $pass3 in
+                         0) echo -e "\e[00;33m brasileiro é foda \n dica: DURANTE VERIFICAÇÃO, USE REDE MÓVEL VIVO\e[0m"; sleep 4; break;;
+                         1) echo -e "\e[01;37m CERTO PASS\e[0m\e[01;32m OK!\e[0m"|pv -qL 20; sleep .5
+                               echo -e "\e[01;37m PASS >\e[0m\e[00;32m $pass2\e[0m"; sleep 1
+                    esac
+                    
+                    tx="SEM ADS DISPONÍVEL NO MOMENTO PARA ESTE NÚMERO"
+                    tx2="CONTINUANDO PARA OS TOKENS PADRÃO\n VEREMOS SE HOJE É SEU DIA DE SORTE!"
+                echo; echo -e "     \e[01;37m 𝚅𝙴𝚁𝙸𝙵𝙸𝙲𝙰𝙽𝙳𝙾 𝚂𝙴 𝙷𝙰 𝙰𝙳𝚂 \e[0m"
+                echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m";sleep .5
+                
+                pass=$(curl -s -d "version=2" i.vivo.ddivulga.com/i/gp)
+                pass2=$(echo $pass| jq -r .sctoken)
+                url=$(curl -s -d "slotId=%5B%7B%22slotId%22%3A110%2C%22target%22%3A%22%22%7D%5D&pageId=693930&insertionId=&insertionUUID=&insertionType=&referer=http%3A%2F%2Fportalrecarga.vivo.com.br%2F&accessPass=$pass2" http://e.vivo.ddivulga.com/api/v2.1/fetch -H "Origin: http://a.vivo.ddivulga.com")
+                     
+                     pass3=$(curl -s -d "slotId=%5B%7B%22slotId%22%3A110%2C%22target%22%3A%22%22%7D%5D&pageId=693930&insertionId=&insertionUUID=&insertionType=&referer=http%3A%2F%2Fportalrecarga.vivo.com.br%2F&accessPass=$pass2" http://e.vivo.ddivulga.com/api/v2.1/fetch -H "Origin: http://a.vivo.ddivulga.com" -w '%{response_code}' | grep -c 401)
+                          case $pass3 in
+                               1) echo -e "\e[01;33m queda na rede!\n CALMA BARBOLETA\e[0m"; sleep 3; break;;
+                               *)
+                          esac
+        
+                    while :; do # verificar ads on / token
+                       token2=$(echo $url | grep -c appInstallRewardAdvUuid)
+                             case $token2 in
+                                  0) ttt=0; break;;
+                                  *) echo -e "\e[01;37m OK ADS ON / AGORA VEREMOS SE HÁ TOKEN ONLINE\e[0m"
+                             esac
+                       toki=$(echo $url | jq -r '.["110"].appInstallRewardAdvUuid')
+                           case $toki in
+                              null);;
+                                 *) ttt=1; break
+                           esac
+                       token=$(echo $url | grep -c "campid:")
+                           case $token in
+                                1) ttt=1; toki=$(echo $url | grep -o "campid:......................................." | cut -d":" -f2 | cut -d'"' -f2); break;;
+                                0) echo -e "\e[01;37m NÃO ENCONTRAMOS TOKEN, PORÉM VOCÊ TERA SUCESSO NO PADRÃO\e[0m"; sleep .5; tx="CONTINUANDO PARA OS TOKENS PADRÃO"; tx2=; ttt=0; break
+                           esac
+                    done
+                    numero=$(echo $url | jq -r '.msisdn')
+                    case $ttt in
+                         0) echo -e "\e[01;33m $tx\e[0m"|pv -qL 20; sleep .5
+                            echo -e "\e[01;02;37m $tx2\e[0m"|pv -qL 18; sleep 3;;
+                         1) echo -e "\e[01;37m CERTO, ADS\e[0m\e[01;32m ON!\e[0m"|pv -qL 18; sleep .5
+                            echo -e "\e[01;37m TOKEN >\e[0m\e[00;32m $toki\e[0m"; sleep .5
+                            echo -e "\e[01;37m NUMERO >\e[0m\e[00;32m $numero\e[0m"; sleep 1
+                            
+                            echo; echo -e "      \e[01;37m 𝙸𝙽𝙸𝙲𝙸𝙰𝙽𝙳𝙾 𝙾 𝚃𝙾𝙺𝙴𝙽 \e[0m"
+                            echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m";sleep .5
+                
+                                VEZES=9999
+                                for i in $(seq $VEZES);
+                                do
+                            response=$(data=$"msisdn=$numero&campid=$token2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+                            body=$(echo $response | jq -r '.packprovision')
+
+                                case $body in
+                                 null) echo -e "\e[01;33m TOKEN VICIADO\e[0m"|pv -qL 20; sleep .3; echo -e "\e[01;02;37m CONTINUANDO PARA OS TOKENS PADRÃO!\e[0m"|pv -qL 18; sleep 3; break && break;;
+                      packprovisionOK) echo -e "\e[01;32m SUCESSO, TOKEN BOM\e[0m / \e[01;37mmais $i\e[0m"|pv -qL 18
+                                esac
+                                done
+                                esac
+                                
+                           clear; echo -e $tit
+                                  echo -e "\e[01;37;41m           𝐓𝐄𝐒𝐓𝐀𝐃𝐎𝐑 𝐏𝐀𝐃𝐑𝐀𝐎           \e[0m"; sleep .4; echo
+                                  echo -e "\e[07;01;37;40m NUMERO \e[01;31;47m $numero \e[0m"; sleep .5; echo
+                           qtdtokens=$(echo "$tokens"| wc -l)
+                           for o in $(seq $qtdtokens);
+                              do
+                           VEZES=9999
+                           tokens1=("sed '"$o"p; d'")
+                           tokens2=$(echo "$tokens" | eval $tokens1)
+                              echo -e "\e[07;01;37;40m   ＴＯＫＥＮ \e[01;36;40m $o \e[0m"
+                              echo -e "\e[01;32m TOKEN \e[01;37m: \e[0m\e[01;04;37m$tokens2\e[0m"
+                          for i in $(seq $VEZES);
+                             do
+                          response=$(data=$"msisdn=$numero&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://a.vivo.ddivulga.com/" -d "${data}")
+                          body=$(echo $response | jq '.packprovision')
+                          pack=$'"packprovisionOK"'
+                              case $o in
+                              $qtdtokens) mssg=$(echo "FINALIZANDO");;
+                                       *) mssg=$(echo "TEM MAIS")
+                              esac
+                              case $body in
+                                   null) echo -e "\e[01;33m TOKEN VICIADO\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break;;
+                                  $pack) echo -e "\e[01;32m SUCESSO, TOKEN BOM\e[0m / \e[01;37mmais $i\e[0m"|pv -qL 18;;
+                                      *) echo "queda na rede"; echo $response; break
+                              esac
+                             done
+                            done
+                          echo -e "         \e[01;37m ＯＰＣＯＥＳ \e[0m"
+                          echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+                          echo -e " \e[01;37m〘*1*〙\e[0m\e[01;04;33mIR NO TESTADOR PADRÃO\e[0m\c"; echo -e "\e[02;03;37m   cole só o número\e[0m"
+                          echo -e " \e[01;37m〘*2*〙\e[0m\e[01;04;33mREPETIR COM VERIFICAÇÃO\e[0m\c"; echo -e "\e[02;03;37m tudo automático\e[0m"
+                          echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+                          echo -e " \e[01;37m『*3*』\e[0m\e[01;04;33mVOLTAR PARA O MENU\e[0m\c"; echo -e "\e[02;03;37m\e[0m"
+                          echo -e " \e[01;37m『*0*』\e[0m\e[01;04;33mCAIR FORA DO SCRIPT\e[0m\c"; echo -e "\e[02;03;37m     Noob sofre\e[0m"
+                          echo -e " \e[00;31m═══════════════════════════════\e[0m"
+               
+                          while :; do
+                            veri=$(echo -e "\e[01;37m Opção: \e[0m")
+                          read -n1 -p "$veri" opc2; echo
+                          case $opc2 in
+                              1)
+                                clear; echo -e $tit
+                                       echo -e "\e[01;37;41m           𝐓𝐄𝐒𝐓𝐀𝐃𝐎𝐑 𝐏𝐀𝐃𝐑𝐀𝐎           \e[0m"; sleep .4; echo
+                                       echo -e "\e[01;37;41m Coloque 55+DDD+NÚMERO \e[0m"
+                                read -p "$veri" NUMERO; sleep 1
+                                clear; echo -e $tit
+                                       echo -e "\e[01;37;41m           𝐓𝐄𝐒𝐓𝐀𝐃𝐎𝐑 𝐏𝐀𝐃𝐑𝐀𝐎           \e[0m"; sleep .4; echo
+                                       echo -e "\e[07;01;37;40m NUMERO \e[01;31;47m $NUMERO \e[0m"; sleep .5; echo
+                                veri=$(echo -e "\e[01;37m Numero: \e[0m")
+                                for o in $(seq $qtdtokens);
+                                   do
+                                VEZES=9999
+                                tokens1=("sed '"$o"p; d'")
+                                tokens2=$(echo "$tokens" | eval $tokens1)
+                                       echo -e "\e[07;01;37;40m   ＴＯＫＥＮ \e[01;36;40m $o \e[0m"
+                                       echo -e "\e[01;32m TOKEN \e[01;37m: \e[0m\e[01;04;37m$tokens2\e[0m"
+                                for i in $(seq $VEZES);
+                                  do
+                                response=$(data=$"msisdn=$NUMERO&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://a.vivo.ddivulga.com/" -d "${data}")
+                                body=$(echo $response | jq '.packprovision')
+                                pack=$'"packprovisionOK"'
+                                case $o in
+                                  $qtdtokens) mssg=$(echo "FINALIZANDO");;
+                                           *) mssg=$(echo "TEM MAIS")
+                                esac 
+                                case $body in
+                                   null) echo -e "\e[01;33m TOKEN VICIADO\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break;;
+                                  $pack) echo -e "\e[01;32m SUCESSO, TOKEN BOM\e[0m / \e[01;37mmais $i\e[0m"|pv -qL 18;;
+                                      *) echo "queda na rede"; echo $response; break
+                               esac
+                              done
+                             done
+                           echo -e "          \e[01;37m ＯＰＣＯＥＳ \e[0m"
+                           echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+                           echo -e " \e[01;37m〘*1*〙\e[0m\e[01;04;33mREPETIR TESTADOR PADRÃO\e[0m\c"; echo -e "\e[02;03;37m cole só o número\e[0m"
+                           echo -e " \e[01;37m〘*2*〙\e[0m\e[01;04;33mINICIAR COM VERIFICAÇÃO\e[0m\c"; echo -e "\e[02;03;37m tudo automático\e[0m"
+                           echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+                           echo -e " \e[01;37m『*3*』\e[0m\e[01;04;33mVOLTAR PARA O MENU\e[0m\c"; echo -e "\e[02;03;37m\e[0m"
+                           echo -e " \e[01;37m『*0*』\e[0m\e[01;04;33mCAIR FORA DO SCRIPT\e[0m\c"; echo -e "\e[02;03;37m     Noob sofre\e[0m"
+                           echo -e " \e[00;31m═══════════════════════════════\e[0m";;
+                          2) break;;
+                          3) break;;
+                          0) exit;;
+                          *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
+                         esac
+                        done
+                          case $opc2 in
+                              3) break
+                          esac
+                     done;;
+                 
+    2) 
+     while :; do
+             echo -e "\e[01;02;37m # Dica: Você pode pegar o pass no site da vivo:\n        \e[01;02;04;37mi.vivo.ddivulga.com/i/gp\e[0m\n \e[01;02;37m# use opção 4 se você é noob ;)\e[0m"; sleep 3
+             clear; echo -e $tit; echo -e "\e[01;37;41m   VERIFICANDO SE HÁ ADS DISPONÍVEL   \e[0m"; sleep .5; echo
+              
+             echo -e "\e[01;37;41m cole o PASS \e[0m"
+                    read -n86 -p "Pass: " passs; sleep 1.5
+             clear; echo -e $tit; echo -e "\e[01;37;41m   VERIFICANDO SE HÁ ADS DISPONÍVEL   \e[0m"; sleep .5; echo
+          
+             tx="SEM ADS DISPONÍVEL NO MOMENTO PARA ESTE NÚMERO"
+             tx2="CONTINUANDO PARA OS TOKENS PADRÃO\n VEREMOS SE HOJE É SEU DIA DE SORTE!"
+                echo -e "     \e[01;37m 𝚅𝙴𝚁𝙸𝙵𝙸𝙲𝙰𝙽𝙳𝙾 𝚂𝙴 𝙷𝙰 𝙰𝙳𝚂 \e[0m"
+                echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m";sleep .5
+                
+             pass2=$"$passs"
+             url=$(curl -s -d "slotId=%5B%7B%22slotId%22%3A110%2C%22target%22%3A%22%22%7D%5D&pageId=693930&insertionId=&insertionUUID=&insertionType=&referer=http%3A%2F%2Fportalrecarga.vivo.com.br%2F&accessPass=$pass2" http://e.vivo.ddivulga.com/api/v2.1/fetch -H "Origin: http://a.vivo.ddivulga.com")
+                    
+                    pass3=$(curl -s -d "slotId=%5B%7B%22slotId%22%3A110%2C%22target%22%3A%22%22%7D%5D&pageId=693930&insertionId=&insertionUUID=&insertionType=&referer=http%3A%2F%2Fportalrecarga.vivo.com.br%2F&accessPass=$pass2" http://e.vivo.ddivulga.com/api/v2.1/fetch -H "Origin: http://a.vivo.ddivulga.com" -w '%{response_code}' | grep -c 401)
+                          case $pass3 in
+                               1) echo -e "\e[01;33m queda na rede!\n CALMA BARBOLETA\e[0m"; sleep 3; break;;
+                               *)
+                          esac
+                    echo $url
+             while :; do # verificar ads on / token
+              #  token2=$(echo $url | jq -r '.["110"].appInstallRewardAdvUuid')
+                token2=$(echo $url | grep -c appInstallRewardAdvUuid)
+                    case $token2 in
+                         0) ttt=0; break;;
+                         *) echo -e "\e[01;37m OK ADS ON / AGORA VEREMOS SE HÁ TOKEN ONLINE\e[0m"
+                    esac
+                toki=$(echo $url | jq -r '.["110"].appInstallRewardAdvUuid')
+                    case $toki in
+                         null);;
+                            *) ttt=1; break
+                    esac
+                token=$(echo $url | grep -c "campid:")
+                    case $token in
+                         1) ttt=1; toki=$(echo $url | grep -o "campid:......................................." | cut -d":" -f2 | cut -d'"' -f2); break;;
+                         0) echo -e "\e[01;37m NÃO ENCONTRAMOS TOKEN, PORÉM VOCÊ TERA SUCESSO NO PADRÃO\e[0m"; sleep .5; tx="CONTINUANDO PARA OS TOKENS PADRÃO"; tx2=; ttt=0; break
+                    esac
+             done
+              numero=$(echo $url | jq -r '.msisdn')
+                case $ttt in
+                       0) echo -e "\e[01;33m $tx\e[0m"|pv -qL 20; sleep .5
+                            echo -e "\e[01;02;37m $tx2\e[0m"|pv -qL 18; sleep 3;;
+                       1) echo -e "\e[01;37m CERTO, ADS\e[0m\e[01;32m ON!\e[0m"|pv -qL 18; sleep .5
+                          echo -e "\e[01;37m TOKEN >\e[0m\e[00;32m $toki\e[0m"; sleep .5
+                          echo -e "\e[01;37m NUMERO >\e[0m\e[00;32m $numero\e[0m"; sleep 1
+                            
+                          echo; echo -e "      \e[01;37m 𝙸𝙽𝙸𝙲𝙸𝙰𝙽𝙳𝙾 𝙾 𝚃𝙾𝙺𝙴𝙽 \e[0m"
+                          echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m";sleep .5
+                
+                          VEZES=9999
+                         for i in $(seq $VEZES);
+                                do
+                          response=$(data=$"msisdn=$numero&campid=$token2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
+                          body=$(echo $response | jq -r '.packprovision')
+                            #echo $response
+
+                            case $body in
+                                 null) echo -e "\e[01;33m TOKEN VICIADO\e[0m"|pv -qL 20; sleep .3; echo -e "\e[01;02;37m CONTINUANDO PARA OS TOKENS PADRÃO!\e[0m"|pv -qL 18; sleep 3; break && break;;
+                      packprovisionOK) echo -e "\e[01;32m SUCESSO, TOKEN BOM\e[0m / \e[01;37mmais $i\e[0m"|pv -qL 18
+                            esac
+                           done
+                esac
+
+             clear; echo -e $tit
+                    echo -e "\e[01;37;41m           𝐓𝐄𝐒𝐓𝐀𝐃𝐎𝐑 𝐏𝐀𝐃𝐑𝐀𝐎           \e[0m"; sleep .4; echo
+                    echo -e "\e[07;01;37;40m NUMERO \e[01;31;47m $numero \e[0m"; sleep .5; echo
+                    qtdtokens=$(echo "$tokens"| wc -l)
+                    for o in $(seq $qtdtokens);
+                       do
+                    VEZES=9999
+                    tokens1=("sed '"$o"p; d'")
+                    tokens2=$(echo "$tokens" | eval $tokens1)
+                      echo -e "\e[07;01;37;40m   ＴＯＫＥＮ \e[01;36;40m $o \e[0m"
+                      echo -e "\e[01;32m TOKEN \e[01;37m: \e[0m\e[01;04;37m$tokens2\e[0m"
+                    for i in $(seq $VEZES);
+                       do
+                    response=$(data=$"msisdn=$numero&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://a.vivo.ddivulga.com/" -d "${data}")
+                    body=$(echo $response | jq '.packprovision')
+                    pack=$'"packprovisionOK"'
+                        case $o in
+                        $qtdtokens) mssg=$(echo "FINALIZANDO");;
+                                 *) mssg=$(echo "TEM MAIS")
+                        esac
+                     case $body in
+                          null) echo -e "\e[01;33m TOKEN VICIADO\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break;;
+                         $pack) echo -e "\e[01;32m SUCESSO, TOKEN BOM\e[0m / \e[01;37mmais $i\e[0m"|pv -qL 18;;
+                             *) echo "queda na rede"; echo $response; break
+                     esac
+                     done
+                     done
+                          echo -e "         \e[01;37m ＯＰＣＯＥＳ \e[0m"
+                          echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+                          echo -e " \e[01;37m〘*1*〙\e[0m\e[01;04;33mIR NO TESTADOR PADRÃO\e[0m\c"; echo -e "\e[02;03;37m   cole só o número\e[0m"
+                          echo -e " \e[01;37m〘*2*〙\e[0m\e[01;04;33mDE NOVO COM VERIFICAÇÃO\e[0m\c"; echo -e "\e[02;03;37m tudo automático\e[0m"
+                          echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+                          echo -e " \e[01;37m『*3*』\e[0m\e[01;04;33mVOLTAR PARA O MENU\e[0m\c"; echo -e "\e[02;03;37m\e[0m"
+                          echo -e " \e[01;37m『*0*』\e[0m\e[01;04;33mCAIR FORA DO SCRIPT\e[0m\c"; echo -e "\e[02;03;37m     Noob sofre\e[0m"
+                          echo -e " \e[00;31m═══════════════════════════════\e[0m"
+
+               
+                  while :; do
+                  veri=$(echo -e "\e[01;37m Opção: \e[0m")
+                   read -n1 -p "$veri" opc2; echo
+                  case $opc2 in
+                       1)
+                       clear; echo -e $tit
+                            echo -e "\e[01;37;41m           𝐓𝐄𝐒𝐓𝐀𝐃𝐎𝐑 𝐏𝐀𝐃𝐑𝐀𝐎           \e[0m"; sleep .4; echo
+                            echo -e "\e[01;37;41m Coloque 55+DDD+NÚMERO \e[0m"
+                            read -p "$veri" NUMERO; sleep 1
+                       clear; echo -e $tit
+                            echo -e "\e[01;37;41m           𝐓𝐄𝐒𝐓𝐀𝐃𝐎𝐑 𝐏𝐀𝐃𝐑𝐀𝐎           \e[0m"; sleep .4; echo
+                            echo -e "\e[07;01;37;40m NUMERO \e[01;31;47m $NUMERO \e[0m"; sleep .5; echo
+                            veri=$(echo -e "\e[01;37m Numero: \e[0m")
+                            for o in $(seq $qtdtokens);
+                               do
+                            VEZES=9999
+                            tokens1=("sed '"$o"p; d'")
+                            tokens2=$(echo "$tokens" | eval $tokens1)
+                               echo -e "\e[07;01;37;40m   ＴＯＫＥＮ \e[01;36;40m $o \e[0m"
+                               echo -e "\e[01;32m TOKEN \e[01;37m: \e[0m\e[01;04;37m$tokens2\e[0m"
+                            for i in $(seq $VEZES);
+                               do
+                            response=$(data=$"msisdn=$NUMERO&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://a.vivo.ddivulga.com/" -d "${data}")
+                            body=$(echo $response | jq '.packprovision')
+                            pack=$'"packprovisionOK"'
+                              case $o in
+                             $qtdtokens) mssg=$(echo "FINALIZANDO");;
+                                      *) mssg=$(echo "TEM MAIS")
+                              esac 
+                              case $body in
+                                   null) echo -e "\e[01;33m TOKEN VICIADO\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break;;
+                                  $pack) echo -e "\e[01;32m SUCESSO, TOKEN BOM\e[0m / \e[01;37mmais $i\e[0m"|pv -qL 18;;
+                                      *) echo "queda na rede"; echo $response; break
+                              esac
+                            done
+                            done
+                            echo -e "          \e[01;37m ＯＰＣＯＥＳ \e[0m"
+                           echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+                           echo -e " \e[01;37m〘*1*〙\e[0m\e[01;04;33mREPETIR TESTADOR PADRÃO\e[0m\c"; echo -e "\e[02;03;37m cole só o número\e[0m"
+                           echo -e " \e[01;37m〘*2*〙\e[0m\e[01;04;33mINICIAR COM VERIFICAÇÃO\e[0m\c"; echo -e "\e[02;03;37m tudo automático\e[0m"
+                           echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+                           echo -e " \e[01;37m『*3*』\e[0m\e[01;04;33mVOLTAR PARA O MENU\e[0m\c"; echo -e "\e[02;03;37m\e[0m"
+                           echo -e " \e[01;37m『*0*』\e[0m\e[01;04;33mCAIR FORA DO SCRIPT\e[0m\c"; echo -e "\e[02;03;37m     Noob sofre\e[0m"
+                           echo -e " \e[00;31m═══════════════════════════════\e[0m";;
+                       2) break;;
+                       3) break;;
+                       0) exit;;
+                       *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
+                   esac
+                   done
+                      case $opc2 in
+                           3) break
+                      esac
+                  done;;
+                     
+    3)
+     while :; do
+        clear; echo -e $tit
+               echo -e "\e[01;37;41m           𝐓𝐄𝐒𝐓𝐀𝐃𝐎𝐑 𝐏𝐀𝐃𝐑𝐀𝐎           \e[0m"; sleep .4; echo
+         qtdtokens=$(echo "$tokens"| wc -l)
+               echo -e "\e[01;37;41m Coloque 55+DDD+NÚMERO \e[0m"
+         veri=$(echo -e "\e[01;37m Numero: \e[0m")
+          read -p "$veri" NUMERO; sleep 1
+         clear; echo -e $tit
+                echo -e "\e[01;37;41m           𝐓𝐄𝐒𝐓𝐀𝐃𝐎𝐑 𝐏𝐀𝐃𝐑𝐀𝐎           \e[0m"; sleep .4; echo
+                echo -e "\e[07;01;37;40m NUMERO \e[01;31;47m $NUMERO \e[0m"; sleep .5; echo
+          for o in $(seq $qtdtokens);
+             do
+         VEZES=9999
+         tokens1=("sed '"$o"p; d'")
+         tokens2=$(echo "$tokens" | eval $tokens1)
+                 echo -e "\e[07;01;37;40m   ＴＯＫＥＮ \e[01;36;40m $o \e[0m"
+                 echo -e "\e[01;32m TOKEN \e[01;37m: \e[0m\e[01;04;37m$tokens2\e[0m"
+          for i in $(seq $VEZES);
+             do
+         response=$(data=$"msisdn=$NUMERO&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://a.vivo.ddivulga.com/" -d "${data}")
+         body=$(echo $response | jq '.packprovision')
+         pack=$'"packprovisionOK"'
+             case $o in
+             $qtdtokens) mssg=$(echo "FINALIZANDO");;
+                      *) mssg=$(echo "TEM MAIS")
+             esac 
+             case $body in
+                  null) echo -e "\e[01;33m TOKEN VICIADO\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break;;
+                 $pack) echo -e "\e[01;32m SUCESSO, TOKEN BOM\e[0m / \e[01;37mmais $i\e[0m"|pv -qL 18;;
+                     *) echo "queda na rede"; echo $response; break
+             esac
+            done
+           done
+                            echo -e "          \e[01;37m ＯＰＣＯＥＳ \e[0m"
+                       echo -e "  \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+                       echo -e "  \e[01;37m〘*1*〙\e[0m\e[01;04;33mREPETIR TESTADOR PADRÃO\e[0m\c"; echo -e "\e[02;03;37m cole só o número\e[0m"
+                       echo -e "  \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
+                       echo -e "  \e[01;37m『*2*』\e[0m\e[01;04;33mVOLTAR PARA O MENU\e[0m\c"; echo -e "\e[02;03;37m\e[0m"
+                       echo -e "  \e[01;37m『*0*』\e[0m\e[01;04;33mCAIR FORA DO SCRIPT\e[0m\c"; echo -e "\e[02;03;37m     Noob sofre\e[0m"
+                       echo -e "  \e[00;31m═══════════════════════════════\e[0m"
+                       veri=$(echo -e "\e[01;37m Opção: \e[0m")
+                          read -n1 -p "$veri" opc2; echo
+                          case $opc2 in
+                              1);;
+                              2) break;;
+                              0) exit;;
+                              *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
+                          esac
+                          case $opc2 in
+                              3) break
+                          esac
+                    done;;
+                
+    4) 
+      clear; echo -e $tit
+             echo -e "\e[01;37;41m            SOLICITAR PASS             \e[0m"; echo
+             echo -e "\e[01;02;37m # USE A REDE VIVO NESSA OPÇÃO! #\e[0m"|pv -qL 25; echo
+             echo -e "      \e[01;37m 𝚁𝙴𝚀𝚄𝙸𝚂𝙸𝚃𝙰𝙽𝙳𝙾 𝙾 𝙿𝙰𝚂𝚂\e[0m"
+             echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m";sleep .5
+                
+                pass=$(curl -s -d "version=2" i.vivo.ddivulga.com/i/gp)
+                pass2=$(echo $pass| jq -r .sctoken)
+                pass3=$(echo $pass| grep -c sctoken)
+                    case $pass3 in
+                         0) echo -e "\e[00;33m brasileiro é foda \n dica: DURANTE VERIFICAÇÃO, USE REDE MÓVEL VIVO\e[0m"; sleep 2;;
+                         1) echo -e "\e[01;37m CERTO PASS\e[0m\e[01;32m OK!\e[0m"|pv -qL 20; sleep .5
+                               echo -e "\e[01;37m PASS > \e[0m\e[01;04;32m$pass2\e[0m"; sleep 1
+                         echo; echo -e "\e[01;02;37m # AGORA SÓ COPIAR E SALVAR EM ALGUM LUGAR #\e[0m"; sleep .5; echo
+                    esac
+             echo; echo -e "\e[01;33m PRESSIONE QUALQUER TECLA PARA VOLTAR\e[0m"
+              read -n1;;
+              
+    0) exit;;
+    *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
+              
+     esac # case MENU
+    done # primeiro loop
