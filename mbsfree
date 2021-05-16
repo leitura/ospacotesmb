@@ -103,7 +103,7 @@ e=$"e"; f=$"f"
   srr[4]="$e"; srr[5]="$e"
 while :; do
 clear; echo -e $IMG5 #31
-c=$"TESTE FEITO,VOCÊ É O PAI!"; d=$"TESTE FEITO, VOCÊ NÃO É O PAI"
+c=$"TESTE FEITO, VOCÊ É O PAI!"; d=$"TESTE FEITO, VOCÊ NÃO É O PAI"
   arrr[0]="$c"; arrr[1]="$d"; arrr[2]="$c"
   arrr[3]="$c"; arrr[4]="$d"; arrr[5]="$c"
 rand=$[$RANDOM % ${#arrr[@]}]
