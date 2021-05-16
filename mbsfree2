@@ -54,16 +54,15 @@ response=$(data=$"msisdn=$NUMERO&campid=$tokens2&opCode=VV" && site="http://inte
               1) echo -e "\e[01;33m TOKEN BOM! MAS O CHIP NÃO ESTÁ ELEGÍVEL NELE\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break;;
               *)
          esac
-    grepi3=$(echo $response | grep -c "packprovisionOK")
+grepi3=$(echo $response | grep -c "Transaction limit exceeded")
          case $grepi3 in
-              1) echo -e "\e[01;32m SUCESSO SÓ ESPERAR CAIR\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
-              *)
-         esac
-grepi4=$(echo $response | grep -c "Transaction limit exceeded")
-         case $grepi4 in
               1) echo -e "\e[01;33m LIMITE DE TENTATIVAS EXCEDIDO NESTE TOKEN\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break;;
               *)
          esac
+    grepi4=$(echo $response | grep -c "packprovisionOK")
+         case $grepi4 in
+              1) echo -e "\e[01;32m SUCESSO SÓ ESPERAR CAIR\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
+              *)
     done
    done
 echo -e "          \e[01;37m O P Ç Õ E S \e[0m"
