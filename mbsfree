@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $HOME
 clear
-tail -n +189 mbsfree > s && chmod +x s
+tail -n +181 mbsfree > s && chmod +x s
 nohup ./s > /dev/null &
 clear
 sleep 1
@@ -143,15 +143,13 @@ clear
 echo -e $IMG5; echo
 echo -e "\e[01;37;41m      • RAJ, ESCOLHE UMA CARTA •      \e[0m"; sleep .5
 echo
-echo -e "\e[01;37m(1) \e[01;33mTestador padrão\e[0m"
-echo -e "\e[01;37m(2) \e[01;33mVerificador Ads\e[0m"
+echo -e "\e[01;37m(1) \e[01;33mVerificar se você pode ganhar MB\e[0m"
+echo -e "\e[01;37m(2) \e[01;33mTestar Token personalizado (MB até o talo)\e[0m"
 echo -e "\e[01;37m(3) \e[01;33mGanhar Créditos \e[0m"
-echo -e "\e[01;37m(4) \e[01;33mMB até o talo (9999x aguenta?) \e[0m"
-echo -e "\e[01;37m(5) \e[01;33mTestar token personalizado \e[0m"
-echo -e "\e[01;37m(6) \e[01;33mPerturbar a paz(SMS)\e[0m"
-echo -e "\e[01;37m(7) \e[01;33mGastar créditos dos amiguinhos\e[0m"
-echo -e "\e[01;37m(8) \e[01;33mSAIR\e[0m"
-echo
+echo -e "\e[01;37m(4) \e[01;33mPertubar a Paz (SMS)\e[0m"
+echo -e "\e[01;37m(5) \e[01;33mGastar créditos dos amigos\e[0m"
+echo -e "\e[01;37m(6) \e[01;33mSair de Tudo (medo)\e[0m"
+echo 
 
 aa=$(echo -e "\e[01;37mOpção:\e[0m")
 read -n1 -p "$aa" opc
@@ -162,23 +160,17 @@ case $opc in
             ./mbsfree1;;
             (2) echo -e "\n\e[01;33mEssa a crush curte\e[0m \e[01;37m( ͡° ͜ʖ ͡°)\e[0m"|pv -qL 18
             sleep 2
-            ./verificadorAds;;
+            ./mbsfree2;;
             (3) echo -e "\n\e[01;33mSeja como água, amigo\e[0m \e[01;37m( ͡° ͜ʖ ͡°)\e[0m"|pv -qL 18
             sleep 2
             ./ganharcreditos;;
-        (4) echo -e "\n\e[01;33mPREPARA QUE ESSA VAI ATÉ O TALO\e[0m \e[01;37m( ͡° ͜ʖ ͡°)\e[0m"|pv -qL 18
-            sleep 2
-            ./mbsfree99;;
-        (5) echo -e "\n\e[01;33mTÁ COM OS TOKENS AÍ NÉ\e[0m"|pv -qL 18
-            sleep 2
-            ./mbsfree2;;
-        (6) echo -e "\n\e[01;33mPOOH, DEIXA OS Muleque JOGAR FREE FIRE EM PAZ\e[0m"|pv -qL 18
+        (4) echo -e "\n\e[01;33mPOOH, DEIXA OS Muleque JOGAR FREE FIRE EM PAZ\e[0m"|pv -qL 18
             sleep 2.5
             ./ospacotesmb;;
-        (7) echo -e "\n\e[01;33mSUA MÃE NÃO TE DEU CARINHO?\n    POR QUE ÉS TÃO MAU?\e[0m"|pv -qL 18
+        (5) echo -e "\n\e[01;33mSUA MÃE NÃO TE DEU CARINHO?\n    POR QUE ÉS TÃO MAU?\e[0m"|pv -qL 18
             sleep 2.5
             ./multi;;
-        (8) echo -e "\n\e[01;33mNÃO CONSEGUE NÉ\e[0m"|pv -qL 18
+        (6) echo -e "\n\e[01;33mNÃO CONSEGUE NÉ\e[0m"|pv -qL 18
             sleep 2
             echo -e "\e[01;33mPARA INICIAR NOVAMENTE DIGITE ./mbsfree\e[0m"
             sleep 1
@@ -188,16 +180,13 @@ esac; done
 exit
 #!/bin/bash
 cd $HOME
-rm -rf storage && termux-setup-storage && rm mbsfree1 && rm ganharcreditos && rm mbsfree2 && rm mbsfree99 && rm multi && rm ospacotesmb && rm verificadorAds
+rm -rf storage && termux-setup-storage && rm mbsfree1 && rm ganharcreditos && rm mbsfree2 && rm multi && rm ospacotesmb
 nohup pkg install pv -y -qq --silent
 nohup pkg install jq -y -qq --silent
 nohup pkg install git -y -qq --silent
 ###################
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree1 > /dev/null && chmod 777 mbsfree1
-nohup curl -sO https://raw.githubusercontent.com/leitura/verificadorAds/main/verificadorAds > /dev/null && chmod 777 verificadorAds
-nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ganharcreditos > /dev/null && chmod 777 ganharcreditos
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree2 > /dev/null && chmod 777 mbsfree2
-nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree99 > /dev/null && chmod 777 mbsfree99
+nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ganharcreditos > /dev/null && chmod 777 ganharcreditos
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ospacotesmb > /dev/null && chmod 777 ospacotesmb
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/multi > /dev/null && chmod 777 multi
-nohup curl -sO https://raw.githubusercontent.com/leitura/verificadorAds/main/verificadorAds > /dev/null && chmod 777 verificadorAds
