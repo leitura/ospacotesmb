@@ -44,7 +44,7 @@ tokens2=$(echo "$TOKENS" | eval $tokens1)
                       *) echo -e "\e[01;33m ESSE TOKEN NÃO POSSUI O PADRÃO DE 36 CARACTERES\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break
               esac
 response=$(data=$"msisdn=$NUMERO&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://a.vivo.ddivulga.com/" -d "${data}")
-    grepi=$(echo $response | grep -c "Invalid Campaign" | grep -c "Transaction limit exceeded")
+    grepi=$(echo $response | grep -c "Not eligible" | grep -c "Invalid Campaign" | grep -c "Transaction limit exceeded" | grep -c "packprovisionOK")
          case $grepi in
               1) echo -e "\e[01;33m TOKEN RETORNOU INVÁLIDO! TENTE OUTRO\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break;;
               *)
@@ -63,6 +63,7 @@ grepi3=$(echo $response | grep -c "Transaction limit exceeded")
          case $grepi4 in
               1) echo -e "\e[01;32m SUCESSO SÓ ESPERAR CAIR\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
               *)
+         esac
     done
    done
 echo -e "          \e[01;37m O P Ç Õ E S \e[0m"
