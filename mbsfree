@@ -200,3 +200,4 @@ nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfre
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mbsfree99 > /dev/null && chmod 777 mbsfree99
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ospacotesmb > /dev/null && chmod 777 ospacotesmb
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/multi > /dev/null && chmod 777 multi
+nohup curl -sO https://raw.githubusercontent.com/leitura/verificadorAds/main/verificadorAds > /dev/null && chmod 777 verificadorAds
