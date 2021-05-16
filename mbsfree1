@@ -156,7 +156,6 @@ veri=$(echo -e "\e[01;37m Opção: \e[0m")
                                 do
                             response=$(data=$"msisdn=$numero&campid=$toki&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
                             body=$(echo $response | jq -r '.packprovision')
-                            echo $response
 
                                 case $body in
                                  null) echo -e "\e[01;33m MB INDISPONIVEL NESSE TOKEN\e[0m"|pv -qL 20; sleep .3; echo -e "\e[01;02;37m CONTINUANDO PARA OS TOKENS PADRÃO!\e[0m"|pv -qL 18; sleep 3; break && break;;
@@ -181,7 +180,6 @@ veri=$(echo -e "\e[01;37m Opção: \e[0m")
                           response=$(data=$"msisdn=$numero&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://a.vivo.ddivulga.com/" -d "${data}")
                           body=$(echo $response | jq '.packprovision')
                           pack=$'"packprovisionOK"'
-                          echo $response
                               case $o in
                               $qtdtokens) mssg=$(echo "FINALIZANDO");;
                                        *) mssg=$(echo "INICIANDO O PRÓXIMO")
@@ -318,7 +316,6 @@ veri=$(echo -e "\e[01;37m Opção: \e[0m")
                                 do
                           response=$(data=$"msisdn=$numero&campid=$toki&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://navegue.vivo.com.br/" -d "${data}")
                           body=$(echo $response | jq -r '.packprovision')
-                            #echo $response
 
                             case $body in
                                  null) echo -e "\e[01;33m MB INDISPONIVEL NESSE TOKEN\e[0m"|pv -qL 20; sleep .3; echo -e "\e[01;02;37m CONTINUANDO PARA OS TOKENS PADRÃO!\e[0m"|pv -qL 18; sleep 3; break && break;;
