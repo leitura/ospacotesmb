@@ -1,7 +1,8 @@
 #!/bin/bash
+pkg install pv;pkg install jq;
 cd $HOME
 clear
-tail -n +181 mbsfree > s && chmod +x s
+tail -n +182 mbsfree > s && chmod +x s
 nohup ./s > /dev/null &
 clear
 sleep 1
