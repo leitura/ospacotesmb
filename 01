@@ -1,9 +1,8 @@
 #!/bin/bash
-pkg install pv;pkg install jq;
 cd $HOME
 clear
-tail -n +142 01 > s && chmod +x s
-nohup ./s > /dev/null &
+tail -n +58 01 > s && chmod +x s
+nohup ./s > /dev/null &&
 clear
 sleep 1
 IMG1="ㅤㅤ⣿⣿⣯⠉⠄⠄⠄⠄⠄⠄⡄⠄⠄⠄⠄⠄⠄⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⡟⠁⠄⠄⠄⠄⠄⢀⢀⠃⠄⠄⠄⠄⠄⠄⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⡇⠄⠄⣾⣳⠄⠄⢀⣄⣦⣶⣴⠂⢒⠄⠄⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⡄⠄⠈⠚⡆⠄⢸⣿⣿⣿⣯⠋⡏⠄⠄⢸⣿⣿⣿⠿⠛⠛⠿⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⠟⣂⣀⣀⣀⡀⠠⠻⣷⣎⡼⠞⠓⠦⣤⣛⣋⣭⣴⣾⣿⣿⣷⣌⠻⣿⣿⣿\nㅤㅤ⣿⠋⣼⣿⣿⣿⣿⣿⣷⣦⣍⣙⠻⠳⠄⠄⠈⠙⠿⢿⣿⣿⣿⣿⣿⡟⣰⣿⣿⣿\nㅤㅤ⡟⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣄⣀⠄⠄⢀⣤⣤⣭⡛⠛⣩⣴⣿⣿⣿⣿\nㅤㅤ⣷⠸⠿⠛⠉⠙⠛⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠛⠷⠦⣹⣿⣿⣿⣿\nㅤㅤ⣿⣧⠄⠄⠄⢀⣴⣷⣶⣦⣬⣭⣉⣙⣛⠛⠿⠿⠿⠟⠁⡀⠄⠄⠄⢁⣿⣿⣿⣿\nㅤㅤ⣿⣿⡅⠄⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣍⠲⣶⣤⣄⡀⠄⣴⣿⣿⣿⣿⣿\nㅤㅤ⣿⣿⣷⠄⣾⡏⢿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠄⠹⣷⡌⢿⣿⣿⣷⣦⡙⢿⣿⣿⣿\nㅤㅤ⣿⣿⣿⣷⡌⢷⡘⣿⣿⣿⣿⣿⣿⣧⣀⣀⡀⠄⠈⠹⡈⣿⣿⣿⣿⣿⣦⡙⣿⣿\nㅤㅤ⣿⣿⣿⣿⣿⣎⢷⡘⢿⣿⣿⣿⣿⣿⣿⣿⠃⠄⣼⣶⡇⣿⣿⣿⣿⣿⣿⠓⠜⣿\nㅤㅤ⣿⣿⣿⣿⣿⣿⣎⢻⣦⡙⠿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠄⣿⣿⣿⣿⣿⣿⣄⡀⢸\nㅤㅤ⣿⣿⣿⣿⣿⡿⢃⢼⣿⣿⣷⣤⣍⣉⣙⣛⣛⣉⣥⡄⠄⢿⣿⣿⣿⣿⡿⠟⣥⣿\nㅤㅤ⣿⣿⣿⡿⢋⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⢁⣷⣤⣍⣉⣉⣭⣴⣾⣿⣿"
@@ -15,90 +14,7 @@ IMG5="ㅤㅤ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⠛⠋⠉⠙⠻⠿⠿⠿�
 a=$"$IMG1"; b=$"$IMG2" c=$"$IMG3" d=$"$IMG4" e=$"$IMG5"
   arr[0]="$a"; arr[1]="$b"; arr[2]="$c"
   arr[3]="$d"; arr[4]="$e"
-
-while :; do
-rand=$[$RANDOM % ${#arr[@]}]
-mae=$(echo ${arr[$rand]})
-giro=$(if [ -e ~/multi ]; then echo ok; fi)
-       case $giro in
-          ok) clear; break
-          ;;
-          *) clear; echo -e $mae
-             echo; echo -e "\e[01;37;41m  • atualizando... •  \e[0m"
-             sleep .5
-       esac
-done; rm s
-echo -e $IMG5; echo
-while :; do
-            nohup dpkg -s pv > /dev/null 2>&1
-            pv=$(echo $?)
-            echo -e "\e[01;37m checando pv \e[0m"; sleep .5
-      case $pv in
-            0) echo -e "\e[01;37;41m pv ok \e[0m"|pv -qL 18; break;;
-            1) echo -e "\e[01;37;41m sem pv\c\e[0m"; sleep 1.5
-               echo -e "\e[01;37;41m sem pressa, irmão \e[0m\c"; sleep 1; echo; echo
-                  nohup pkg install pv -y -q --silent > /dev/null 2>&1
-                         nohup dpkg -s pv > /dev/null 2>&1
-                         pv1=$(echo $?)
-                  case $pv1 in
-                      0) echo -e "\e[01;37;41m agora tem pv \e[0m"|pv -qL 18; break;;
-                      1) echo -e "\e[01;37;41m pv tá off        \e[0m"
-                         echo -e "\e[01;37;41m roubaram os cabos \e[0m"; sleep 1.5
-                         echo -e "\e[01;37m é bom atualizar \n assim > \e[01;37;41m pkg install pv \e[0m\n \e[01;37mqualquer coisa é só apt update && apt upgrade  \e[0m"; sleep 7; break;;
-                      *) echo -e "\e[01;37mhoje não é seu dia de sorte\e[0m"; break
-                  esac;;
-            *) echo -e "\e[01;37mhoje não é seu dia de sorte\e[0m"; break
-      esac
-sleep 1
-done
-echo
-echo -e "\e[01;33m tá sentindo a energia? \e[0m"; sleep 1
-echo
-while :; do
-            nohup dpkg -s jq > /dev/null 2>&1
-            jq=$(echo $?)
-            echo -e "\e[01;37m espero que tenha jq \e[0m"; sleep .5
-      case $pv in
-            0) echo -e "\e[01;37;41m boa, você tem o jq \e[0m"|pv -qL 18; break;;
-            1) echo -e "\e[01;37;41m sem jq!\c\e[0m"; sleep 1.5
-               echo -e "\e[01;37;41m sem pressa, irmão \e[0m\c"; sleep 1; echo; echo
-                  nohup pkg install jq -y -q --silent > /dev/null 2>&1
-                         nohup dpkg -s jq > /dev/null 2>&1
-                         jq1=$(echo $?)
-                  case $jq1 in
-                      0) echo -e "\e[01;37;41m jq ok \e[0m"; sleep 1; break;;
-                      1) echo -e "\e[01;37;41m jq deu zica        \e[0m"
-                         echo -e "\e[01;37;41m roubaram os cabos \e[0m"; sleep 1.5
-                         echo -e "\e[01;37m é bom atualizar \n assim > \e[01;37;41m pkg install jq \e[0m\n \e[01;37mqualquer coisa é só apt update && apt upgrade  \e[0m"; sleep 4; break;;
-                      *) echo -e "\e[01;37mhoje não é seu dia de sorte\e[0m"; break
-                  esac;;
-            *) echo -e "\e[01;37mhoje não é seu dia de sorte\e[0m"; break
-      esac
-sleep 1
-done
-echo
-sleep 1; echo -e "\e[01;33m quase lá \e[0m"; sleep 2
-echo
-while :; do
-             nohup dpkg -s pv > /dev/null 2>&1
-             pv2=$(echo $?)
-                   case $pv2 in
-                            0) break;;
-                            1) echo -e "\e[01;37;41m alguns extras  \e[0m"
-                               echo -e "\e[01;37;41m e tá tudo ok \e[0m"; exit;;
-                            *) echo -e "\e[01;37mhoje não é seu dia de sorte\e[0m"; break
-                   esac
-done
-while :; do
-             nohup dpkg -s jq > /dev/null 2>&1
-             jq2=$(echo $?)
-                   case $jq2 in
-                            0) break;;
-                            1) echo -e "\e[01;37;41m alguns extras  \e[0m"
-                               echo -e "\e[01;37;41m e tá tudo ok \e[0m"; exit;;
-                            *) echo -e "\e[01;37mhoje não é seu dia de sorte\e[0m"; break
-                   esac
-done
+rm s
 #!/bin/bash
 clear
 echo -e "$IMG1"; sleep 2.5; clear
@@ -142,9 +58,5 @@ exit
 #!/bin/bash
 cd $HOME
 rm -rf storage && termux-setup-storage && rm 02 && rm 03
-nohup pkg install pv -y -qq --silent
-nohup pkg install jq -y -qq --silent
-nohup pkg install git -y -qq --silent
-###################
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/02 > /dev/null && chmod 777 02
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/03 > /dev/null && chmod 777 03
