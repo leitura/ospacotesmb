@@ -180,13 +180,7 @@ veri=$(echo -e "\e[01;37m Opção: \e[0m")
                           for i in $(seq $VEZES);
                              do
                           response=$(data=$"msisdn=$numero&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://a.vivo.ddivulga.com/" -d "${data}")
-                          body=$(echo $response | jq '.packprovision')
-                          pack=$'"packprovisionOK"'
-                              case $o in
-                              $qtdtokens) mssg=$(echo "FINALIZANDO");;
-                                       *) mssg=$(echo "INICIANDO O PRÓXIMO")
-                              esac
-                             grepi=$(echo $response | grep -c "Invalid Campaign")
+                          grepi=$(echo $response | grep -c "Invalid Campaign")
          case $grepi in
               1) echo -e "\e[01;33m TOKEN RETORNOU INVÁLIDO! TENTE OUTRO\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break;;
               *)
@@ -206,6 +200,12 @@ veri=$(echo -e "\e[01;37m Opção: \e[0m")
               1) echo -e "\e[01;32m SUCESSO SÓ ESPERAR CAIR\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
               *)
          esac
+body=$(echo $response | jq '.packprovision')
+                                pack=$'"packprovisionOK"'
+                                case $o in
+                                  $qtdtokens) mssg=$(echo "FINALIZANDO");;
+                                           *) mssg=$(echo "INICIANDO O PRÓXIMO")
+                                           esac
     done
    done
                           echo -e "         ≡ \e[01;37mO P Ç Õ E S\e[0m ≡"
@@ -245,12 +245,6 @@ veri=$(echo -e "\e[01;37m Opção: \e[0m")
                                 for i in $(seq $VEZES);
                                   do
                                 response=$(data=$"msisdn=$NUMERO&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://a.vivo.ddivulga.com/" -d "${data}")
-                                body=$(echo $response | jq '.packprovision')
-                                pack=$'"packprovisionOK"'
-                                case $o in
-                                  $qtdtokens) mssg=$(echo "FINALIZANDO");;
-                                           *) mssg=$(echo "INICIANDO O PRÓXIMO")
-                                esac 
                                 grepi=$(echo $response | grep -c "Invalid Campaign")
          case $grepi in
               1) echo -e "\e[01;33m TOKEN RETORNOU INVÁLIDO! TENTE OUTRO\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break;;
@@ -271,6 +265,12 @@ veri=$(echo -e "\e[01;37m Opção: \e[0m")
               1) echo -e "\e[01;32m SUCESSO SÓ ESPERAR CAIR\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
               *)
          esac
+body=$(echo $response | jq '.packprovision')
+                                pack=$'"packprovisionOK"'
+                                case $o in
+                                  $qtdtokens) mssg=$(echo "FINALIZANDO");;
+                                           *) mssg=$(echo "INICIANDO O PRÓXIMO")
+                                           esac
     done
    done
                            echo -e "         ≡ \e[01;37mO P Ç Õ E S\e[0m ≡"
@@ -370,7 +370,7 @@ veri=$(echo -e "\e[01;37m Opção: \e[0m")
                     for i in $(seq $VEZES);
                        do
                     response=$(data=$"msisdn=$numero&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "${site}" -H "Referer: http://a.vivo.ddivulga.com/" -d "${data}")
-grepi=$(echo $response | grep -c "Invalid Campaign")
+                    grepi=$(echo $response | grep -c "Invalid Campaign")
          case $grepi in
               1) echo -e "\e[01;33m TOKEN RETORNOU INVÁLIDO! TENTE OUTRO\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break;;
               *)
@@ -390,6 +390,12 @@ grepi=$(echo $response | grep -c "Invalid Campaign")
               1) echo -e "\e[01;32m SUCESSO SÓ ESPERAR CAIR\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 18;;
               *)
                      esac
+body=$(echo $response | jq '.packprovision')
+                          pack=$'"packprovisionOK"'
+                              case $o in
+                              $qtdtokens) mssg=$(echo "FINALIZANDO");;
+                                       *) mssg=$(echo "INICIANDO O PRÓXIMO")
+                                       esac
                      done
                      done
                           echo -e "         ≡ \e[01;37mO P Ç Õ E S\e[0m ≡"
