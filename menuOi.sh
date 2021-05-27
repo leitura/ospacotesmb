@@ -246,7 +246,7 @@ clear && echo -e $tit
                       2) break
                  esac
            done;;
-       4) tail -n +120 principal > principal1 && head -n +22 principal1 > principal2 && rm principal1 && chmod +x principal2;;
+       4) tail -n +120 principal > principal1 && head -n +22 principal1 > principal2 && rm principal1 && chmod +x principal2 && ./principal2;;
        0) rm principal2 > /dev/null 2>&1; echo; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./principal\e[0m"|pv -qL 20; exit;;
        *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
      esac # case MENU
