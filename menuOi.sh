@@ -202,7 +202,7 @@ clear && echo -e $tit
            echo -e '\e[01;37m(1) 50x\c'; echo -e ' | (2) 100x \c'; echo -e '| (3) 500x\c'; echo -e ' | (4) 999x \e[0m'
            read -n1 -p "$veri" xx
               case $xx in
-                   1) VEZES=3; echo; echo -e '\e[01;37;41m Só 50? esperava mais de você... \e[0m'|pv -qL 25; sleep 2; break;;
+                   1) VEZES=50; echo; echo -e '\e[01;37;41m Só 50? esperava mais de você... \e[0m'|pv -qL 25; sleep 2; break;;
                    2) VEZES=100; echo; echo -e '\e[01;37;41m 100 é legal, mas esperava mais de você... \e[0m'|pv -qL 25; sleep 2; break;;
                    3) VEZES=500; echo; echo -e '\e[01;37;41m Agora sim 500, esse é meu garoto \e[0m'|pv -qL 25; sleep 2.5; break;;
                    4) VEZES=999; echo; echo -e '\e[01;37;41m 999?... cara, vou deixar você andar comigo no recreio \e[0m'|pv -qL 25; sleep 3; break;;
@@ -246,7 +246,8 @@ clear && echo -e $tit
                       2) break
                  esac
            done;;
-       0) exit;;
+       4) tail -n +120 principal > principal1 && head -n +22 principal1 > principal2 && rm principal1 && chmod +x principal2;;
+       0) rm principal2 > /dev/null 2>&1; echo; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./principal\e[0m"|pv -qL 20; exit;;
        *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
      esac # case MENU
     done # primeiro loop
