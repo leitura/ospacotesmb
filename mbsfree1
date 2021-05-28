@@ -102,7 +102,7 @@ clear && echo -e $tit
              read -n1 -p "$veri" opc2; echo
                  case $opc2 in
                       1) break;;
-                      2) break;;
+                      2) ./mbsfree
                       0) rm mbsfree2 > /dev/null 2>&1; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./mbsfree\e[0m"|pv -qL 20; exit;;
                       *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
                  esac
