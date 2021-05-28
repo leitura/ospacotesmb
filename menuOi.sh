@@ -60,7 +60,7 @@ clear && echo -e $tit
                      *)
                 esac
            grepi3=$(echo $response | grep -c "Invalid Campaign")
-                 case $grep3 in
+                 case $grepi3 in
                       1) echo -e "\e[01;33m TOKEN RETORNOU INVÁLIDO! TENTE OUTRO\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 25; echo; break;;
                       *)
                  esac
