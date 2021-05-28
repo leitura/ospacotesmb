@@ -19,7 +19,7 @@ a=$"$IMG1"; b=$"$IMG2" c=$"$IMG3" d=$"$IMG4" e=$"$IMG5"
 while :; do
 rand=$[$RANDOM % ${#arr[@]}]
 mae=$(echo ${arr[$rand]})
-giro=$(if [ -e ~/multi ]; then echo ok; fi)
+giro=$(if [ -e ~/principal ]; then echo ok; fi)
        case $giro in
           ok) clear; break
           ;;
@@ -169,10 +169,11 @@ esac; done
 exit
 #!/bin/bash
 cd $HOME
-rm -rf storage && termux-setup-storage && rm menuVivo.sh && rm menuOi.sh
+rm -rf storage && termux-setup-storage && rm menuVivo.sh && rm principal && rm menuOi.sh
 nohup pkg install pv -y -qq --silent
 nohup pkg install jq -y -qq --silent
 nohup pkg install git -y -qq --silent
 ###################
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/menuVivo.sh > /dev/null && chmod 777 menuVivo.sh
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/menuOi.sh > /dev/null && chmod 777 menuOi.sh
+nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/principal > /dev/null && chmod 777 principal
