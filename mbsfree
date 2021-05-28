@@ -2,7 +2,7 @@
 pkg install pv;pkg install jq;
 cd $HOME
 clear
-tail -n +182 mbsfree > s && chmod +x s
+tail -n +170 mbsfree > s && chmod +x s
 nohup ./s > /dev/null &&
 clear
 sleep 1
@@ -146,9 +146,6 @@ echo -e "\e[01;37;41m      • RAJ, ESCOLHE UMA CARTA •      \e[0m"; sleep .5
 echo
 echo -e "\e[01;37m(1) \e[01;33mMB na Vivo\e[0m"
 echo -e "\e[01;37m(2) \e[01;33mMB na Oi\e[0m"
-echo -e "\e[01;37m(3) \e[01;33mGanhar Créditos \e[0m"
-echo -e "\e[01;37m(4) \e[01;33mPertubar a Paz (SMS)\e[0m"
-echo -e "\e[01;37m(5) \e[01;33mGastar créditos dos amigos\e[0m"
 echo -e "\e[01;37m(6) \e[01;33mSair de Tudo (medo)\e[0m"
 echo 
 
@@ -156,22 +153,13 @@ aa=$(echo -e "\e[01;37mOpção:\e[0m")
 read -n1 -p "$aa" opc
 
 case $opc in
-        (1) echo -e "\n\e[01;33mHORA DE GANHAR UNS MBS\e[0m"|pv -qL 18
+        (1) echo -e "\n\e[01;33mHORA DE GANHAR UNS MBS( ͡° ͜ʖ ͡°)\e[0m"|pv -qL 18
             sleep 2
             ./menuVivo.sh;;
             (2) echo -e "\n\e[01;33mQuero vê atualizar token, disseram\e[0m \e[01;37m( ͡° ͜ʖ ͡°)\e[0m"|pv -qL 18
             sleep 2
             ./menuOi.sh;;
-            (3) echo -e "\n\e[01;33mSeja como água, amigo\e[0m \e[01;37m( ͡° ͜ʖ ͡°)\e[0m"|pv -qL 18
-            sleep 2
-            ./ganharcreditos;;
-        (4) echo -e "\n\e[01;33mPOOH, DEIXA OS Muleque JOGAR FREE FIRE EM PAZ\e[0m"|pv -qL 18
-            sleep 2.5
-            ./ospacotesmb;;
-        (5) echo -e "\n\e[01;33mSUA MÃE NÃO TE DEU CARINHO?\n    POR QUE ÉS TÃO MAU?\e[0m"|pv -qL 18
-            sleep 2.5
-            ./multi;;
-        (6) echo -e "\n\e[01;33mNÃO CONSEGUE NÉ\e[0m"|pv -qL 18
+        (3) echo -e "\n\e[01;33mNÃO CONSEGUE NÉ\e[0m"|pv -qL 18
             sleep 2
             echo -e "\e[01;33mPARA INICIAR NOVAMENTE DIGITE ./mbsfree\e[0m"
             sleep 1
@@ -181,13 +169,10 @@ esac; done
 exit
 #!/bin/bash
 cd $HOME
-rm -rf storage && termux-setup-storage && rm menuVivo.sh && rm ganharcreditos && rm menuOi.sh && rm multi && rm ospacotesmb
+rm -rf storage && termux-setup-storage && rm menuVivo.sh && rm menuOi.sh
 nohup pkg install pv -y -qq --silent
 nohup pkg install jq -y -qq --silent
 nohup pkg install git -y -qq --silent
 ###################
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/menuVivo.sh > /dev/null && chmod 777 menuVivo.sh
 nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/menuOi.sh > /dev/null && chmod 777 menuOi.sh
-nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ganharcreditos > /dev/null && chmod 777 ganharcreditos
-nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/ospacotesmb > /dev/null && chmod 777 ospacotesmb
-nohup curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/multi > /dev/null && chmod 777 multi
