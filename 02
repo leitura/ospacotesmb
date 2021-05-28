@@ -137,10 +137,16 @@ body=$(echo $response | jq '.packprovision')
                                 pack=$'"packprovisionOK"'
                                 case $o in
                                   $qtdtokens) mssg=$(echo "FINALIZANDO");;
-                                           *) mssg=$(echo "INICIANDO O PRÓXIMO")
-                                           esac
-    done
-   done
+                                           *) mssg=$(echo "INICIANDO O PRÓXIMO");;
+                                           *)
+                 esac
+           grepi5=$(echo $response | grep -c "7x1 elegibility")
+                 case $grepi5 in
+                      1) echo -e "\e[01;32m SERVIDOR DANDO PAU! CORRE BERG\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 25;;
+                      *)
+                 esac
+              done
+           done
                           echo -e "         ≡ \e[01;37mO P Ç Õ E S\e[0m ≡"
                           echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
                           echo -e " \e[01;37m〘*1*〙\e[0m\e[01;04;33mIR AO TESTADOR PADRÃO\e[0m\c"; echo -e "\e[02;03;37m   Apenas cole o numero\e[0m"
@@ -202,10 +208,16 @@ body=$(echo $response | jq '.packprovision')
                                 pack=$'"packprovisionOK"'
                                 case $o in
                                   $qtdtokens) mssg=$(echo "FINALIZANDO");;
-                                           *) mssg=$(echo "INICIANDO O PRÓXIMO")
-                                           esac
-    done
-   done
+                                           *) mssg=$(echo "INICIANDO O PRÓXIMO");;
+                                           *)
+                 esac
+           grepi5=$(echo $response | grep -c "7x1 elegibility")
+                 case $grepi5 in
+                      1) echo -e "\e[01;32m SERVIDOR DANDO PAU! CORRE BERG\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 25;;
+                      *)
+                 esac
+              done
+           done
                            echo -e "         ≡ \e[01;37mO P Ç Õ E S\e[0m ≡"
                            echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
                            echo -e " \e[01;37m〘*1*〙\e[0m\e[01;04;33mREPETIR TESTADOR PADRÃO\e[0m\c"; echo -e "\e[02;03;37m Apenas cole o numero\e[0m"
@@ -327,10 +339,16 @@ body=$(echo $response | jq '.packprovision')
                           pack=$'"packprovisionOK"'
                               case $o in
                               $qtdtokens) mssg=$(echo "FINALIZANDO");;
-                                       *) mssg=$(echo "INICIANDO O PRÓXIMO")
-                                       esac
-                     done
-                     done
+                                       *) mssg=$(echo "INICIANDO O PRÓXIMO");;
+                                       *)
+                 esac
+           grepi5=$(echo $response | grep -c "7x1 elegibility")
+                 case $grepi5 in
+                      1) echo -e "\e[01;32m SERVIDOR DANDO PAU! CORRE BERG\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 25;;
+                      *)
+                 esac
+              done
+           done
                           echo -e "         ≡ \e[01;37mO P Ç Õ E S\e[0m ≡"
                           echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
                           echo -e " \e[01;37m〘*1*〙\e[0m\e[01;04;33mIR AO TESTADOR PADRÃO\e[0m\c"; echo -e "\e[02;03;37m   Apenas cole o numero\e[0m"
@@ -386,10 +404,16 @@ body=$(echo $response | jq '.packprovision')
          esac
                               case $o in
                         $qtdtokens) mssg=$(echo "FINALIZANDO");;
-                                 *) mssg=$(echo "INICIANDO O PRÓXIMO")
-                              esac
-                            done
-                            done
+                                 *) mssg=$(echo "INICIANDO O PRÓXIMO");;
+                              *)
+                 esac
+           grepi5=$(echo $response | grep -c "7x1 elegibility")
+                 case $grepi5 in
+                      1) echo -e "\e[01;32m SERVIDOR DANDO PAU! CORRE BERG\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 25;;
+                      *)
+                 esac
+              done
+           done
                             echo -e "         ≡ \e[01;37mO P Ç Õ E S\e[0m ≡"
                            echo -e " \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
                            echo -e " \e[01;37m〘*1*〙\e[0m\e[01;04;33mREPETIR TESTADOR PADRÃO\e[0m\c"; echo -e "\e[02;03;37m Apenas cole o numero\e[0m"
@@ -459,9 +483,15 @@ body=$(echo $response | jq '.packprovision')
          esac
              case $o in
                         $qtdtokens) mssg=$(echo "FINALIZANDO");;
-                                 *) mssg=$(echo "INICIANDO O PRÓXIMO")
-             esac 
-            done
+                                 *) mssg=$(echo "INICIANDO O PRÓXIMO");;
+             *)
+                 esac
+           grepi5=$(echo $response | grep -c "7x1 elegibility")
+                 case $grepi5 in
+                      1) echo -e "\e[01;32m SERVIDOR DANDO PAU! CORRE BERG\e[0m / \e[01;37mCONTAGEM: $i\e[0m"|pv -qL 25;;
+                      *)
+                 esac
+              done
            done
                             echo -e "         ≡ \e[01;37mO P Ç Õ E S\e[0m ≡"
                        echo -e "  \e[00;31m══════════════\e[0m\e[01;37m︾\e[00;31m═══════════════\e[0m"
