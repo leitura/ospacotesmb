@@ -144,8 +144,8 @@ clear
 echo -e $IMG5; echo
 echo -e "\e[01;37;41m      • RAJ, ESCOLHE UMA CARTA •      \e[0m"; sleep .5
 echo
-echo -e "\e[01;37m(1) \e[01;33mVerificar se você pode ganhar MB\e[0m"
-echo -e "\e[01;37m(2) \e[01;33mTestar Token personalizado (MB até o talo)\e[0m"
+echo -e "\e[01;37m(1) \e[01;33mMB na Vivo\e[0m"
+echo -e "\e[01;37m(2) \e[01;33mMB na Oi\e[0m"
 echo -e "\e[01;37m(3) \e[01;33mGanhar Créditos \e[0m"
 echo -e "\e[01;37m(4) \e[01;33mPertubar a Paz (SMS)\e[0m"
 echo -e "\e[01;37m(5) \e[01;33mGastar créditos dos amigos\e[0m"
@@ -159,7 +159,7 @@ case $opc in
         (1) echo -e "\n\e[01;33mHORA DE GANHAR UNS MBS\e[0m"|pv -qL 18
             sleep 2
             ./mbsfree1;;
-            (2) echo -e "\n\e[01;33mEssa a crush curte\e[0m \e[01;37m( ͡° ͜ʖ ͡°)\e[0m"|pv -qL 18
+            (2) echo -e "\n\e[01;33mQuero vê atualizar token, disseram\e[0m \e[01;37m( ͡° ͜ʖ ͡°)\e[0m"|pv -qL 18
             sleep 2
             ./mbsfree2;;
             (3) echo -e "\n\e[01;33mSeja como água, amigo\e[0m \e[01;37m( ͡° ͜ʖ ͡°)\e[0m"|pv -qL 18
