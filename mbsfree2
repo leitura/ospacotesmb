@@ -60,7 +60,7 @@ clear && echo -e $tit
                      *)
                 esac
            grepi3=$(echo $response | grep -c "Invalid Campaign")
-                 case $grep3 in
+                 case $grepi3 in
                       1) echo -e "\e[01;33m TOKEN RETORNOU INVÁLIDO! TENTE OUTRO\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 25; echo; break;;
                       *)
                  esac
@@ -89,7 +89,7 @@ clear && echo -e $tit
                  case $opc2 in
                       1) break;;
                       2) break;;
-                      0) rm principal2 > /dev/null 2>&1; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./mbsfree2\e[0m"|pv -qL 20; exit;;
+                      0) rm principal2 > /dev/null 2>&1; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./principal\e[0m"|pv -qL 20; exit;;
                       *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
                  esac
             done
@@ -178,7 +178,7 @@ clear && echo -e $tit
                  case $opc2 in
                       1) break;;
                       2) break;;
-                      0) rm principal2 > /dev/null 2>&1; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./mbsfree2\e[0m"|pv -qL 20; exit;;
+                      0) rm principal2 > /dev/null 2>&1; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./principal\e[0m"|pv -qL 20; exit;;
                       *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
                  esac
             done
@@ -239,7 +239,7 @@ clear && echo -e $tit
                  case $opc2 in
                       1) break;;
                       2) break;;
-                      0) rm principal2 > /dev/null 2>&1; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./mbsfree2\e[0m"|pv -qL 20; exit;;
+                      0) rm principal2 > /dev/null 2>&1; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./principal\e[0m"|pv -qL 20; exit;;
                       *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
                  esac
             done
@@ -247,12 +247,12 @@ clear && echo -e $tit
                       2) break
                  esac
            done;;
-       4) tail -n +120 principal > mbsfree2 && head -n +27 principal1 > mbsfree2 && rm principal1 && chmod +x mbsfree2 && break;;
-       0) rm principal2 > /dev/null 2>&1; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./mbsfree2\e[0m"|pv -qL 20; break;;
+       4) tail -n +120 principal > principal1 && head -n +27 principal1 > principal2 && rm principal1 && chmod +x principal2 && break;;
+       0) rm principal2 > /dev/null 2>&1; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./principal\e[0m"|pv -qL 20; break;;
        *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
      esac # case MENU
     done # primeiro loop
     case $verifica in
-             4) ./mbsfree2;;
+             4) ./principal2;;
              0) exit
     esac
