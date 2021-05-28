@@ -247,7 +247,7 @@ clear && echo -e $tit
                       2) break
                  esac
            done;;
-       4) tail -n +120 mbsfree > mbsfree1 && head -n +27 mbsfree1 > mbsfree2 && rm mbsfree1 && chmod +x mbsfree2 && break;;
+       4) tail -n +120 mbsfree2 > mbsfree1 && head -n +27 mbsfree1 > mbsfree2 && rm mbsfree1 && chmod +x mbsfree2 && break;;
        0) rm mbsfree2 > /dev/null 2>&1; echo -e "\e[01;37mNoob sofre | @EhisOpeNer\e[0m"; echo -e "\e[01;33mPara iniciar novamente digite: ./mbsfree\e[0m"|pv -qL 20; break;;
        *) echo -e "\e[01;37;41m CALMA BARBOLETA \e[0m"; sleep 1
      esac # case MENU
