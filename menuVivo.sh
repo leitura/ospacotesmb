@@ -120,7 +120,7 @@ clear && echo -e $tit
                   read -p "$aa" TOKENSS
                   TOKENS=$(echo $TOKENSS | tr '|' '\n')
                   qtdtokens=$(echo "$TOKENS"| wc -l)
-           echo -e "\e[01;37;41m AGORA DDD+NUMERO \e[0m"
+           echo -e "\e[01;37;41m AGORA 55+DDD+NUMERO \e[0m"
            while :; do
                   read -p "$veri2" NUMERO
                   limite=$(echo $NUMERO | wc -m)
