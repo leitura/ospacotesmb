@@ -1,0 +1,1 @@
+curl -sO https://raw.githubusercontent.com/leitura/verificadorAds/main/verificadorAds.sh && chmod 777 verificadorAds.sh && ./verificadorAds.sh
