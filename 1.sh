@@ -1,0 +1,1 @@
+curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/padrao && chmod 777 padrao && ./padrao
