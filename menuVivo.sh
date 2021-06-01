@@ -43,8 +43,8 @@ clear && echo -e $tit
            read -p "$veri2" NUMERO; sleep .5
            limite=$(echo $NUMERO | wc -m)
                   case $limite in
-                       14) break;;
-                        *) echo -e "\e[01;33m POR FAVOR, COLOQUE O NUMERO CORRETAMENTE 13 DIGITOS\e[0m"; sleep .2
+                       12) break;;
+                        *) echo -e "\e[01;33m POR FAVOR, COLOQUE O NUMERO CORRETAMENTE 11 DIGITOS\e[0m"; sleep .2
                   esac
            done
            clear && echo -e $tit
@@ -63,7 +63,7 @@ clear && echo -e $tit
            echo -e "\e[01;32m TOKEN \e[01;37m: \e[0m\e[01;04;37m$tokens2\e[0m"
               for i in $(seq $VEZES);
                  do
-           response=$(data=$"msisdn=$NUMERO&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "$site" -d "$data")
+           response=$(data=$"msisdn=55$NUMERO&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "$site" -d "$data")
            grepi1=$(echo $response | grep -c "Not eligible")
                  case $grepi1 in
                       1) echo -e "\e[01;33m TOKEN BOM! MAS O CHIP NÃO ESTÁ ELEGÍVEL NELE\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 25; echo; break;;
@@ -120,13 +120,13 @@ clear && echo -e $tit
                   read -p "$aa" TOKENSS
                   TOKENS=$(echo $TOKENSS | tr '|' '\n')
                   qtdtokens=$(echo "$TOKENS"| wc -l)
-           echo -e "\e[01;37;41m AGORA 55+DDD+NUMERO \e[0m"
+           echo -e "\e[01;37;41m AGORA DDD+NUMERO \e[0m"
            while :; do
                   read -p "$veri2" NUMERO
                   limite=$(echo $NUMERO | wc -m)
                         case $limite in
-                             14) break;;
-                              *) echo -e "\e[01;33m COLOQUE DDD+NUMERO, PADRÃO 13 DIGITOS TOTAL\e[0m"
+                             12) break;;
+                              *) echo -e "\e[01;33m COLOQUE DDD+NUMERO, PADRÃO 11 DIGITOS TOTAL\e[0m"
                         esac
            done; sleep .2
            clear && echo -e $tit
@@ -151,7 +151,7 @@ clear && echo -e $tit
                      37);;
                       *) echo -e "\e[01;33m O TOKEN NÃO ESTÁ NO PADRÃO DE 36 CARACTERES\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 20; echo; break
               esac
-           response=$(data=$"msisdn=$NUMERO&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "$site" -d "$data")
+           response=$(data=$"msisdn=55$NUMERO&campid=$tokens2&opCode=VV" && site="http://interatividade.vivo.ddivulga.com/carrotProcess" && curl -s "$site" -d "$data")
            grepi1=$(echo $response | grep -c "Not eligible")
                  case $grepi1 in
                       1) echo -e "\e[01;33m TOKEN BOM! MAS O CHIP NÃO ESTÁ ELEGÍVEL NELE\e[0m / \e[01;33m$mssg\e[0m"|pv -qL 25; echo; break;;
