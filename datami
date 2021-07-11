@@ -16,7 +16,15 @@ echo -e "\033[0m\033[01;31mㅤㅤㅤE lá vamos nós \033[05m"
 
 connect () {
 clear
-cp /data/data/$App/cache/android.conf /storage/emulated/0/Download/Neymar.ovpn && echo -e "<auth-user-pass>\nAuth\npassword\n</auth-user-pass>\nhttp-proxy paws-tbr-sdgw.datami.net 8043\n--verify-client-cert none" >> /storage/emulated/0/Download/Neymar.ovpn && termux-open --chooser /storage/emulated/0/Download/Neymar.ovpn --content-type "application/x-openvpn-profile"
+am start -n $App/$atividade E1="sleep 4"
+check() {
+    vpn=$(ifconfig | grep -c tun0)
+    case $vpn in
+0) sleep 4 ; check;;
+1) cp /data/data/$App/cache/android.conf /storage/emulated/0/Download/Neymar.ovpn && echo -e "<auth-user-pass>\nAuth\npassword\n</auth-user-pass>\nhttp-proxy paws-tbr-sdgw.datami.net 8043\n--verify-client-cert none" >> /storage/emulated/0/Download/Neymar.ovpn && termux-open --chooser /storage/emulated/0/Download/Neymar.ovpn --content-type "application/x-openvpn-profile"
+esac
+}
+check
 }
 clear
 Menu
