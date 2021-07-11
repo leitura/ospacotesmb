@@ -16,7 +16,15 @@ echo -e "\033[0m\033[01;31mㅤㅤㅤE lá vamos nós \033[05m"
 
 connect () {
 clear
-am start -n $App/$atividade E1="sleep 4"
+check() {
+    vpn=$(ifconfig | grep -c tun0)
+    case $vpn in
+    1) clear && echo "VPN ligada" ; echo ; echo "agora, desligue a VPN" ; echo "não sabe desligar VPN?" ; echo "fecha dos recentes" ; echo "forçar parada do App" ; echo ; echo "obedeça" ; sleep 2 ; check;;
+    0) clear 
+    esac
+}
+check
+am start -n $App/$atividade E1="sleep 4" 
 check() {
     vpn=$(ifconfig | grep -c tun0)
     case $vpn in
