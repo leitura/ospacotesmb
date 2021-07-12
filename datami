@@ -24,12 +24,20 @@ check() {
     esac
 }
 check
-am start -n $App/$atividade E1="sleep 4" 
+echo "Indo pro mod estudante" ; echo "que selecionou" ; sleep 5 ; clear ; echo "Quando gerar VPN, feche o mod estudante" ; echo "daí será redirecionado pro" ; echo "OpenVPN" ; sleep 8 && am start -n $App/$atividade E1="sleep 4" 
 check() {
     vpn=$(ifconfig | grep -c tun0)
     case $vpn in
 0) sleep 4 ; check;;
-1) cp /data/data/$App/cache/android.conf /storage/emulated/0/Download/Neymar.ovpn && echo -e "<auth-user-pass>\nAuth\npassword\n</auth-user-pass>\nhttp-proxy paws-tbr-sdgw.datami.net 8043\n--verify-client-cert none" >> /storage/emulated/0/Download/Neymar.ovpn && termux-open --chooser /storage/emulated/0/Download/Neymar.ovpn --content-type "application/x-openvpn-profile"
+1) clear 
+    esac
+}
+check
+check() {
+    vpn=$(ifconfig | grep -c tun0)
+    case $vpn in
+    1) clear && echo "Agora feche o app de escola" ; echo "para ser redirecionado" ; echo "para o open Vpn" ; echo ; echo "obedeça" ; sleep 2 ; check;;
+    0) cp /data/data/$App/cache/android.conf /storage/emulated/0/Download/Neymar.ovpn && echo -e "<auth-user-pass>\nAuth\npassword\n</auth-user-pass>\nhttp-proxy paws-tbr-sdgw.datami.net 8043\n--verify-client-cert none" >> /storage/emulated/0/Download/Neymar.ovpn && termux-open --chooser /storage/emulated/0/Download/Neymar.ovpn --content-type "application/x-openvpn-profile"
 esac
 }
 check
