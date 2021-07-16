@@ -1,6 +1,7 @@
 #!/bin/bash
                     # Pacote | Atividade | Nome
-pacotes="org.educaolinda.app org.aprendendosempre.app.SplashScreenActivity Olinda
+pacotes="br.gov.go.seduc.netescola br.gov.go.seduc.netescola.MainActivity NetEscola
+org.educaolinda.app org.aprendendosempre.app.SplashScreenActivity Olinda
 com.educasaoleo.reach4all com.educasaoleo.reachall.SplashScreen São Leo
 com.conectauneb.reach4all com.datami.reachall.SplashScreen Conecta UNEB
 br.gov.rj.rio.EscolaRioApp br.gov.rj.rio.EscolaRioApp.MainActivity Escola Rio
