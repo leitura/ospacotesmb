@@ -1,0 +1,90 @@
+#!/bin/bash
+clear
+Menu() {
+    clear
+    echo -e '\n'
+    echo -e " \e[01;31m==========================\e[0m"
+    echo -e " \e[05;33mDatami \e[0m\e[05;32m@EhisOpeNer\e[0m"  
+    echo -e " \e[05;36mQual Túnel VPN para hoje\e[0m"	
+    echo -e " \e[05;32m__________________________\e[0m"
+    echo -e " \e[01;36m[ 1 ] | \e[0m\e[01;33mEscola em Casa DF\e[0m"
+    echo -e " \e[01;36m[ 2 ] | \e[0m\e[01;33mE-learning EC (Porto Seguro)\e[0m"
+    echo -e " \e[01;36m[ 3 ] | \e[0m\e[01;33mConecta Uneb\e[0m"
+    echo -e " \e[01;36m[ 4 ] | \e[0m\e[01;33mSala Estudante SC\e[0m"
+    echo -e " \e[01;36m[ 5 ] | \e[0m\e[01;33mMinha Estácio\e[0m"
+    echo -e " \e[01;36m[ 6 ] | \e[0m\e[01;33mConexão Escola 2.0\e[0m"
+    echo -e " \e[01;36m[ 7 ] | \e[0m\e[01;33mEscola Rio\e[0m"
+    echo -e " \e[01;36m[ 8 ] | \e[0m\e[01;33mEscola RS - Professor\e[0m"
+    echo -e " \e[01;36m[ 9 ] | \e[0m\e[01;33mEscola RS - Estudante\e[0m"
+    echo -e " \e[01;36m[ 10 ] | \e[0m\e[01;33mEDUCA SÃO LEO\e[0m"
+    echo -e " \e[01;36m[ 11 ] | \e[0m\e[01;33mEstude em Casa\e[0m"
+    echo -e " \e[01;36m[ 12 ] | \e[0m\e[01;33mEscola MSJ\e[0m"
+    echo -e " \e[01;36m[ 13 ] | \e[0m\e[01;33mPrincesa Educa+\e[0m"
+    echo -e " \e[01;36m[ 14 ] | \e[0m\e[01;33mConquistApp\e[0m"
+    echo -e " \e[01;36m[ 15 ] | \e[0m\e[01;33mEducar Igarassu\e[0m"
+    echo -e " \e[01;36m[ 16 ] | \e[0m\e[01;33mEscoLAR\e[0m"
+    echo -e " \e[01;36m[ 17 ] | \e[0m\e[01;33mNetEscola\e[0m"
+    echo -e " \e[01;36m[ 18 ] | \e[0m\e[01;33mCMSP (root)\e[0m"
+    echo -e " \e[01;36m[ 19 ] | \e[0m\e[01;33mCMSP KIDS (root)\e[0m"
+    echo -e " \e[01;36m[ 20 ] | \e[0m\e[01;33mAula Paraná (root)\e[0m"
+    echo -e " \e[01;36m[ 21 ] | \e[0m\e[01;33mConecta Aí (root)\e[0m"
+    echo -e " \e[01;36m[ 22 ] | \e[0m\e[01;33mApplique-se (root)\e[0m"
+    echo -e " \e[01;36m[ 23 ] | \e[0m\e[01;33mRio Educa Em Casa (root)\e[0m"
+    echo -e " \e[01;36m[ 24 ] | \e[0m\e[01;33mPacote personalizado\e[0m"
+    echo -e " \e[01;36m[ 0 ] | \e[0m\e[01;31mSAIR, TENHO MEDO\e[0m"
+    echo -e '\n'
+    echo -e " \e[00;31m═══════════════════════════════\e[0m"
+    echo 
+    echo -e "   \e[05;32mRaj, escolhe uma carta\e[05m"
+    read x
+    case $x in
+    1) x="org.cordova.quasar.corona.app" ; y="org.cordova.quasar.corona.app.SplashScreenActivity" ; nome="EscolaEmCasaDF" ; E1="sleep 4";;
+    2) x="com.portoseguru.reach4all" ; y="com.datami.reachall.SplashScreen" ; nome="E-learningEC" ; E1="sleep 4";;
+    3) x="com.conectauneb.reach4all" ; y="com.datami.reachall.SplashScreen" ; nome="ConectaUneb" ; E1="sleep 4";;
+    4) x="br.sc.gov.ciasc.sed.inp" ; y="br.sc.gov.ciasc.sed.inp.MainActivity" ; nome="SalaEstudanteSC" ; E1="sleep 4";;
+    5) x="br.estacio.estaciomobile" ; y="br.estacio.mobile.MainActivity" ; nome="MinhaEstacio" ; E1="sleep 4";;
+    6) x="br.gov.prodemge.conexaoescola" ; y="br.gov.prodemge.conexaoescola.SplashActivity" ; nome="ConexãoEscola" ; E1="sleep 4";;
+    7) x="br.gov.rj.rio.EscolaRioApp" ; y="br.gov.rj.rio.EscolaRioApp.MainActivity" ; nome="EscolaRio" ; E1="sleep 4";;
+    8) x="br.com.procergs.tuaescola" ; y="br.com.procergs.tuaescola.MainActivity" ; nome="EscolaProfessorRS" ; E1="sleep 4";;
+    9) x="br.com.procergs.estudante" ; y="br.com.procergs.estudante.MainActivity" ; nome="EscolaEstudanteRS" ; E1="sleep 4";;
+    10) x="com.educasaoleo.reach4all" ; y="com.educasaoleo.reachall.SplashScreen" ; nome="EducaSãoLeo" ; E1="sleep 4";;
+    11) x="com.seduc.estudeemcasa" ; y="com.seduc.estudeemcasa.SplashActivity" ; nome="EstudeEmCasa" ; E1="sleep 4";;
+    12) x="com.escola.msj" ; y="com.escola.msj.SplashScreenActivity" ; nome="EscolaMSJ" ; E1="sleep 4";;
+    13) x="org.educaolinda.app" ; y="org.aprendendosempre.app.SplashScreenActivity " ; nome="PrincesaEduca+" ; E1="sleep 4";;
+    14) x="br.gov.ba.pmvc.vcapp" ; y="br.gov.ba.pmvc.vcapp.SplashScreenActivity" ; nome="ConquistApp" ; E1="sleep 4";;
+    15) x="org.educarigarassu.app" ; y="org.educarigarassu.app.SplashScreenActivity" ; nome="EscolaIgarassu" ; E1="sleep 4";;
+    16) x="br.gov.es.sedu.educacao" ; y="br.gov.es.sedu.educacao.MenuActivity" ; nome="EscoLAR" ; E1="sleep 4";;
+    17) x="br.gov.go.seduc.netescola" ; y="br.gov.go.seduc.netescola.MainActivity" ; nome="NetEscola" ;;
+    18) x="tv.ip.edusp" ; y="tv.ip.my.activities.SplashScreen" ; A3="su -c am start -n tv.ip.edusp/tv.ip.my.activities.VideoActivity2 " ; nome="CentroDeMidiasSP" ; A2="su -c am start -n tv.ip.edusp/com.datami.smi.ui.VpnPermissionActivity" ; s="sleep 8" ; A4="su -c am start -n tv.ip.edusp/tv.ip.my.activities.SplashScreen" ; db="su -c pm disable tv.ip.edusp" ; eb="su -c pm enable tv.ip.edusp";;
+    19) x="tv.ip.cmspi" ; y="tv.ip.my.activities.SplashScreen" ; A3="su -c am start -n tv.ip.cmspi/tv.ip.my.activities.MyVideoActivity" ; nome="RioEducaEmCasa" ; A2="su -c am start -n tv.ip.cmspi/com.datami.smi.ui.VpnPermissionActivity" ; s="sleep 8" ; A4="su -c am start -n tv.ip.cmspi/tv.ip.my.activities.SplashScreen " ; db="su -c pm disable tv.ip.cmspi" ; eb="su -c pm enable tv.ip.cmspi";;
+    20) x="tv.ip.aulapr" ; y="tv.ip.my.activities.SplashScreen" ; A3="su -c am start -n tv.ip.aulapr/tv.ip.my.activities.VideoActivity2 " ; nome="AulaParana" ; A2="su -c am start -n tv.ip.aulapr/com.datami.smi.ui.VpnPermissionActivity" ; s="sleep 8" ; A4="su -c am start -n tv.ip.aulapr/tv.ip.my.activities.SplashScreen" ; db="su -c pm disable tv.ip.aulapr" ; eb="su -c pm enable tv.ip.aulapr";;
+    21) x="tv.ip.conectaai" ; y="tv.ip.my.activities.SplashScreen" ; A3="su -c am start -n tv.ip.conectaai/tv.ip.my.activities.MyVideoActivity" ; nome="Applique-se" ; A2="su -c am start -n tv.ip.conectaai/com.datami.smi.ui.VpnPermissionActivity" ; s="sleep 8" ; A4="su -c am start -n tv.ip.conectaai/tv.ip.my.activities.SplashScreen" ; db="su -c pm disable tv.ip.conectaai" ; eb="su -c pm enable tv.ip.conectaai";; 
+    22) x="tv.ip.appliquese" ; y="tv.ip.my.activities.SplashScreen" ; A3="su -c am start -n tv.ip.appliquese/tv.ip.my.activities.VideoActivity2" ; nome="Applique-se" ; A2="su -c am start -n tv.ip.appliquese/com.datami.smi.ui.VpnPermissionActivity" ; s="sleep 8" ; A4="su -c am start -n tv.ip.appliquese/tv.ip.my.activities.SplashScreen" ; db="su -c pm disable tv.ip.appliquese" ; eb="su -c pm enable tv.ip.appliquese";; 
+   23) x="tv.ip.rioeduca" ; y="tv.ip.my.activities.SplashScreen" ; A3="su -c am start -n tv.ip.rioeduca/tv.ip.my.activities.VideoActivity2" ; nome="RioEducaEmCasa" ; A2="su -c am start -n tv.ip.rioeduca/com.datami.smi.ui.VpnPermissionActivity" ; s="sleep 8" ; A4="su -c am start -n tv.ip.rioeduca/tv.ip.my.activities.SplashScreen" ; db="su -c pm disable tv.ip.rioeduca" ; eb="su -c pm enable tv.ip.rioeduca";;
+   0) clear ; exit ;;
+    *) echo "Calma Barboleta" ; sleep 1 ; Menu ;;
+    esac
+    connect
+    }
+
+connect () {
+clear
+check1() {
+    vpn=$(ifconfig | grep -c tun0)
+    case $vpn in
+    1) clear && echo "VPN ligada" ; echo ; echo "agora, desligue a VPN" ; echo "não sabe desligar VPN?" ; echo "fecha dos recentes" ; echo "forçar parada do App" ; echo ; echo "obedeça" ; sleep 3 ; check1;;
+    0) clear 
+    esac
+}
+check1
+check2() {
+    vpn=$(ifconfig | grep -c tun0)
+    case $vpn in
+    1) clear && echo "pare a vpn" ; echo "caso precise" ; echo "diversão garantida" ; echo ; echo "tá sentindo a energia?" ; sleep 2 ; check2;;
+    0) clear  ; am broadcast -p com.applisto.appcloner -a com.applisto.appcloner.api.action.NEW_IDENTITY --es package_name $x [--ez clear_cache {true}] [--ez delete_app_data {true}] ; clear ; sleep 3 ; echo "Se o aplicativo escolhido já está" ; echo "Modificado para gerar nova identidade" ; echo "Vá em Informações do Aplicativo, Armazenamento" ; echo "Limpar dados e reabra o aplicativo Estudante" ; echo "Se o aplicativo escolhido não está modificado..." ; echo "Para gerar nova identidade, modifique antes..." ; echo "Ele apenas vai abrir após alguns segundos" ;rm -vf /storage/emulated/0/Android/data/$x ; sleep 4 ; am start -n $x/$y ;;
+    esac
+}
+check2
+}
+clear
+Menu
