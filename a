@@ -30,7 +30,6 @@ Menu() {
     echo -e " \e[01;36m[ 21 ] | \e[0m\e[01;33mConecta Aí (root)\e[0m"
     echo -e " \e[01;36m[ 22 ] | \e[0m\e[01;33mApplique-se (root)\e[0m"
     echo -e " \e[01;36m[ 23 ] | \e[0m\e[01;33mRio Educa Em Casa (root)\e[0m"
-    echo -e " \e[01;36m[ 24 ] | \e[0m\e[01;33mPacote personalizado\e[0m"
     echo -e " \e[01;36m[ 0 ] | \e[0m\e[01;31mSAIR, TENHO MEDO\e[0m"
     echo -e '\n'
     echo -e " \e[00;31m═══════════════════════════════\e[0m"
