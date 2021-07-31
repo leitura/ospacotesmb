@@ -80,7 +80,7 @@ check2() {
     vpn=$(ifconfig | grep -c tun0)
     case $vpn in
     1) clear && echo "pare a vpn" ; echo "caso precise" ; echo "diversão garantida" ; echo ; echo "tá sentindo a energia?" ; sleep 2 ; check2;;
-    0) clear  ; am broadcast -p com.applisto.appcloner -a com.applisto.appcloner.api.action.NEW_IDENTITY --es package_name $x [--ez clear_cache {true}] [--ez delete_app_data {true}] ; clear ; sleep 3 ; echo "Se o aplicativo escolhido já está" ; echo "Modificado para gerar nova identidade" ; echo "Vá em Informações do Aplicativo, Armazenamento" ; echo "Limpar dados e reabra o aplicativo Estudante" ; echo "Se o aplicativo escolhido não está modificado..." ; echo "Para gerar nova identidade, modifique antes..." ; echo "Ele apenas vai abrir após alguns segundos" ;rm -vf /storage/emulated/0/Android/data/$x ; sleep 4 ; am start -n $x/$y ;;
+    0) clear  ; am broadcast -p com.applisto.appcloner -a com.applisto.appcloner.api.action.NEW_IDENTITY --es package_name $x [--ez clear_cache {true}] [--ez delete_app_data {true}] ; clear ; sleep 3 ; echo "Se o aplicativo escolhido já está" ; echo "Modificado para gerar nova identidade" ; echo "Vá em Informações do Aplicativo, Armazenamento" ; echo "Limpar dados e reabra o aplicativo Estudante" ; echo "Se o aplicativo escolhido não está modificado..." ; echo "Para gerar nova identidade, modifique antes..." ; echo "Ele apenas vai abrir após alguns segundos" ;rm -r /data/data/$x/* ; sleep 4 ; am start -n $x/$y ;;
     esac
 }
 check2
