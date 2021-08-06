@@ -1,0 +1,44 @@
+#!/bin/bash
+clear
+Menu() {
+    clear
+    echo -e '\n'
+    echo -e " \e[01;31m==========================\e[0m"
+    echo -e " \e[05;33mDatami \e[0m\e[05;32m@EhisOpeNer\e[0m"  
+    echo -e " \e[05;36mQual Túnel VPN para hoje\e[0m"	
+    echo -e " \e[05;32m__________________________\e[0m"
+    echo -e " \e[01;36m[  1 ] | \e[0m\e[01;33mNetEscola\e[0m"
+    echo -e " \e[01;36m[  0 ] | \e[0m\e[01;31mSAIR, TENHO MEDO\e[0m"
+    echo -e '\n'
+    echo -e " \e[00;31m═══════════════════════════════\e[0m"
+    echo 
+    echo -e "   \e[05;35mRaj, escolhe uma carta\e[05m"
+    read x
+    case $x in
+    1) x="br.gov.go.seduc.netescola" ; y="br.gov.go.seduc.netescola.MainActivity" ; nome="NetEscola" ; E1="sleep 4" ;;
+    0) clear ; exit ;;
+    *) echo "Calma Barboleta" ; sleep 1 ; Menu ;;
+    esac
+    connect
+    }
+    connect () {
+    clear
+    check1() {
+    vpn=$(ifconfig | grep -c tun0)
+    case $vpn in
+    1) clear ; echo "VPN ligada" ; echo ; echo "agora, desligue a VPN" ; echo "não sabe desligar VPN?" ; echo "fecha dos recentes" ; echo "forçar parada do App" ; echo ; echo "obedeça" ; sleep 2 ; check1;;
+    0) clear 
+    esac
+}
+check1
+check2() {
+    vpn=$(ifconfig | grep -c tun0)
+    case $vpn in
+    1) clear ; echo "pare a vpn" ; echo "caso precise" ; echo "diversão garantida" ; echo ; echo "tá sentindo a energia?" ; sleep 1 ; check2;;
+    0) sleep 1 ; am start -n com.applisto.appcloner/com.applisto.appcloner.activity.StartActivity ; sleep 4 ; am start -n com.termux/com.termux.app.TermuxActivity ; sleep 2 ; am broadcast -p com.applisto.appcloner -a com.applisto.appcloner.api.action.NEW_IDENTITY --es package_name $x [--ez clear_cache {true}] [--ez delete_app_data {true}] ; sleep 2 ; echo "Se o aplicativo escolhido já está" ; echo "Modificado para gerar nova identidade" ; echo "Vá em Informações do Aplicativo, Armazenamento" ; echo "Limpar dados e reabra o aplicativo Estudante" ; echo "Se o aplicativo escolhido não está modificado..." ; echo "Para gerar nova identidade, modifique antes..." ; echo "Ele apenas vai abrir após alguns segundos" ; sleep 4 ; am start -n $x/$y ; clear ; exit ;;
+    esac
+}
+check2
+}
+clear
+Menu
