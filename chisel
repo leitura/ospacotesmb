@@ -1,0 +1,78 @@
+#!/bin/bash
+clear
+Menu() {
+echo -e "[Chisel versão brasileira]"
+echo -e ""
+echo -e "1. instalar e iniciar servidor Chisel
+2. instalar e iniciar o servidor Chisel offline para o Termux
+3. pausar o Chisel
+4. iniciar o Chisel
+5. reiniciar o Chisel
+6. remover completamente o servidor Chisel
+7. remover o servidor Chisel Script
+0. sair Do servidor Chisel Script
+
+Raj, escolhe uma carta "
+
+read Op
+case $Op in
+
+1) Op1 ;;
+2) Op2 ;;
+3) Op3 ;;
+4) Op4 ;;
+5) Op5 ;;
+6) Op6 ;;
+7) Op7 ;;
+0) Sair ;;
+esac
+}
+
+Op1 () {
+clear
+sudo -i && read -p "escolha o formato Docker suportado pelo seu VPS (docker ou docker.io): " docker && apt update && apt install ${docker} && read -p "qual porta vai instalar seu servidor Chisel? " porta && read -p "crie um usuário para logar no Chisel " usuario && read -p "crie uma senha para logar no Chisel " senha && docker run \
+  --name chisel -p ${porta}:${porta} \
+  -d --restart always \
+  jpillora/chisel server -p ${porta} --socks5 --key supersecret --auth "${usuario}:${senha}"
+bash chisel
+}
+
+Op2 () {
+termux-setup-storage && cd /sdcard/Download && cp chisel ~ && cd && chmod +x chisel && read -p "qual porta vai instalar seu servidor Chisel? " porta && read -p "crie um usuário para logar no Chisel " usuario && read -p "crie uma senha para logar no Chisel " senha && ./chisel server -p ${porta} --socks5 --key supersecret --auth "${usuario}:${senha}"
+}
+
+Op3 () {
+docker stop chisel
+bash chisel
+}
+
+Op4 () {
+docker start chisel
+bash chisel
+}
+
+Op5 () {
+docker restart chisel
+bash chisel
+}
+
+Op6 () {
+docker stop chisel && docker rm chisel
+bash chisel
+}
+
+Op7 () {
+rm chisel
+}
+
+Voltar () {
+clear
+Menu
+}
+
+Sair () {
+clear
+exit
+}
+clear
+Menu
