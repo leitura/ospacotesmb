@@ -1,0 +1,3 @@
+{
+"Blocked":["net.magicph.sshinjector" ]
+}
