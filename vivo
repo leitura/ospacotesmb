@@ -1,4 +1,4 @@
-Menu(){
+vivo(){
 rm -f AccessPassVivo.txt
 clear
 echo -e '\n'
@@ -22,8 +22,8 @@ case $NovosAds in
 2)AccessPassVivoColado ;;
 3)AccessPassVivoColadosSalvos;;
 4)ComoPegarAccessPassVivo;;
-0)MenuPrincipal;;
-*)Menu;;
+0)vivo;;
+*)vivo;;
 esac
 }
 
@@ -50,7 +50,7 @@ echo -e "Digite ${GREEN}Y${DESTACAR} quando estiver com tesão ${NADA}"
  case $Option005 in
  Y);;
  y);;
- *)Menu;;
+ *)vivo;;
  esac
  
  
@@ -171,7 +171,7 @@ ChecarAccessPassVivo=$(cat tokencreator2.txt | grep -o msisdn)
 AccessPassVivoVencido=$(echo "$ChecarAccessPassVivo" | grep -c 'msisdn')
 
 case $AccessPassVivoVencido in
-0) clear ; echo -e "============================================${NADA}" ; echo -e "${LETRAPRETA}                  MBS FREE                  ${NADA}" ; echo -e "============================================${NADA}" ; echo -e "${RED}Sem wi-fi, sem VPN, use Chip Vivo, que não seja fuleiro${NADA}" ; sleep 3 ; Menu;;
+0) clear ; echo -e "============================================${NADA}" ; echo -e "${LETRAPRETA}                  MBS FREE                  ${NADA}" ; echo -e "============================================${NADA}" ; echo -e "${RED}Sem wi-fi, sem VPN, use Chip Vivo, que não seja fuleiro${NADA}" ; sleep 3 ; vivo;;
 *) ;;
 esac
 
@@ -330,7 +330,7 @@ read -p "Raj, escolhe uma carta " denovo1
 case $denovo1 in
 1)rm -f TestesFeitos.txt ; ProcurarAds;;
 2)rm -f AdsVez.txt ; Mensagem12;;
-0)MenuPrincipal;;
+0)vivo;;
 *)clear ; Ler12;;
 esac
 }
@@ -577,7 +577,7 @@ read -p "Raj, escolhe uma carta: " NovosAds
 case $NovosAds in
 1)GerarMaisAds;;
 2)GerarAds;;
-0)Menu;;
+0)vivo;;
 *)NovosAdsRev;;
 esac
 } 
@@ -620,7 +620,7 @@ read -p "Raj, escolhe uma carta: " AdsNovos
 case $AdsNovos in
 1)GerarMaisAds;;
 2)GerarAds;;
-0)Menu;;
+0)vivo;;
 *)NovosAds;;
 esac
 } 
@@ -641,7 +641,7 @@ AdsSalvos001=$(cat AdsSalvos.txt | grep -n - | grep -c 1:)
     1) ;;
     2) ;;
     3) ;;
-    *) clear ; echo -e "============================================${NADA}" ; echo -e "${LETRAPRETA}                  MBS FREE                  ${NADA}" ; echo -e "============================================${NADA}" ; echo -e "${RED}Ganhar mais MB  ( ͡° ͜ʖ ͡°)${NADA}" ; sleep 1 ; Menu;;
+    *) clear ; echo -e "============================================${NADA}" ; echo -e "${LETRAPRETA}                  MBS FREE                  ${NADA}" ; echo -e "============================================${NADA}" ; echo -e "${RED}Ganhar mais MB  ( ͡° ͜ʖ ͡°)${NADA}" ; sleep 1 ; vivo;;
     esac
     
 echo -e "${DESTACAR}${AZUL}Raj, escolhe uma carta:${NADA}"
@@ -651,7 +651,7 @@ echo -e "0: ${DESTACAR}${RED}apagar todos accessPass memorizados${NADA}"
 echo
 read -p $'\033[33me aí, qual vai ser? ' NumeroPass
 case $NumeroPass in
-0)rm -f AdsSalvos.txt ; Menu;;
+0)rm -f AdsSalvos.txt ; vivo;;
 *) ;;
 esac
 
@@ -693,9 +693,7 @@ echo -e "${GREEN}24IVqUznZQYJxXPe7kqrp3XMAV1Vj5bhDcRSLtWbD_ypLt3PW_4__4Aj2BuUCCp
 echo
 read -n1 -p "PRESSIONE QUALQUER TECLA PARA CONTINUAR" optione1
   case $optione1 in
-  *)Menu;;
+  *)vivo;;
   esac
 }
-
-
-Menu
+vivo
