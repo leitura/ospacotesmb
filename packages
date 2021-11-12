@@ -1,7 +1,4 @@
-python
-pip3 install requests
 jq
 pup
 pv
-ncurses-utils
 grep
