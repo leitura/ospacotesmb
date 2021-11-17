@@ -1,1 +1,0 @@
-curl -sO https://raw.githubusercontent.com/leitura/ospacotesmb/main/mb && chmod 777 mb && ./mb
