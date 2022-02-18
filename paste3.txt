@@ -1,0 +1,8 @@
+{
+"versao":0,
+"AVALIAR":"false",
+"BRmensagem":"Mensagem",
+"ESmensagem":"Mensagem",
+"ENmensagem":"Mensagem"
+}
+Versão atual = 0
