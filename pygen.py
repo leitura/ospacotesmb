@@ -48,7 +48,7 @@ while True:
         linha()
         lista = str(input("Nome da lista:"))
 
-        pay = nome+"!!!!"+tipo+"!!!!GET / HTTP/1.1[crlf]Host: "+dominio+"[crlf]Upgrade: websocket[crlf][crlf]!!!!"+proxy+"!!!!"+dnsP+"!!!!"+dnsS+"!!!!!!!!"+porta+"!!!!0!!!!0!!!!"+teg+"!!!!1!!!!1!!!!!!!!!!!!"+sni+"!!!!127.0.0.1:"+udp+"((((((######"+lista+"!!!!1((((((######0######--------FfiB3ReRbCKY@@@@@@@@@@@@"
+        pay = nome+"!!!!"+tipo+"!!!!GET / HTTP/1.1[crlf]Host: "+dominio+"[crlf]Connection: Keep-alive[crlf]Upgrade: ws[crlf][crlf]!!!!"+proxy+"!!!!"+dnsP+"!!!!"+dnsS+"!!!!!!!!"+porta+"!!!!0!!!!0!!!!"+teg+"!!!!1!!!!1!!!!!!!!!!!!"+sni+"!!!!127.0.0.1:"+udp+"((((((######"+lista+"!!!!1((((((######0######--------FfiB3ReRbCKY@@@@@@@@@@@@"
         code = base64.b64encode(pay.encode('utf-8'))
         print('\033[1;31;43m',code[::-1])
 
@@ -75,7 +75,7 @@ while True:
         linha()
         lista = str(input("Nome da lista:"))
 
-        pay = nome+"!!!!"+tipo+"!!!!GET / HTTP/1.1[crlf]Host: "+dominio+"[crlf]Upgrade: websocket[crlf][crlf]!!!!"+proxy+"!!!!"+dnsP+"!!!!"+dnsS+"!!!!!!!!"+porta+"!!!!0!!!!0!!!!"+teg+"!!!!1!!!!1!!!!!!!!!!!!"+"!!!!127.0.0.1:"+udp+"((((((######"+lista+"!!!!1((((((######0######--------FfiB3ReRbCKY@@@@@@@@@@@@"
+        pay = nome+"!!!!"+tipo+"!!!!GET / HTTP/1.1[crlf]Host: "+dominio+"[crlf]Connection: Keep-alive[crlf]Upgrade: ws[crlf][crlf]!!!!"+proxy+"!!!!"+dnsP+"!!!!"+dnsS+"!!!!!!!!"+porta+"!!!!0!!!!0!!!!"+teg+"!!!!1!!!!1!!!!!!!!!!!!"+"!!!!127.0.0.1:"+udp+"((((((######"+lista+"!!!!1((((((######0######--------FfiB3ReRbCKY@@@@@@@@@@@@"
         code = base64.b64encode(pay.encode('utf-8'))
         print('\033[1;31;43m',code[::-1])
 
@@ -103,7 +103,7 @@ while True:
         linha()
         lista = str(input("Nome da lista:"))
 
-        pay = nome+"!!!!"+tipo+"!!!!GET wss://"+sni+" HTTP/1.1[crlf]Host: "+dominio+"[crlf]Upgrade: websocket[crlf][crlf]!!!!"+proxy+"!!!!"+dnsP+"!!!!"+dnsS+"!!!!!!!!"+porta+"!!!!0!!!!0!!!!"+teg+"!!!!1!!!!1!!!!!!!!!!!!"+sni+"!!!!127.0.0.1:"+udp+"((((((######"+lista+"!!!!1((((((######0######--------FfiB3ReRbCKY@@@@@@@@@@@"
+        pay = nome+"!!!!"+tipo+"!!!!GET wss://"+sni+" HTTP/1.1[crlf]Host: "+dominio+"[crlf]Connection: Keep-alive[crlf]Upgrade: ws[crlf][crlf]!!!!"+proxy+"!!!!"+dnsP+"!!!!"+dnsS+"!!!!!!!!"+porta+"!!!!0!!!!0!!!!"+teg+"!!!!1!!!!1!!!!!!!!!!!!"+sni+"!!!!127.0.0.1:"+udp+"((((((######"+lista+"!!!!1((((((######0######--------FfiB3ReRbCKY@@@@@@@@@@@"
         code = base64.b64encode(pay.encode('utf-8'))
         print('\033[1;31;43m',code[::-1])
     elif menu == 4:
