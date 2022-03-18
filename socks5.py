@@ -10,13 +10,13 @@ import time
 
 print ('------------------------------------------')
 print ('SOCKS5   PARA   TELEGRAM')
-print ('USUARIO:   Telegram   SENHA:  1')
+print ('USUARIO:   telegram   SENHA:  3')
 print ('@EhisOpeNer')
 print ('APERTE  CTRL A D  PARA DEIXAR RODANDO')
 print ('------------------------------------------')
 
 PORT = input('\033[34mDIGITE A PORTA PARA O SOCKS5: ')
-USERS = {"Telegram": "1"}
+USERS = {"telegram": "3"}
 
 BLOCK_NON_TG_HOSTS = True
 HIDE_ERRORS_BEFORE_AUTH = True
