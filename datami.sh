@@ -1,6 +1,7 @@
 #!/bin/bash
                     # Pacote | Atividade | Nome
-pacotes="br.gov.go.seduc.netescola br.gov.go.seduc.netescola.MainActivity NetEscola
+pacotes="tv.ip.edusp tv.ip.my.activities.SplashScreen Centro de Mídias SP
+br.gov.go.seduc.netescola br.gov.go.seduc.netescola.MainActivity NetEscola
 org.educaolinda.app org.aprendendosempre.app.SplashScreenActivity Olinda
 com.educasaoleo.reach4all com.educasaoleo.reachall.SplashScreen São Leo
 com.conectauneb.reach4all com.datami.reachall.SplashScreen Conecta UNEB
