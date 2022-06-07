@@ -25,7 +25,7 @@ tv.ip.appliquese tv.ip.my.activities.SplashScreen Applique-se
 tv.ip.edusp tv.ip.my.activities.SplashScreen Centro de Mídias SP
 tv.ip.conectaai tv.ip.my.activities.SplashScreen Conecta Aí
 tv.ip.aulaam tv.ip.my.activities.SplashScreen Aula em Casa"
-add="<auth-user-pass>\nAuth\npassword\n</auth-user-pass>"
+add="<auth-user-pass>\ntest\ntest\n</auth-user-pass>"
 banner=" ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
  ██░▄▄▀█░▄▄▀█▄▄░▄▄█░▄▄▀██░▄▀▄░█▄░▄██
  ██░██░█░▀▀░███░███░▀▀░██░█░█░██░███
