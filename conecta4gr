@@ -1,0 +1,76 @@
+{
+  "Version": "1.0.0",
+  "ReleaseNotes": "",
+  "UrlUpdate": "https://raw.githubusercontent.com/leitura/ospacotesmb/main/conecta4gr",
+  "Sms": "https://raw.githubusercontent.com/leitura/ospacotesmb/main/UrlSms",
+  "EmailFeedback": "olamae@gmail.com",
+  "UrlContato": "https://t.me/rakuriuu",
+  "UrlTermos": "https://raw.githubusercontent.com/leitura/ospacotesmb/main/termos.html",
+  "CheckUser": "true",
+  "UdpPort": "7300",
+  "Servers": [
+    {
+      "Name": "PREMIUM",
+      "TYPE": "premium",
+      "FLAG": "br.png",
+      "ServerIP": "b.bomdiane.ml",
+      "CheckUser": "http://b.bomdiane.ml:8080/checkUser",
+      "ServerPort": "443",
+      "SSLPort": "443",
+      "USER": "",
+      "PASS": ""
+    }
+  ],
+  "Networks": [
+    {
+      "Name": "VIVO",
+      "FLAG": "vivo",
+      "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: mentalista[crlf][crlf]",
+      "SNI": "",
+      "TlsIP": "",
+      "ProxyIP": "172.64.195.2",
+      "ProxyPort": "80",
+      "Info": "Proxy"
+    },
+    {
+      "Name": "TIM",
+      "FLAG": "tim",
+      "Payload": "GET wss://www.alura.com.br/ HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: mentalista[crlf][crlf]",
+      "SNI": "www.alura.com.br",
+      "TlsIP": "www.alura.com.br",
+      "ProxyIP": "www.alura.com.br",
+      "ProxyPort": "443",
+      "Info": "Tlsws"
+    },
+    {
+      "Name": "CLARO",
+      "FLAG": "claro",
+      "Payload": "GET wss://go.kaltura.com/ HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: mentalista[crlf][crlf]",
+      "SNI": "go.kaltura.com",
+      "TlsIP": "go.kaltura.com",
+      "ProxyIP": "go.kaltura.com",
+      "ProxyPort": "443",
+      "Info": "Tlsws"
+    },
+    {
+      "Name": "CLARO 2",
+      "FLAG": "claro",
+      "Payload": "GET wss://4.icanhazip.com/ HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: mentalista[crlf][crlf]",
+      "SNI": "4.icanhazip.com",
+      "TlsIP": "4.icanhazip.com",
+      "ProxyIP": "4.icanhazip.com",
+      "ProxyPort": "443",
+      "Info": "Tlsws"
+    },
+    {
+      "Name": "OI",
+      "FLAG": "oi",
+      "Payload": "GET wss://www.hbogo.com.br/ HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: mentalista[crlf][crlf]",
+      "SNI": "www.hbogo.com.br",
+      "TlsIP": "www.hbogo.com.br",
+      "ProxyIP": "www.hbogo.com.br",
+      "ProxyPort": "443",
+      "Info": "Tlsws"
+    }
+  ]
+}
