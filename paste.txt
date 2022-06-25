@@ -1,8 +1,0 @@
-{ 
-"version": [ {"ok": "10" }],
-"BRmensagem": [ {"ok": "Versão 1.0.9 do APK disponivel.\n\nALTERAÇÕES: Erros corrigidos.\n\nAtualize!" }],
-
-"ENmensagem": [ {"ok": "\nAPK version 1.0.9 available.\n\nCHANGES:  Bugs fixed!.\n\n Update!" }],
-
-"ESmensagem": [ {"ok": "Versión APK 1.0.9 disponible. \n\nCAMBIOS: Errores arreglados\n\nActualice!" }]
-}
