@@ -1,0 +1,198 @@
+{
+  "status": 200, 
+  "data": [
+    {
+      "user_id": 27, 
+      "value": "<font color=\"#007eff\">Dev4Tunnel</font>", 
+      "id": 37, 
+      "name": "app_name"
+    }, 
+    {
+      "id": 2163, 
+      "user_id": 27, 
+      "value": "27_app_background_image_B5692EF246CBBA93F91F.png", 
+      "name": "app_background_image"
+    },
+    {
+      "user_id": 27, 
+      "value": "#222222", 
+      "id": 2165, 
+      "name": "background_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "#222222", 
+      "id": 39, 
+      "name": "card_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "#ffffff", 
+      "id": 40, 
+      "name": "text_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "#007eff", 
+      "id": 41, 
+      "name": "button_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "#007eff", 
+      "id": 42, 
+      "name": "icon_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "#333333", 
+      "id": 556, 
+      "name": "border_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "250", 
+      "id": 557, 
+      "name": "logo_height"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "250", 
+      "id": 558, 
+      "name": "logo_width"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "", 
+      "id": 2224, 
+      "name": "app_contact_link"
+    },
+
+    {
+      "user_id": 27, 
+      "value": "#333333", 
+      "id": 2382, 
+      "name": "border_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "200", 
+      "id": 2383, 
+      "name": "logo_height"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "200", 
+      "id": 2384, 
+      "name": "logo_width"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "https://t.me/+0A-wrPY1UfgxODgx", 
+      "id": 2385, 
+      "name": "app_conta_link"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "27_app_logo_B5692EF246CBBA93F91F.png", 
+      "id": 2386, 
+      "name": "app_logo"
+    },
+    {
+      "user_id": 27, 
+      "value": "#222222", 
+      "id": 3134, 
+      "name": "app_dialog_config_background_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "#333333", 
+      "id": 3135, 
+      "name": "app_config_item_background_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "#222222", 
+      "id": 3136, 
+      "name": "app_dialog_success_background_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "#222222", 
+      "id": 3137, 
+      "name": "app_dialog_error_background_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "27_app_qsTileIcon_FC2AF74D2F82B28A9482.png", 
+      "id": 5130, 
+      "name": "app_qsTileIcon"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "#2bb673", 
+      "id": 5139, 
+      "name": "app_dialog_success_text_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "#ed1c24", 
+      "id": 5140, 
+      "name": "app_dialog_error_text_color"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "SEJAM BEM VINDO(A)S AO DEV4TUNNEL!!", 
+      "id": 5141, 
+      "name": "app_message_text"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "1", 
+      "id": 5142, 
+      "name": "app_message_type"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "27_app_dialog_image_success_BF629882C4376A8477E9.png", 
+      "id": 5143, 
+      "name": "app_dialog_image_success"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "27_app_dialog_image_fail_CB677A56822C494CF87B.png", 
+      "id": 5144, 
+      "name": "app_dialog_image_fail"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "27_app_dialog_image_validate_AE1AA0FA0F34767B4CD5.png", 
+      "id": 5145, 
+      "name": "app_dialog_image_validate"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "27_app_dialog_image_message_18B74AC4C05657CA3735.png", 
+      "id": 5146, 
+      "name": "app_dialog_image_message"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "27_app_dialog_image_limit_exceeded_7C3A884BF2A948617329.png", 
+      "id": 5147, 
+      "name": "app_dialog_image_limit_exceeded"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "27_app_dialog_image_invalid_data_BFAF550666A9ABE1BC26.png", 
+      "id": 5148, 
+      "name": "app_dialog_image_invalid_data"
+    }, 
+    {
+      "user_id": 27, 
+      "value": "27_app_contact_icon_02734E1B8D116203659C.png", 
+      "id": 7732, 
+      "name": "app_contct_icon"
+    }
+  ]
+}
