@@ -1,0 +1,10 @@
+{
+  "status": 200, 
+  "data": {
+    "id": 23, 
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjdXN0b21lcl9pZCI6MjcsInVzZXJfaWQiOjI3LCJ1c2VyX3R5cGUiOiJDVVNUT01FUiJ9.oo_1DlsxrpRZWqBuEb-cbp4q50pdFJMhXKPhDK4eTl0", 
+    "status": "ACTIVE", 
+    "user_id": 23, 
+    "device_id": ""
+  }
+}
