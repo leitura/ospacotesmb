@@ -10,12 +10,23 @@
   "UdpPort": "7300",
   "Servers": [
     {
+      "Name": "FREE",
+      "TYPE": "free",
+      "FLAG": "br.png",
+      "ServerIP": "v.bomdiane.ml",
+      "CheckUser": "http://179.96.120.104:443/checkUser",
+      "ServerPort": "443",
+      "SSLPort": "443",
+      "USER": "neymar",
+      "PASS": "bolo"
+    },
+    {
       "Name": "PREMIUM",
       "TYPE": "premium",
       "FLAG": "br.png",
-      "ServerIP": "v.bomdiane.ml",
-      "CheckUser": "http://v.bomdiane.ml:443/checkUser",
-      "ServerPort": "443",
+      "ServerIP": "l.bomdiane.ml",
+      "CheckUser": "http://c.bomdiane.ml:443/checkUser",
+      "ServerPort": "80",
       "SSLPort": "443",
       "USER": "",
       "PASS": ""
@@ -71,6 +82,16 @@
       "ProxyIP": "www.hbogo.com.br",
       "ProxyPort": "443",
       "Info": "Tlsws"
+    },
+    {
+      "Name": "VIVO Premium",
+      "FLAG": "vivo",
+      "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Connection: Upgrade[crlf]Upgrade: Websocket[crlf][crlf]",
+      "SNI": "",
+      "TlsIP": "",
+      "ProxyIP": "recarga.vivo.com.br",
+      "ProxyPort": "80",
+      "Info": "Proxy"
     }
   ]
 }
