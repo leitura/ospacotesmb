@@ -1,12 +1,12 @@
 {
-  "Version": "1.0.0",
+  "Version": "8.6.6",
   "ReleaseNotes": "Como vai, garotão?",
   "UrlUpdate": "https://raw.githubusercontent.com/leitura/ospacotesmb/main/upi",
   "Sms": "https://raw.githubusercontent.com/leitura/ospacotesmb/main/UrlSms",
   "EmailFeedback": "olamae@gmail.com",
   "UrlContato": "https://t.me/EhisOpeNer",
   "UrlTermos": "https://raw.githubusercontent.com/leitura/ospacotesmb/main/termos.html",
-  "CheckUser": "true",
+  "CheckUser": "false",
   "UdpPort": "7300",
   "Servers": [
     {
@@ -14,22 +14,11 @@
       "TYPE": "free",
       "FLAG": "br.png",
       "ServerIP": "v.bomdiane.ml",
-      "CheckUser": "http://179.96.120.104:443/checkUser",
+      "CheckUser": "http://xvideos com:443/checkUser",
       "ServerPort": "443",
       "SSLPort": "443",
-      "USER": "neymar",
-      "PASS": "bolo"
-    },
-    {
-      "Name": "PREMIUM",
-      "TYPE": "premium",
-      "FLAG": "br.png",
-      "ServerIP": "l.bomdiane.ml",
-      "CheckUser": "http://c.bomdiane.ml:443/checkUser",
-      "ServerPort": "80",
-      "SSLPort": "443",
-      "USER": "",
-      "PASS": ""
+      "USER": "familia1",
+      "PASS": "2008"
     }
   ],
   "Networks": [
@@ -82,16 +71,6 @@
       "ProxyIP": "www.hbogo.com.br",
       "ProxyPort": "443",
       "Info": "Tlsws"
-    },
-    {
-      "Name": "VIVO Premium",
-      "FLAG": "vivo",
-      "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Connection: Upgrade[crlf]Upgrade: Websocket[crlf][crlf]",
-      "SNI": "",
-      "TlsIP": "",
-      "ProxyIP": "recarga.vivo.com.br",
-      "ProxyPort": "80",
-      "Info": "Proxy"
     }
   ]
 }
