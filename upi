@@ -1,5 +1,5 @@
 {
-  "Version": "10.0.0",
+  "Version": "11.0.0",
   "ReleaseNotes": "Como vai, garotão?",
   "UrlUpdate": "https://raw.githubusercontent.com/leitura/ospacotesmb/main/upi",
   "Sms": "https://raw.githubusercontent.com/leitura/ospacotesmb/main/UrlSms",
@@ -13,12 +13,12 @@
       "Name": "FREE",
       "TYPE": "free",
       "FLAG": "br.png",
-      "ServerIP": "penguinehis.worldofdragon.com.br",
+      "ServerIP": "ca.sshws.net",
       "CheckUser": "http://xvideos com:443/checkUser",
       "ServerPort": "443",
       "SSLPort": "443",
-      "USER": "sisudragon",
-      "PASS": "bolocake"
+      "USER": "fastssh.com-ehisopener",
+      "PASS": "ehisopener"
     }
   ],
   "Networks": [
