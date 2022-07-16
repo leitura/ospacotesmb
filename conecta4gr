@@ -1,5 +1,5 @@
 {
-  "Version": "1.0.0",
+  "Version": "2.0.0",
   "ReleaseNotes": "",
   "UrlUpdate": "https://raw.githubusercontent.com/leitura/ospacotesmb/main/conecta4gr",
   "Sms": "https://raw.githubusercontent.com/leitura/ospacotesmb/main/UrlSms",
@@ -28,7 +28,7 @@
       "Payload": "GET / HTTP/1.1[crlf]Host: [app_host][crlf]Upgrade: mentalista[crlf][crlf]",
       "SNI": "",
       "TlsIP": "",
-      "ProxyIP": "172.64.195.2",
+      "ProxyIP": "172.67.165.43",
       "ProxyPort": "80",
       "Info": "Proxy"
     },
