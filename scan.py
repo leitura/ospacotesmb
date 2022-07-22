@@ -56,7 +56,7 @@ def auto_replace(server,ip):
 			server.send(b'HTTP/1.1 200 Connection established\r\n\r\n')
 			print(f'{O}[TCP] response : {R}{status}{GR}')
 			return auto_replace(server,ip)
-	print('==== ==== ==== ==== ==== ==== ==== ==== ==== ====')
+	print('🐝 🐝 🐝 🐝 🐝 🐝 🐝 🐝 🐝 🐝')
 
 def payloadsnd(ip,domain):
 	#domain = 'ca.sshws.net'
@@ -71,10 +71,10 @@ def payloadsnd(ip,domain):
 def Main():
 	try:
 		domain = input(
-			f'{clb}[ {cp}01 {clb}]{k} Digite o Dominio \n{cg}|\n└──{k}Dominio {cg}:{k} ')
+			f'{clb}[ {cp}01 {clb}]{k} Raj, escolhe uma carta: cole um subdominio Cloudflare do amigo que vai levar um leve ataque aqui \n{cg}|\n└──{k}Dominio {cg}:{k} ')
 		print()
 		range = input(
-			f'{clb}[ {cp}02 {clb}]{k} Digite IP e intervalo no formato " 192.0.0.0/24 " \n{cg}|\n└──{k}IP {cg}:{k} ')
+			f'{clb}[ {cp}02 {clb}]{k} Hora da ranger: digite IP BugHost e intervalo no formato " 192.0.0.0/24 " \n{cg}|\n└──{k}IP {cg}:{k} ')
 		if range == '':
 			print('Noob sofre')
 			sys.exit(1)
@@ -85,7 +85,7 @@ def Main():
 	try:
 		net4 = ipaddress.ip_network(range)
 	except ValueError as e:
-		print(f'\n{clr}fodeu{k}: ' + str(e))
+		print(f'\n{clr}fudeu{k}: ' + str(e))
 		print()
 		sys.exit(1)
 
@@ -96,7 +96,7 @@ def Main():
 	print(f'\n{clb}DIGITALIZANDO{k}: {range}\n{clb}Total de hosts no intervalo{k}: {v}\n')
 	
 	enter = input(
-			f'{clb}{cp} Enter para continuar {cg}:{k} ')
+			f'{clb}{cp} Dê Enter quando você se sentir pronto {cg}:{k} ')
 
 	y=0
 	for host in net4.hosts():
