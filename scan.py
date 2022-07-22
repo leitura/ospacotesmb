@@ -19,7 +19,7 @@ clr = '\033[91m'
 ver = '@Ver 1.0 LTS'
 		
 def save(x):
-	with open('101.txt','a') as fl:
+	with open('ok.txt','a') as fl:
 		fl.write(str(x)+'\n')
 		fl.close()
 		
