@@ -71,7 +71,7 @@ def payloadsnd(ip,domain):
 def Main():
 	try:
 		domain = input(
-			f'{clb}[ {cp}01 {clb}]{k} Raj, escolhe uma carta: cole um subdominio Cloudflare do amigo que vai levar um leve ataque aqui \n{cg}|\n└──{k}Dominio {cg}:{k} ')
+			f'{clb}[ {cp}01 {clb}]{k} Raj, escolhe uma carta: cole um\n subdominio Cloudflare do amigo que vai levar um leve ataque aqui \n{cg}|\n└──{k}Dominio {cg}:{k} ')
 		print()
 		range = input(
 			f'{clb}[ {cp}02 {clb}]{k} Hora da ranger: digite IP BugHost e intervalo no formato " 192.0.0.0/24 " \n{cg}|\n└──{k}IP {cg}:{k} ')
